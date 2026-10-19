@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>لوحة التحكم | متجر بامبينو كيدز</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="icon" href="../images/kids_cat_girls.jpg">
+</head>
+<body class="admin-body">
+
+  <!-- ADMIN AUTH BOX (PIN Protection) -->
+  <div id="adminAuthBox" style="min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 20px; background: linear-gradient(135deg, #fff5f6 0%, #fee2e2 100%);">
+    <div style="background: #fff; padding: 40px; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); max-width: 420px; width: 100%; text-align: center; border: 1px solid var(--border-light);">
+      <div style="font-size: 3rem; margin-bottom: 10px;">🔐</div>
+      <h2 style="font-size: 1.6rem; font-weight: 900; color: var(--dark); margin-bottom: 6px;">لوحة تحكم بامبينو كيدز</h2>
+      <p style="color: var(--text-light); font-size: 0.9rem; margin-bottom: 24px;">يرجى إدخال رمز الأمان (PIN) لتعديل المتجر وإدارة المنتجات</p>
+
+      <form id="adminLoginForm">
+        <div class="form-group">
+          <input type="password" id="adminPinInput" placeholder="أدخل رمز الدخول (الافتراضي: 1234)" style="text-align: center; font-size: 1.2rem; letter-spacing: 4px; padding: 14px;" required autofocus>
+        </div>
+        <button type="submit" class="btn-checkout" style="width: 100%; margin-top: 10px;">
+          <span>دخول إلى لوحة التحكم ←</span>
+        </button>
+      </form>
+
+      <div style="margin-top: 20px; font-size: 0.85rem; color: #64748b;">
+        الرمز الافتراضي للوحة هو: <strong style="color: var(--primary);">1234</strong>
+      </div>
+      <div style="margin-top: 14px;">
+        <a href="../index.html" style="font-size: 0.88rem; color: var(--primary); font-weight: 700;">الرجوع إلى المتجر الرئيسي</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ADMIN APP BOX -->
+  <div id="adminAppBox" style="display: none;">
+    <!-- Admin Top Navbar -->
+    <header class="admin-navbar">
+      <div class="admin-brand">
+        <h2>BAMBINO</h2>
+        <span>لوحة تحكم المتجر</span>
+      </div>
+
+      <div class="admin-top-actions">
+        <a href="../index.html" target="_blank" class="btn-admin-pill btn-admin-outline" title="معاينة المتجر في صفحة جديدة">
+          <span>معاينة المتجر</span>
+          <span>👁️</span>
+        </a>
+        <button onclick="AdminApp.logout()" class="btn-admin-pill btn-admin-danger">
+          <span>خروج</span>
+          <span>🚪</span>
+        </button>
+      </div>
+    </header>
+
+    <div class="admin-layout">
+      <!-- Admin Sidebar -->
+      <aside class="admin-sidebar">
+        <div class="admin-nav-item active" data-tab="products">
+          <span>🛍️</span>
+          <span>إدارة المنتجات</span>
+        </div>
+        <div class="admin-nav-item" data-tab="settings">
+          <span>⚙️</span>
+          <span>إعدادات المتجر</span>
+        </div>
+        <div class="admin-nav-item" data-tab="backup">
+          <span>💾</span>
+          <span>النسخ الاحتياطي</span>
+        </div>
+      </aside>
+
+      <!-- Admin Main Content -->
+      <main class="admin-main">
+        <!-- STATS OVERVIEW -->
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-card-title">إجمالي المنتجات</div>
+            <div class="stat-card-val" id="statTotalProducts">0</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card-title">الأقسام النشطة</div>
+            <div class="stat-card-val" id="statTotalCats">0</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card-title">متوسط أسعار القطع</div>
+            <div class="stat-card-val" id="statAvgPrice">0 ر.س</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card-title">حالة المتجر</div>
+            <div class="stat-card-val" style="color: #10b981; font-size: 1.3rem;">● متصل ويعمل</div>
+          </div>
+        </div>
+
+        <!-- TAB 1: PRODUCTS MANAGER -->
+        <div class="admin-tab-content active" id="tab-products">
+          <div class="admin-card">
+            <div class="admin-card-header">
+              <h3>قائمة المنتجات في المتجر</h3>
+              <button class="btn-admin-pill btn-admin-primary" onclick="AdminApp.openAddModal()">
+                <span>+ إضافة منتج جديد</span>
+              </button>
+            </div>
+
+            <!-- Search and Filter input -->
+            <div style="margin-bottom: 18px; max-width: 350px;">
+              <input type="text" placeholder="بحث سريع في المنتجات بالاسم أو القسم..." oninput="AdminApp.renderProductsTable(this.value)" style="width: 100%; padding: 10px 14px; border: 1px solid #cbd5e1; border-radius: var(--radius-sm); font-size: 0.9rem;">
+            </div>
+
+            <div class="admin-table-wrap">
+              <table class="admin-table">
+                <thead>
+                  <tr>
+                    <th>الصورة</th>
+                    <th>اسم المنتج</th>
+                    <th>القسم</th>
+                    <th>السعر الحالي</th>
+                    <th>شارة التميز</th>
+                    <th>المقاسات</th>
+                    <th>الإجراءات</th>
+                  </tr>
+                </thead>
+                <tbody id="adminProductsTbody">
+                  <!-- Rendered dynamically -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB 2: STORE SETTINGS -->
+        <div class="admin-tab-content" id="tab-settings">
+          <div class="admin-card" style="max-width: 750px;">
+            <div class="admin-card-header">
+              <h3>إعدادات وتفاصيل المتجر</h3>
+            </div>
+
+            <form id="adminSettingsForm">
+              <div class="form-group">
+                <label>اسم المتجر والبراند</label>
+                <input type="text" id="settStoreName" required>
+              </div>
+
+              <div class="form-group">
+                <label>نص شريط الإعلانات العلوي (Announcement Bar)</label>
+                <input type="text" id="settAnnouncement" required>
+              </div>
+
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                <div class="form-group">
+                  <label>رقم واتساب لاستقبال الطلبات (بدون +)</label>
+                  <input type="text" id="settWhatsapp" placeholder="966500000000" required>
+                </div>
+                <div class="form-group">
+                  <label>رقم هاتف الاتصال المباشر</label>
+                  <input type="text" id="settPhone" placeholder="+966 50 000 0000" required>
+                </div>
+              </div>
+
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                <div class="form-group">
+                  <label>البريد الإلكتروني الرسمي</label>
+                  <input type="email" id="settEmail" required>
+                </div>
+                <div class="form-group">
+                  <label>العملة</label>
+                  <input type="text" id="settCurrency" value="ر.س" required>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label>عنوان المتجر / المقر</label>
+                <input type="text" id="settAddress" required>
+              </div>
+
+              <button type="submit" class="btn-checkout" style="width: auto; padding: 12px 30px;">
+                <span>حفظ التعديلات في المتجر ✅</span>
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <!-- TAB 3: BACKUP & DATA -->
+        <div class="admin-tab-content" id="tab-backup">
+          <div class="admin-card" style="max-width: 750px;">
+            <div class="admin-card-header">
+              <h3>النسخ الاحتياطي وإدارة البيانات</h3>
+            </div>
+
+            <div style="display: flex; flex-direction: column; gap: 20px;">
+              <div style="background: var(--bg-soft); padding: 20px; border-radius: var(--radius-sm); border: 1px solid var(--border-light);">
+                <h4 style="font-size: 1.05rem; font-weight: 800; color: var(--dark); margin-bottom: 6px;">📥 تصدير نسخة احتياطية من جميع المنتجات</h4>
+                <p style="font-size: 0.9rem; color: var(--text-light); margin-bottom: 14px;">يمكنك تحميل ملف JSON يحتوي على كامل منتجات المتجر وأسعارها وتفاصيلها لحفظها على جهازك.</p>
+                <button class="btn-admin-pill btn-admin-primary" onclick="AdminApp.exportProductsJSON()">
+                  <span>تحميل ملف المنتجات (JSON) 📥</span>
+                </button>
+              </div>
+
+              <div style="background: var(--bg-soft); padding: 20px; border-radius: var(--radius-sm); border: 1px solid var(--border-light);">
+                <h4 style="font-size: 1.05rem; font-weight: 800; color: var(--dark); margin-bottom: 6px;">📤 استيراد وتحديث المنتجات من ملف</h4>
+                <p style="font-size: 0.9rem; color: var(--text-light); margin-bottom: 14px;">ارفع ملف JSON الذي قمت بتصديره سابقاً لاستعادة المنتجات في ثوانٍ معدودة.</p>
+                <input type="file" id="importProductsInput" accept=".json" onchange="AdminApp.importProductsJSON(event)" style="display: none;">
+                <button class="btn-admin-pill btn-admin-outline" onclick="document.getElementById('importProductsInput').click()">
+                  <span>اختيار ملف JSON ورفعه 📤</span>
+                </button>
+              </div>
+
+              <div style="background: #fff1f2; padding: 20px; border-radius: var(--radius-sm); border: 1px solid #fecdd3;">
+                <h4 style="font-size: 1.05rem; font-weight: 800; color: #dc2626; margin-bottom: 6px;">⚠️ استعادة المنتجات الافتراضية (إعادة ضبط المصنع)</h4>
+                <p style="font-size: 0.9rem; color: #b91c1c; margin-bottom: 14px;">سيؤدي هذا إلى إعادة المتجر إلى المنتجات الأصلية وحذف أي منتجات تجريبية تمت إضافتها.</p>
+                <button class="btn-admin-pill btn-admin-danger" onclick="AdminApp.resetDefaultProducts()">
+                  <span>استرجاع المنتجات الاصلية للمتجر 🔄</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <!-- ADD / EDIT PRODUCT MODAL -->
+  <div class="admin-modal-overlay" id="adminProductModalOverlay">
+    <div class="admin-modal">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; border-bottom: 1px solid var(--border-light); padding-bottom: 14px;">
+        <h3 id="modalProductTitle" style="font-size: 1.3rem; font-weight: 900; color: var(--dark);">إضافة منتج جديد</h3>
+        <button onclick="AdminApp.closeModal()" style="background: none; border: none; font-size: 1.4rem; cursor: pointer; color: var(--text-light);">✕</button>
+      </div>
+
+      <form id="adminProductForm">
+        <div class="form-group">
+          <label>اسم المنتج *</label>
+          <input type="text" id="prodNameInput" placeholder="مثال: فستان سهرة وردي للأميرات" required>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+          <div class="form-group">
+            <label>القسم / التصنيف *</label>
+            <select id="prodCatInput" required>
+              <option value="girls">ملابس بناتي</option>
+              <option value="boys">ملابس أولادي</option>
+              <option value="baby">بيبي ومواليد</option>
+              <option value="shoes">أحذية وإكسسوارات</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>شارة التميز (Badge)</label>
+            <input type="text" id="prodBadgeInput" placeholder="الأكثر مبيعاً ⭐، جديد 🚀، خصم خاص ⚡">
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+          <div class="form-group">
+            <label>السعر بعد الخصم (ر.س) *</label>
+            <input type="number" id="prodPriceInput" step="1" placeholder="مثال: 250" required>
+          </div>
+          <div class="form-group">
+            <label>السعر الأصلي قبل الخصم (ر.س)</label>
+            <input type="number" id="prodOldPriceInput" step="1" placeholder="مثال: 320">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>مسار الصورة أو رابط الصورة (URL) *</label>
+          <div style="display: flex; gap: 10px; align-items: center;">
+            <input type="text" id="prodImgInput" placeholder="images/prod_girls_party.jpg أو رابط مباشر" oninput="document.getElementById('productImagePreview').src = this.value.startsWith('http') ? this.value : '../' + this.value" required style="flex: 1;">
+            <img id="productImagePreview" src="../images/prod_girls_party.jpg" style="width: 50px; height: 50px; border-radius: 6px; object-fit: cover; border: 1px solid #cbd5e1;">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>المقاسات المتوفرة (مفصولة بفواصل)</label>
+          <input type="text" id="prodSizesInput" placeholder="1-2y, 3-5y, 6-8y">
+        </div>
+
+        <div class="form-group">
+          <label>وصف المنتج وتفاصيل القماش</label>
+          <textarea id="prodDescInput" rows="3" placeholder="اكتب وصفاً مميزاً للمنتج وخاماته وطريقة العناية به..."></textarea>
+        </div>
+
+        <div style="display: flex; justify-content: flex-end; gap: 10px; margin-top: 20px;">
+          <button type="button" class="btn-admin-pill btn-admin-outline" onclick="AdminApp.closeModal()">إلغاء</button>
+          <button type="submit" class="btn-admin-pill btn-admin-primary">حفظ وتحديث المتجر ✅</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="../js/store.js"></script>
+  <script src="../js/admin.js"></script>
+</body>
+</html>
