@@ -14,7 +14,7 @@
     <div style="background: #fff; padding: 40px; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); max-width: 420px; width: 100%; text-align: center; border: 1px solid var(--border-light);">
       <div style="font-size: 3rem; margin-bottom: 10px;">🔐</div>
       <h2 style="font-size: 1.6rem; font-weight: 900; color: var(--dark); margin-bottom: 6px;">لوحة تحكم بامبينو كيدز</h2>
-      <p style="color: var(--text-light); font-size: 0.9rem; margin-bottom: 24px;">يرجى إدخال رمز الأمان (PIN) لتعديل المتجر وإدارة المنتجات</p>
+      <p style="color: var(--text-light); font-size: 0.9rem; margin-bottom: 24px;">يرجى إدخال رمز الأمان (PIN) لتعديل المتجر وإدارة المنتجات والصفحات</p>
 
       <form id="adminLoginForm">
         <div class="form-group">
@@ -62,13 +62,17 @@
           <span>🛍️</span>
           <span>إدارة المنتجات</span>
         </div>
+        <div class="admin-nav-item" data-tab="pages">
+          <span>📄</span>
+          <span>محتوى وتعديل الصفحات</span>
+        </div>
         <div class="admin-nav-item" data-tab="settings">
           <span>⚙️</span>
           <span>إعدادات المتجر</span>
         </div>
         <div class="admin-nav-item" data-tab="backup">
           <span>💾</span>
-          <span>النسخ الاحتياطي</span>
+          <span>النسخ الاحتياطي الشامل</span>
         </div>
       </aside>
 
@@ -130,7 +134,379 @@
           </div>
         </div>
 
-        <!-- TAB 2: STORE SETTINGS -->
+        <!-- TAB 2: PAGES CONTENT CMS (Visual Editor for all pages) -->
+        <div class="admin-tab-content" id="tab-pages">
+          <div class="admin-card">
+            <div class="admin-card-header">
+              <div>
+                <h3>محرر محتوى صفحات المتجر (Visual Page CMS)</h3>
+                <p style="color: var(--text-light); font-size: 0.88rem; margin-top: 4px;">
+                  اختر أي صفحة لتعديل نصوصها وأقسامها بحرية تامة دون الحاجة للمساس بالأكواد البرمجية.
+                </p>
+              </div>
+            </div>
+
+            <!-- Page Switcher Cards -->
+            <div class="cms-pages-grid">
+              <div class="cms-page-card active" data-page="home" onclick="AdminApp.selectPage('home')">
+                <div class="cms-page-card-icon">🏠</div>
+                <div>
+                  <div class="cms-page-card-title">الصفحة الرئيسية</div>
+                  <div class="cms-page-card-sub">السلايدر، العروض، الميزات</div>
+                </div>
+              </div>
+
+              <div class="cms-page-card" data-page="about" onclick="AdminApp.selectPage('about')">
+                <div class="cms-page-card-icon">✨</div>
+                <div>
+                  <div class="cms-page-card-title">صفحة من نحن</div>
+                  <div class="cms-page-card-sub">القصة، الرسالة، الجودة</div>
+                </div>
+              </div>
+
+              <div class="cms-page-card" data-page="contact" onclick="AdminApp.selectPage('contact')">
+                <div class="cms-page-card-icon">📞</div>
+                <div>
+                  <div class="cms-page-card-title">صفحة اتصل بنا</div>
+                  <div class="cms-page-card-sub">عناوين ونصوص التواصل</div>
+                </div>
+              </div>
+
+              <div class="cms-page-card" data-page="terms" onclick="AdminApp.selectPage('terms')">
+                <div class="cms-page-card-icon">📋</div>
+                <div>
+                  <div class="cms-page-card-title">الشروط والأحكام</div>
+                  <div class="cms-page-card-sub">شروط الطلب وسياسة الاسترجاع</div>
+                </div>
+              </div>
+
+              <div class="cms-page-card" data-page="privacy" onclick="AdminApp.selectPage('privacy')">
+                <div class="cms-page-card-icon">🔒</div>
+                <div>
+                  <div class="cms-page-card-title">سياسة الخصوصية</div>
+                  <div class="cms-page-card-sub">بنود حماية بيانات العملاء</div>
+                </div>
+              </div>
+
+              <div class="cms-page-card" data-page="footer" onclick="AdminApp.selectPage('footer')">
+                <div class="cms-page-card-icon">🔻</div>
+                <div>
+                  <div class="cms-page-card-title">الفوتر العام</div>
+                  <div class="cms-page-card-sub">نبذة الفوتر وحقوق النشر</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- EDIT FORMS FOR EACH PAGE -->
+            <div id="cmsFormsContainer">
+
+              <!-- HOME PAGE FORM -->
+              <div class="cms-page-form-wrapper" id="cmsForm-home">
+                <div class="cms-section-group">
+                  <h4>🎨 قسم البانر الرئيسي (Hero Section)</h4>
+                  <div class="form-group">
+                    <label>الشارة العلوية للبانر</label>
+                    <input type="text" id="cms_home_heroBadge" data-cms-field="heroBadge">
+                  </div>
+                  <div class="form-group">
+                    <label>العنوان الرئيسي الكبير</label>
+                    <input type="text" id="cms_home_heroTitle" data-cms-field="heroTitle">
+                  </div>
+                  <div class="form-group">
+                    <label>النص الوصفي للبانر</label>
+                    <textarea id="cms_home_heroDesc" data-cms-field="heroDesc" rows="2"></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label>نص زر التسوق الرئيسي</label>
+                    <input type="text" id="cms_home_heroBtnText" data-cms-field="heroBtnText">
+                  </div>
+                </div>
+
+                <div class="cms-section-group">
+                  <h4>🚚 ميزات المتجر الأربعة (Features Bar)</h4>
+                  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
+                    <div class="form-group">
+                      <label>عنوان الميزة 1</label>
+                      <input type="text" id="cms_home_feat1Title" data-cms-field="feat1Title">
+                      <label style="font-size:0.8rem; color:#64748b; margin-top:4px;">وصف الميزة 1</label>
+                      <input type="text" id="cms_home_feat1Desc" data-cms-field="feat1Desc">
+                    </div>
+                    <div class="form-group">
+                      <label>عنوان الميزة 2</label>
+                      <input type="text" id="cms_home_feat2Title" data-cms-field="feat2Title">
+                      <label style="font-size:0.8rem; color:#64748b; margin-top:4px;">وصف الميزة 2</label>
+                      <input type="text" id="cms_home_feat2Desc" data-cms-field="feat2Desc">
+                    </div>
+                    <div class="form-group">
+                      <label>عنوان الميزة 3</label>
+                      <input type="text" id="cms_home_feat3Title" data-cms-field="feat3Title">
+                      <label style="font-size:0.8rem; color:#64748b; margin-top:4px;">وصف الميزة 3</label>
+                      <input type="text" id="cms_home_feat3Desc" data-cms-field="feat3Desc">
+                    </div>
+                    <div class="form-group">
+                      <label>عنوان الميزة 4</label>
+                      <input type="text" id="cms_home_feat4Title" data-cms-field="feat4Title">
+                      <label style="font-size:0.8rem; color:#64748b; margin-top:4px;">وصف الميزة 4</label>
+                      <input type="text" id="cms_home_feat4Desc" data-cms-field="feat4Desc">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="cms-section-group">
+                  <h4>⚡ بانر الخصومات الخاطفة (Flash Deals)</h4>
+                  <div class="form-group">
+                    <label>شارة العرض</label>
+                    <input type="text" id="cms_home_flashTag" data-cms-field="flashTag">
+                  </div>
+                  <div class="form-group">
+                    <label>عنوان العرض الكبير</label>
+                    <input type="text" id="cms_home_flashTitle" data-cms-field="flashTitle">
+                  </div>
+                  <div class="form-group">
+                    <label>وصف العرض</label>
+                    <textarea id="cms_home_flashDesc" data-cms-field="flashDesc" rows="2"></textarea>
+                  </div>
+                </div>
+
+                <div class="cms-section-group">
+                  <h4>👑 قسم نادي أمهات بامبينو (VIP Club)</h4>
+                  <div class="form-group">
+                    <label>شارة نادي الأمهات</label>
+                    <input type="text" id="cms_home_vipTag" data-cms-field="vipTag">
+                  </div>
+                  <div class="form-group">
+                    <label>عنوان النادي</label>
+                    <input type="text" id="cms_home_vipTitle" data-cms-field="vipTitle">
+                  </div>
+                  <div class="form-group">
+                    <label>النص التشجيعي للاشتراك</label>
+                    <textarea id="cms_home_vipDesc" data-cms-field="vipDesc" rows="2"></textarea>
+                  </div>
+                </div>
+
+                <div style="display: flex; gap: 12px; margin-top: 20px;">
+                  <button type="button" class="btn-checkout" style="width: auto; padding: 12px 28px;" onclick="AdminApp.saveCurrentPage('home')">حفظ تعديلات الصفحة الرئيسية ✅</button>
+                  <button type="button" class="btn-admin-pill btn-admin-outline" onclick="AdminApp.previewPage('home')">معاينة مباشرة للصفحة 👁️</button>
+                  <button type="button" class="btn-admin-pill btn-admin-danger" onclick="AdminApp.resetCurrentPage('home')">استعادة النصوص الأصلية 🔄</button>
+                </div>
+              </div>
+
+              <!-- ABOUT PAGE FORM -->
+              <div class="cms-page-form-wrapper" id="cmsForm-about" style="display: none;">
+                <div class="cms-section-group">
+                  <h4>📖 قصة العلامة التجارية (Brand Story)</h4>
+                  <div class="form-group">
+                    <label>عنوان هيدر الصفحة</label>
+                    <input type="text" id="cms_about_heroTitle" data-cms-field="heroTitle">
+                  </div>
+                  <div class="form-group">
+                    <label>شارة القصة</label>
+                    <input type="text" id="cms_about_storyTag" data-cms-field="storyTag">
+                  </div>
+                  <div class="form-group">
+                    <label>عنوان القصة الرئيسي</label>
+                    <input type="text" id="cms_about_storyTitle" data-cms-field="storyTitle">
+                  </div>
+                  <div class="form-group">
+                    <label>الفقرة الأولى من القصة</label>
+                    <textarea id="cms_about_storyP1" data-cms-field="storyP1" rows="3"></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label>الفقرة الثانية من القصة</label>
+                    <textarea id="cms_about_storyP2" data-cms-field="storyP2" rows="3"></textarea>
+                  </div>
+                </div>
+
+                <div class="cms-section-group">
+                  <h4>🌟 بطاقات مميزات الجودة الثلاثة</h4>
+                  <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px;">
+                    <div class="form-group">
+                      <label>عنوان البطاقة 1</label>
+                      <input type="text" id="cms_about_card1Title" data-cms-field="card1Title">
+                      <label style="font-size:0.8rem; color:#64748b; margin-top:4px;">وصف البطاقة 1</label>
+                      <textarea id="cms_about_card1Desc" data-cms-field="card1Desc" rows="2"></textarea>
+                    </div>
+                    <div class="form-group">
+                      <label>عنوان البطاقة 2</label>
+                      <input type="text" id="cms_about_card2Title" data-cms-field="card2Title">
+                      <label style="font-size:0.8rem; color:#64748b; margin-top:4px;">وصف البطاقة 2</label>
+                      <textarea id="cms_about_card2Desc" data-cms-field="card2Desc" rows="2"></textarea>
+                    </div>
+                    <div class="form-group">
+                      <label>عنوان البطاقة 3</label>
+                      <input type="text" id="cms_about_card3Title" data-cms-field="card3Title">
+                      <label style="font-size:0.8rem; color:#64748b; margin-top:4px;">وصف البطاقة 3</label>
+                      <textarea id="cms_about_card3Desc" data-cms-field="card3Desc" rows="2"></textarea>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="cms-section-group">
+                  <h4>🎯 رسالة المتجر</h4>
+                  <div class="form-group">
+                    <label>عنوان الرسالة</label>
+                    <input type="text" id="cms_about_missionTitle" data-cms-field="missionTitle">
+                  </div>
+                  <div class="form-group">
+                    <label>نص الرسالة</label>
+                    <textarea id="cms_about_missionText" data-cms-field="missionText" rows="3"></textarea>
+                  </div>
+                </div>
+
+                <div style="display: flex; gap: 12px; margin-top: 20px;">
+                  <button type="button" class="btn-checkout" style="width: auto; padding: 12px 28px;" onclick="AdminApp.saveCurrentPage('about')">حفظ تعديلات صفحة من نحن ✅</button>
+                  <button type="button" class="btn-admin-pill btn-admin-outline" onclick="AdminApp.previewPage('about')">معاينة صفحة من نحن 👁️</button>
+                  <button type="button" class="btn-admin-pill btn-admin-danger" onclick="AdminApp.resetCurrentPage('about')">استعادة النصوص الأصلية 🔄</button>
+                </div>
+              </div>
+
+              <!-- CONTACT PAGE FORM -->
+              <div class="cms-page-form-wrapper" id="cmsForm-contact" style="display: none;">
+                <div class="cms-section-group">
+                  <h4>📞 نصوص ومعلومات التواصل</h4>
+                  <div class="form-group">
+                    <label>عنوان هيدر الصفحة</label>
+                    <input type="text" id="cms_contact_heroTitle" data-cms-field="heroTitle">
+                  </div>
+                  <div class="form-group">
+                    <label>شارة قسم التواصل</label>
+                    <input type="text" id="cms_contact_secTag" data-cms-field="secTag">
+                  </div>
+                  <div class="form-group">
+                    <label>عنوان قنوات التواصل</label>
+                    <input type="text" id="cms_contact_secTitle" data-cms-field="secTitle">
+                  </div>
+                  <div class="form-group">
+                    <label>الوصف التمهيدي لخدمة العملاء</label>
+                    <textarea id="cms_contact_secDesc" data-cms-field="secDesc" rows="2"></textarea>
+                  </div>
+                  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
+                    <div class="form-group">
+                      <label>عنوان واتساب</label>
+                      <input type="text" id="cms_contact_waTitle" data-cms-field="waTitle">
+                      <label style="font-size:0.8rem; color:#64748b; margin-top:4px;">وصف رد واتساب</label>
+                      <input type="text" id="cms_contact_waDesc" data-cms-field="waDesc">
+                    </div>
+                    <div class="form-group">
+                      <label>عنوان الهاتف</label>
+                      <input type="text" id="cms_contact_phoneTitle" data-cms-field="phoneTitle">
+                      <label style="font-size:0.8rem; color:#64748b; margin-top:4px;">أوقات عمل الهاتف</label>
+                      <input type="text" id="cms_contact_phoneDesc" data-cms-field="phoneDesc">
+                    </div>
+                  </div>
+                </div>
+
+                <div style="display: flex; gap: 12px; margin-top: 20px;">
+                  <button type="button" class="btn-checkout" style="width: auto; padding: 12px 28px;" onclick="AdminApp.saveCurrentPage('contact')">حفظ تعديلات صفحة اتصل بنا ✅</button>
+                  <button type="button" class="btn-admin-pill btn-admin-outline" onclick="AdminApp.previewPage('contact')">معاينة صفحة اتصل بنا 👁️</button>
+                  <button type="button" class="btn-admin-pill btn-admin-danger" onclick="AdminApp.resetCurrentPage('contact')">استعادة النصوص الأصلية 🔄</button>
+                </div>
+              </div>
+
+              <!-- TERMS PAGE FORM -->
+              <div class="cms-page-form-wrapper" id="cmsForm-terms" style="display: none;">
+                <div class="cms-section-group">
+                  <h4>📋 بنود الشروط والأحكام</h4>
+                  <div class="form-group">
+                    <label>عنوان الصفحة الرئيسي</label>
+                    <input type="text" id="cms_terms_heroTitle" data-cms-field="heroTitle">
+                  </div>
+                  <div class="form-group">
+                    <label>المقدمة التمهيدية</label>
+                    <textarea id="cms_terms_intro" data-cms-field="intro" rows="2"></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label>عنوان البند 1 (الطلب والأسعار)</label>
+                    <input type="text" id="cms_terms_sec1Title" data-cms-field="sec1Title">
+                    <label style="font-size:0.8rem; color:#64748b; margin-top:4px;">تفاصيل البند 1</label>
+                    <textarea id="cms_terms_sec1Desc" data-cms-field="sec1Desc" rows="2"></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label>عنوان البند 2 (الشحن والتوصيل)</label>
+                    <input type="text" id="cms_terms_sec2Title" data-cms-field="sec2Title">
+                    <label style="font-size:0.8rem; color:#64748b; margin-top:4px;">تفاصيل البند 2</label>
+                    <textarea id="cms_terms_sec2Desc" data-cms-field="sec2Desc" rows="2"></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label>عنوان البند 3 (الاستبدال والاسترجاع)</label>
+                    <input type="text" id="cms_terms_sec3Title" data-cms-field="sec3Title">
+                    <label style="font-size:0.8rem; color:#64748b; margin-top:4px;">تفاصيل البند 3</label>
+                    <textarea id="cms_terms_sec3Desc" data-cms-field="sec3Desc" rows="2"></textarea>
+                  </div>
+                </div>
+
+                <div style="display: flex; gap: 12px; margin-top: 20px;">
+                  <button type="button" class="btn-checkout" style="width: auto; padding: 12px 28px;" onclick="AdminApp.saveCurrentPage('terms')">حفظ تعديلات الشروط والأحكام ✅</button>
+                  <button type="button" class="btn-admin-pill btn-admin-outline" onclick="AdminApp.previewPage('terms')">معاينة صفحة الشروط 👁️</button>
+                  <button type="button" class="btn-admin-pill btn-admin-danger" onclick="AdminApp.resetCurrentPage('terms')">استعادة النصوص الأصلية 🔄</button>
+                </div>
+              </div>
+
+              <!-- PRIVACY PAGE FORM -->
+              <div class="cms-page-form-wrapper" id="cmsForm-privacy" style="display: none;">
+                <div class="cms-section-group">
+                  <h4>🔒 بنود سياسة الخصوصية</h4>
+                  <div class="form-group">
+                    <label>عنوان الصفحة الرئيسي</label>
+                    <input type="text" id="cms_privacy_heroTitle" data-cms-field="heroTitle">
+                  </div>
+                  <div class="form-group">
+                    <label>المقدمة التمهيدية</label>
+                    <textarea id="cms_privacy_intro" data-cms-field="intro" rows="2"></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label>عنوان البند 1</label>
+                    <input type="text" id="cms_privacy_sec1Title" data-cms-field="sec1Title">
+                    <label style="font-size:0.8rem; color:#64748b; margin-top:4px;">تفاصيل البند 1</label>
+                    <textarea id="cms_privacy_sec1Desc" data-cms-field="sec1Desc" rows="2"></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label>عنوان البند 2</label>
+                    <input type="text" id="cms_privacy_sec2Title" data-cms-field="sec2Title">
+                    <label style="font-size:0.8rem; color:#64748b; margin-top:4px;">تفاصيل البند 2</label>
+                    <textarea id="cms_privacy_sec2Desc" data-cms-field="sec2Desc" rows="2"></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label>عنوان البند 3</label>
+                    <input type="text" id="cms_privacy_sec3Title" data-cms-field="sec3Title">
+                    <label style="font-size:0.8rem; color:#64748b; margin-top:4px;">تفاصيل البند 3</label>
+                    <textarea id="cms_privacy_sec3Desc" data-cms-field="sec3Desc" rows="2"></textarea>
+                  </div>
+                </div>
+
+                <div style="display: flex; gap: 12px; margin-top: 20px;">
+                  <button type="button" class="btn-checkout" style="width: auto; padding: 12px 28px;" onclick="AdminApp.saveCurrentPage('privacy')">حفظ تعديلات سياسة الخصوصية ✅</button>
+                  <button type="button" class="btn-admin-pill btn-admin-outline" onclick="AdminApp.previewPage('privacy')">معاينة صفحة الخصوصية 👁️</button>
+                  <button type="button" class="btn-admin-pill btn-admin-danger" onclick="AdminApp.resetCurrentPage('privacy')">استعادة النصوص الأصلية 🔄</button>
+                </div>
+              </div>
+
+              <!-- FOOTER FORM -->
+              <div class="cms-page-form-wrapper" id="cmsForm-footer" style="display: none;">
+                <div class="cms-section-group">
+                  <h4>🔻 نبذة الفوتر وحقوق النشر</h4>
+                  <div class="form-group">
+                    <label>النبذة التعريفية في الفوتر</label>
+                    <textarea id="cms_footer_aboutText" data-cms-field="aboutText" rows="3"></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label>نص حقوق النشر والملكية (Copyright)</label>
+                    <input type="text" id="cms_footer_copyright" data-cms-field="copyright">
+                  </div>
+                </div>
+
+                <div style="display: flex; gap: 12px; margin-top: 20px;">
+                  <button type="button" class="btn-checkout" style="width: auto; padding: 12px 28px;" onclick="AdminApp.saveCurrentPage('footer')">حفظ تعديلات الفوتر ✅</button>
+                  <button type="button" class="btn-admin-pill btn-admin-outline" onclick="AdminApp.previewPage('footer')">معاينة الفوتر في الرئيسية 👁️</button>
+                  <button type="button" class="btn-admin-pill btn-admin-danger" onclick="AdminApp.resetCurrentPage('footer')">استعادة النصوص الأصلية 🔄</button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB 3: STORE SETTINGS -->
         <div class="admin-tab-content" id="tab-settings">
           <div class="admin-card" style="max-width: 750px;">
             <div class="admin-card-header">
@@ -182,36 +558,36 @@
           </div>
         </div>
 
-        <!-- TAB 3: BACKUP & DATA -->
+        <!-- TAB 4: BACKUP & DATA (FULL BACKUP: Products + Settings + Pages) -->
         <div class="admin-tab-content" id="tab-backup">
           <div class="admin-card" style="max-width: 750px;">
             <div class="admin-card-header">
-              <h3>النسخ الاحتياطي وإدارة البيانات</h3>
+              <h3>النسخ الاحتياطي الشامل وإدارة البيانات</h3>
             </div>
 
             <div style="display: flex; flex-direction: column; gap: 20px;">
               <div style="background: var(--bg-soft); padding: 20px; border-radius: var(--radius-sm); border: 1px solid var(--border-light);">
-                <h4 style="font-size: 1.05rem; font-weight: 800; color: var(--dark); margin-bottom: 6px;">📥 تصدير نسخة احتياطية من جميع المنتجات</h4>
-                <p style="font-size: 0.9rem; color: var(--text-light); margin-bottom: 14px;">يمكنك تحميل ملف JSON يحتوي على كامل منتجات المتجر وأسعارها وتفاصيلها لحفظها على جهازك.</p>
-                <button class="btn-admin-pill btn-admin-primary" onclick="AdminApp.exportProductsJSON()">
-                  <span>تحميل ملف المنتجات (JSON) 📥</span>
+                <h4 style="font-size: 1.05rem; font-weight: 800; color: var(--dark); margin-bottom: 6px;">📥 تصدير نسخة احتياطية شاملة (المنتجات + محتوى الصفحات + الإعدادات)</h4>
+                <p style="font-size: 0.9rem; color: var(--text-light); margin-bottom: 14px;">يمكنك تحميل ملف JSON متكامل يحتوي على كامل منتجات المتجر، نصوص كل الصفحات، والإعدادات لحفظها كأمان على جهازك.</p>
+                <button class="btn-admin-pill btn-admin-primary" onclick="AdminApp.exportFullBackupJSON()">
+                  <span>تحميل ملف النسخة الاحتياطية الشاملة (JSON) 📥</span>
                 </button>
               </div>
 
               <div style="background: var(--bg-soft); padding: 20px; border-radius: var(--radius-sm); border: 1px solid var(--border-light);">
-                <h4 style="font-size: 1.05rem; font-weight: 800; color: var(--dark); margin-bottom: 6px;">📤 استيراد وتحديث المنتجات من ملف</h4>
-                <p style="font-size: 0.9rem; color: var(--text-light); margin-bottom: 14px;">ارفع ملف JSON الذي قمت بتصديره سابقاً لاستعادة المنتجات في ثوانٍ معدودة.</p>
-                <input type="file" id="importProductsInput" accept=".json" onchange="AdminApp.importProductsJSON(event)" style="display: none;">
+                <h4 style="font-size: 1.05rem; font-weight: 800; color: var(--dark); margin-bottom: 6px;">📤 استيراد واستعادة المتجر من ملف نسخ احتياطي</h4>
+                <p style="font-size: 0.9rem; color: var(--text-light); margin-bottom: 14px;">ارفع ملف JSON الذي قمت بتصديره سابقاً لاستعادة جميع المنتجات والصفحات في لحظات معدودة.</p>
+                <input type="file" id="importProductsInput" accept=".json" onchange="AdminApp.importFullBackupJSON(event)" style="display: none;">
                 <button class="btn-admin-pill btn-admin-outline" onclick="document.getElementById('importProductsInput').click()">
                   <span>اختيار ملف JSON ورفعه 📤</span>
                 </button>
               </div>
 
               <div style="background: #fff1f2; padding: 20px; border-radius: var(--radius-sm); border: 1px solid #fecdd3;">
-                <h4 style="font-size: 1.05rem; font-weight: 800; color: #dc2626; margin-bottom: 6px;">⚠️ استعادة المنتجات الافتراضية (إعادة ضبط المصنع)</h4>
-                <p style="font-size: 0.9rem; color: #b91c1c; margin-bottom: 14px;">سيؤدي هذا إلى إعادة المتجر إلى المنتجات الأصلية وحذف أي منتجات تجريبية تمت إضافتها.</p>
+                <h4 style="font-size: 1.05rem; font-weight: 800; color: #dc2626; margin-bottom: 6px;">⚠️ استعادة ضبط المصنع لجميع محتويات المتجر</h4>
+                <p style="font-size: 0.9rem; color: #b91c1c; margin-bottom: 14px;">سيؤدي هذا إلى إعادة المتجر ونصوص الصفحات والمنتجات إلى الحالة الأصلية الافتراضية.</p>
                 <button class="btn-admin-pill btn-admin-danger" onclick="AdminApp.resetDefaultProducts()">
-                  <span>استرجاع المنتجات الاصلية للمتجر 🔄</span>
+                  <span>استرجاع الإعدادات والمنتجات الأصلية 🔄</span>
                 </button>
               </div>
             </div>

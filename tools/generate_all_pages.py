@@ -33,15 +33,15 @@ __HEADER__
         <div class="hero-slide active" style="background: linear-gradient(90deg, rgba(255,241,242,0.95) 0%, rgba(255,255,255,0.7) 100%);">
           <img src="images/kids_hero_banner.jpg" alt="تشكيلة بامبينو كيدز الحصرية" style="position: absolute; left: 0; top: 0; width: 55%; height: 100%; object-fit: cover; z-index: 1;">
           <div class="hero-content" style="position: relative; z-index: 2; max-width: 540px; padding: 40px;">
-            <span class="hero-tag" style="background: var(--primary); color: #fff; padding: 5px 14px; border-radius: var(--radius-full); font-size: 0.85rem; font-weight: 800; display: inline-block; margin-bottom: 12px;">🌟 تشكيلة الموسم الجديد 2026</span>
-            <h1 class="hero-title" style="font-size: 2.7rem; font-weight: 900; line-height: 1.25; color: var(--dark); margin-bottom: 16px;">
-              أناقة استثنائية <br><span style="color: var(--primary);">تليق بابتسامة طفلك</span>
+            <span class="hero-tag" data-cms="home.heroBadge" style="background: var(--primary); color: #fff; padding: 5px 14px; border-radius: var(--radius-full); font-size: 0.85rem; font-weight: 800; display: inline-block; margin-bottom: 12px;">🌟 تشكيلة الموسم الجديد 2026</span>
+            <h1 class="hero-title" data-cms="home.heroTitle" style="font-size: 2.7rem; font-weight: 900; line-height: 1.25; color: var(--dark); margin-bottom: 16px;">
+              أناقة استثنائية تليق بابتسامة طفلك
             </h1>
-            <p class="hero-desc" style="font-size: 1.05rem; color: var(--text); margin-bottom: 26px;">
+            <p class="hero-desc" data-cms="home.heroDesc" style="font-size: 1.05rem; color: var(--text); margin-bottom: 26px;">
               اكتشفي تشكيلة الأزياء الفاخرة المصنوعة من القطن العضوي 100% بنعومة فائقة تناسب بشرة أطفالك الرقيقة، من عمر الولادة وحتى 14 سنة.
             </p>
             <div style="display: flex; gap: 14px; flex-wrap: wrap;">
-              <a href="shop.html" class="btn-checkout" style="width: auto; padding: 13px 30px;">تسوقي التشكيلة الآن ✨</a>
+              <a href="shop.html" class="btn-checkout" style="width: auto; padding: 13px 30px;"><span data-cms="home.heroBtnText">تسوقي التشكيلة الآن ✨</span></a>
               <a href="shop.html?cat=girls" class="btn-add-cart" style="padding: 13px 24px; font-weight: 800;">فساتين بناتي 👗</a>
             </div>
           </div>
@@ -57,29 +57,29 @@ __HEADER__
         <div class="feature-item">
           <div class="feature-icon">🚚</div>
           <div class="feature-text">
-            <h4>شحن سريع ومجاني</h4>
-            <p>لكافة مدن المملكة للطلبات فوق 250 ر.س</p>
+            <h4 data-cms="home.feat1Title">شحن سريع ومجاني</h4>
+            <p data-cms="home.feat1Desc">لكافة مدن المملكة للطلبات فوق 250 ر.س</p>
           </div>
         </div>
         <div class="feature-item">
           <div class="feature-icon">🌱</div>
           <div class="feature-text">
-            <h4>قطن طبيعي 100%</h4>
-            <p>أقمشة ناعمة وآمنة لبشرة طفلك الحساسة</p>
+            <h4 data-cms="home.feat2Title">قطن طبيعي 100%</h4>
+            <p data-cms="home.feat2Desc">أقمشة ناعمة وآمنة لبشرة طفلك الحساسة</p>
           </div>
         </div>
         <div class="feature-item">
           <div class="feature-icon">💬</div>
           <div class="feature-text">
-            <h4>طلب سهل عبر واتساب</h4>
-            <p>إتمام فوري للطلب مع خدمة عملاء متفانية</p>
+            <h4 data-cms="home.feat3Title">طلب سهل عبر واتساب</h4>
+            <p data-cms="home.feat3Desc">إتمام فوري للطلب مع خدمة عملاء متفانية</p>
           </div>
         </div>
         <div class="feature-item">
           <div class="feature-icon">🔄</div>
           <div class="feature-text">
-            <h4>استبدال ميسر وسريع</h4>
-            <p>سياسة مرنة للاستبدال واسترجاع المقاسات</p>
+            <h4 data-cms="home.feat4Title">استبدال ميسر وسريع</h4>
+            <p data-cms="home.feat4Desc">سياسة مرنة للاستبدال واسترجاع المقاسات</p>
           </div>
         </div>
       </div>
@@ -90,9 +90,9 @@ __HEADER__
   <section class="section-padding">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">أقسام المتجر</span>
-        <h2 class="section-title">تسوق حسب الفئة</h2>
-        <p class="section-desc">اختاري ما يناسب طفلك من أرقى التشكيلات المصممة خصيصاً لأناقة يومية ومناسبات مميزة</p>
+        <span class="section-tag" data-cms="home.catSecTag">أقسام المتجر</span>
+        <h2 class="section-title" data-cms="home.catSecTitle">تسوق حسب الفئة</h2>
+        <p class="section-desc" data-cms="home.catSecDesc">اختاري ما يناسب طفلك من أرقى التشكيلات المصممة خصيصاً لأناقة يومية ومناسبات مميزة</p>
       </div>
 
       <div class="categories-grid">
@@ -139,9 +139,9 @@ __HEADER__
   <section class="container">
     <div class="flash-banner">
       <div class="flash-content">
-        <span class="flash-tag">⚡ عروض حصرية لفترة محدودة</span>
-        <h2 class="flash-title">خصومات حتى 40% على تشكيلة الصيف</h2>
-        <p class="flash-desc">اغتنمي الفرصة ووفري الكثير على أجمل الفساتين والأطقم الفاخرة لأطفالك. ينتهي العرض قريباً!</p>
+        <span class="flash-tag" data-cms="home.flashTag">⚡ عروض حصرية لفترة محدودة</span>
+        <h2 class="flash-title" data-cms="home.flashTitle">خصومات حتى 40% على تشكيلة الصيف</h2>
+        <p class="flash-desc" data-cms="home.flashDesc">اغتنمي الفرصة ووفري الكثير على أجمل الفساتين والأطقم الفاخرة لأطفالك. ينتهي العرض قريباً!</p>
         
         <div class="countdown-box">
           <div class="countdown-unit">
@@ -170,9 +170,9 @@ __HEADER__
   <section class="section-padding" style="background: var(--bg-soft);">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">أحدث القطع</span>
-        <h2 class="section-title">المختارات الأكثر طلباً</h2>
-        <p class="section-desc">قطع مختارة بعناية تجمع بين الأناقة الراقية والراحة الفائقة لطفلك</p>
+        <span class="section-tag" data-cms="home.prodSecTag">أحدث القطع</span>
+        <h2 class="section-title" data-cms="home.prodSecTitle">المختارات الأكثر طلباً</h2>
+        <p class="section-desc" data-cms="home.prodSecDesc">قطع مختارة بعناية تجمع بين الأناقة الراقية والراحة الفائقة لطفلك</p>
       </div>
 
       <!-- Filter Tabs -->
@@ -201,9 +201,9 @@ __HEADER__
   <!-- VIP NEWSLETTER SECTION -->
   <section class="container">
     <div class="vip-club-section">
-      <span style="color: var(--secondary); font-weight: 800; font-size: 0.9rem; letter-spacing: 1px;">نادي أمهات بامبينو 👑</span>
-      <h2 class="vip-title">انضمي لنادي الأمهات واحصلي على خصم 15%</h2>
-      <p class="vip-desc">سجلي بريدك الإلكتروني ليصلك كل جديد في عالم أزياء الأطفال، ودعوات حصرية لخصومات المواسم قبل الجميع.</p>
+      <span style="color: var(--secondary); font-weight: 800; font-size: 0.9rem; letter-spacing: 1px;" data-cms="home.vipTag">نادي أمهات بامبينو 👑</span>
+      <h2 class="vip-title" data-cms="home.vipTitle">انضمي لنادي الأمهات واحصلي على خصم 15%</h2>
+      <p class="vip-desc" data-cms="home.vipDesc">سجلي بريدك الإلكتروني ليصلك كل جديد في عالم أزياء الأطفال، ودعوات حصرية لخصومات المواسم قبل الجميع.</p>
       <form class="newsletter-form" onsubmit="event.preventDefault(); BambinoStore.showToast('🎉 شكراً لانضمامك لنادي أمهات بامبينو! كود خصمك: VIP15'); this.reset();">
         <input type="email" placeholder="أدخلي بريدك الإلكتروني..." required>
         <button type="submit" class="btn-checkout" style="width: auto; padding: 12px 28px;">انضمام 💌</button>
@@ -246,527 +246,7 @@ __FOOTER__
 
 
 # ==========================================
-# 2. SHOP.HTML (Catalog & Filters)
-# ==========================================
-def build_shop():
-    header = get_header(active_nav='shop')
-    footer = get_footer()
-
-    html = """<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>المتجر والتشكيلات الكاملة | بامبينو كيدز</title>
-  <meta name="description" content="تصفح جميع تشكيلات بامبينو كيدز، فساتين البنات، ملابس الأولاد، أطقم المواليد، والأحذية بأسعار مميزة وجودة لا تضاهى.">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="icon" href="images/kids_cat_girls.jpg">
-</head>
-<body>
-__HEADER__
-
-  <!-- PAGE HERO -->
-  <div class="page-hero">
-    <div class="container">
-      <h1 class="page-hero-title">المتجر والتشكيلات الفاخرة</h1>
-      <div class="breadcrumb">
-        <a href="index.html">الرئيسية</a>
-        <span>/</span>
-        <span style="color: var(--primary); font-weight: 700;">المتجر</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- SHOP CONTENT LAYOUT -->
-  <div class="container">
-    <div class="shop-layout">
-      <!-- SIDEBAR FILTERS -->
-      <aside class="shop-sidebar">
-        <!-- Categories Widget -->
-        <div class="filter-widget">
-          <h3 class="filter-widget-title">أقسام المتجر</h3>
-          <ul class="category-filter-list">
-            <li class="category-filter-item active" onclick="setCategoryFilter('all', this)">
-              <span>جميع الأقسام</span>
-              <span class="filter-count" id="countAll">0</span>
-            </li>
-            <li class="category-filter-item" onclick="setCategoryFilter('girls', this)">
-              <span>ملابس بناتي 👗</span>
-              <span class="filter-count" id="countGirls">0</span>
-            </li>
-            <li class="category-filter-item" onclick="setCategoryFilter('boys', this)">
-              <span>ملابس أولادي 👕</span>
-              <span class="filter-count" id="countBoys">0</span>
-            </li>
-            <li class="category-filter-item" onclick="setCategoryFilter('baby', this)">
-              <span>بيبي ومواليد 🍼</span>
-              <span class="filter-count" id="countBaby">0</span>
-            </li>
-            <li class="category-filter-item" onclick="setCategoryFilter('shoes', this)">
-              <span>أحذية وإكسسوارات 👟</span>
-              <span class="filter-count" id="countShoes">0</span>
-            </li>
-          </ul>
-        </div>
-
-        <!-- Search Box inside sidebar -->
-        <div class="filter-widget">
-          <h3 class="filter-widget-title">بحث بالاسم</h3>
-          <div class="search-box" style="max-width: 100%;">
-            <input type="text" id="shopSearchInput" placeholder="اكتب اسم القطعة..." oninput="handleShopSearch(this.value)">
-            <span class="search-icon">🔍</span>
-          </div>
-        </div>
-
-        <!-- Price Range Filter -->
-        <div class="filter-widget">
-          <h3 class="filter-widget-title">نطاق السعر</h3>
-          <div style="display: flex; gap: 8px; flex-direction: column;">
-            <button class="btn-admin-pill btn-admin-outline" onclick="setPriceFilter(0, 9999, this)" style="justify-content: flex-start;">جميع الأسعار</button>
-            <button class="btn-admin-pill btn-admin-outline" onclick="setPriceFilter(0, 150, this)" style="justify-content: flex-start;">أقل من 150 ر.س</button>
-            <button class="btn-admin-pill btn-admin-outline" onclick="setPriceFilter(150, 250, this)" style="justify-content: flex-start;">من 150 إلى 250 ر.س</button>
-            <button class="btn-admin-pill btn-admin-outline" onclick="setPriceFilter(250, 9999, this)" style="justify-content: flex-start;">أكثر من 250 ر.س</button>
-          </div>
-        </div>
-
-        <!-- WhatsApp Assistance Banner -->
-        <div style="background: var(--bg-soft); padding: 18px; border-radius: var(--radius-sm); border: 1px dashed var(--border); text-align: center;">
-          <div style="font-size: 1.5rem; margin-bottom: 6px;">💬</div>
-          <h4 style="font-size: 0.95rem; font-weight: 800; margin-bottom: 4px;">تحتاجين مساعدة في اختيار المقاس؟</h4>
-          <p style="font-size: 0.8rem; color: var(--text-light); margin-bottom: 12px;">فريق خدمة العملاء جاهز لمساعدتك فوراً عبر واتساب</p>
-          <a href="https://wa.me/966500000000" target="_blank" class="btn-add-cart store-whatsapp-link" style="padding: 6px 14px; font-size: 0.82rem;">محادثة واتساب</a>
-        </div>
-      </aside>
-
-      <!-- PRODUCTS MAIN VIEW -->
-      <main class="shop-main">
-        <!-- Top bar: Count & Sort -->
-        <div class="sort-search-bar">
-          <div>
-            <span id="shopProductCount" style="font-weight: 800; color: var(--dark); font-size: 1.05rem;">عرض المنتجات</span>
-          </div>
-          <div class="sort-box" style="display: flex; align-items: center; gap: 10px;">
-            <label for="shopSortSelect" style="font-weight: 700; font-size: 0.88rem; color: var(--text-light);">ترتيب حسب:</label>
-            <select id="shopSortSelect" onchange="handleSortChange(this.value)">
-              <option value="default">الافتراضي (المقترح)</option>
-              <option value="price-low">السعر: من الأقل للأعلى</option>
-              <option value="price-high">السعر: من الأعلى للأقل</option>
-              <option value="bestseller">الأكثر مبيعاً</option>
-              <option value="rating">الأعلى تقييماً</option>
-            </select>
-          </div>
-        </div>
-
-        <!-- Products Grid -->
-        <div class="products-grid" id="shopProductsGrid">
-          <!-- Rendered dynamically -->
-        </div>
-      </main>
-    </div>
-  </div>
-
-__FOOTER__
-
-  <script src="js/store.js"></script>
-  <script>
-    let currentCategory = 'all';
-    let currentSearchTerm = '';
-    let currentMinPrice = 0;
-    let currentMaxPrice = 9999;
-    let currentSort = 'default';
-
-    function initShop() {
-      // Check URL parameters (e.g. ?cat=girls or ?search=dress)
-      const params = new URLSearchParams(window.location.search);
-      const catParam = params.get('cat');
-      const searchParam = params.get('search');
-
-      if (catParam) {
-        currentCategory = catParam;
-        document.querySelectorAll('.category-filter-item').forEach(el => {
-          el.classList.toggle('active', el.textContent.includes(getCatNameAr(catParam)));
-        });
-      }
-
-      if (searchParam) {
-        currentSearchTerm = searchParam;
-        const searchInput = document.getElementById('shopSearchInput');
-        if (searchInput) searchInput.value = searchParam;
-      }
-
-      updateCategoryCounters();
-      renderShopProducts();
-    }
-
-    function getCatNameAr(cat) {
-      switch(cat) {
-        case 'girls': return 'بناتي';
-        case 'boys': return 'أولادي';
-        case 'baby': return 'بيبي';
-        case 'shoes': return 'أحذية';
-        default: return 'جميع';
-      }
-    }
-
-    function updateCategoryCounters() {
-      const products = BambinoStore.getProducts();
-      document.getElementById('countAll').textContent = products.length;
-      document.getElementById('countGirls').textContent = products.filter(p => p.cat === 'girls').length;
-      document.getElementById('countBoys').textContent = products.filter(p => p.cat === 'boys').length;
-      document.getElementById('countBaby').textContent = products.filter(p => p.cat === 'baby').length;
-      document.getElementById('countShoes').textContent = products.filter(p => p.cat === 'shoes').length;
-    }
-
-    function setCategoryFilter(cat, elem) {
-      currentCategory = cat;
-      document.querySelectorAll('.category-filter-item').forEach(el => el.classList.remove('active'));
-      if (elem) elem.classList.add('active');
-      renderShopProducts();
-    }
-
-    function setPriceFilter(min, max, elem) {
-      currentMinPrice = min;
-      currentMaxPrice = max;
-      renderShopProducts();
-    }
-
-    function handleShopSearch(term) {
-      currentSearchTerm = term.trim().toLowerCase();
-      renderShopProducts();
-    }
-
-    function handleSortChange(sortVal) {
-      currentSort = sortVal;
-      renderShopProducts();
-    }
-
-    function renderShopProducts() {
-      const container = document.getElementById('shopProductsGrid');
-      const countEl = document.getElementById('shopProductCount');
-      if (!container) return;
-
-      let products = BambinoStore.getProducts();
-
-      // Category filter
-      if (currentCategory !== 'all') {
-        products = products.filter(p => p.cat === currentCategory);
-      }
-
-      // Search filter
-      if (currentSearchTerm) {
-        products = products.filter(p => 
-          p.name.toLowerCase().includes(currentSearchTerm) ||
-          (p.desc && p.desc.toLowerCase().includes(currentSearchTerm)) ||
-          p.catName.toLowerCase().includes(currentSearchTerm)
-        );
-      }
-
-      // Price filter
-      products = products.filter(p => p.price >= currentMinPrice && p.price <= currentMaxPrice);
-
-      // Sorting
-      if (currentSort === 'price-low') {
-        products.sort((a, b) => a.price - b.price);
-      } else if (currentSort === 'price-high') {
-        products.sort((a, b) => b.price - a.price);
-      } else if (currentSort === 'bestseller') {
-        products.sort((a, b) => (b.sales || 0) - (a.sales || 0));
-      } else if (currentSort === 'rating') {
-        products.sort((a, b) => (b.rating || 0) - (a.rating || 0));
-      }
-
-      countEl.textContent = `تم العثور على (${products.length}) منتج`;
-
-      if (products.length === 0) {
-        container.innerHTML = `
-          <div style="grid-column: 1 / -1; text-align: center; padding: 60px 20px; background: #fff; border-radius: var(--radius-md); border: 1px dashed var(--border);">
-            <div style="font-size: 3rem; margin-bottom: 12px;">🔍</div>
-            <h3 style="font-size: 1.3rem; font-weight: 800; color: var(--dark); margin-bottom: 6px;">لا توجد منتجات مطابقة لخيارات البحث</h3>
-            <p style="color: var(--text-light); margin-bottom: 18px;">جربي إزالة بعض الفلاتر أو البحث بكلمات أخرى</p>
-            <button onclick="setCategoryFilter('all'); document.getElementById('shopSearchInput').value=''; currentSearchTerm='';" class="btn-checkout" style="width: auto; margin: 0 auto; padding: 10px 24px;">عرض جميع المنتجات</button>
-          </div>
-        `;
-        return;
-      }
-
-      container.innerHTML = products.map(p => BambinoStore.renderProductCardHTML(p)).join('');
-    }
-
-    document.addEventListener('DOMContentLoaded', () => {
-      initShop();
-    });
-  </script>
-</body>
-</html>
-"""
-    with open(os.path.join(BASE_DIR, 'shop.html'), 'w', encoding='utf-8') as f:
-        f.write(html.replace('__HEADER__', header).replace('__FOOTER__', footer))
-    print("shop.html written successfully!")
-
-
-# ==========================================
-# 3. PRODUCT.HTML (Single Product Details)
-# ==========================================
-def build_product():
-    header = get_header(active_nav='shop')
-    footer = get_footer()
-
-    html = """<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>تفاصيل المنتج | بامبينو كيدز</title>
-  <meta name="description" content="تعرفي على تفاصيل ومواصفات المنتج الفاخر من بامبينو كيدز، خامات عضوية 100% ومقاسات متنوعة مع توصيل سريع وإمكانية الطلب المباشر عبر واتساب.">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="icon" href="images/kids_cat_girls.jpg">
-</head>
-<body>
-__HEADER__
-
-  <!-- BREADCRUMB -->
-  <div class="page-hero" style="padding: 24px 0;">
-    <div class="container">
-      <div class="breadcrumb" style="justify-content: flex-start;">
-        <a href="index.html">الرئيسية</a>
-        <span>/</span>
-        <a href="shop.html">المتجر</a>
-        <span>/</span>
-        <span id="productBreadcrumbCat" style="color: var(--text-light);">القسم</span>
-        <span>/</span>
-        <span id="productBreadcrumbTitle" style="color: var(--primary); font-weight: 700;">اسم المنتج</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- PRODUCT DETAILS SECTION -->
-  <div class="container">
-    <div class="product-detail-grid">
-      <!-- Gallery Column -->
-      <div class="product-gallery">
-        <img id="detailMainImg" src="images/prod_girls_party.jpg" alt="صورة المنتج" class="main-gallery-img">
-        <div class="gallery-thumbs" id="detailThumbs">
-          <!-- Thumbnail buttons -->
-        </div>
-      </div>
-
-      <!-- Info Column -->
-      <div class="product-detail-info">
-        <div style="display: flex; gap: 8px; margin-bottom: 10px;">
-          <span id="detailBadge" class="product-badge badge-featured" style="position: static; display: inline-block;">الأكثر مبيعاً ⭐</span>
-          <span id="detailCatBadge" class="size-tag" style="padding: 4px 10px;">ملابس أطفال</span>
-        </div>
-
-        <h1 id="detailTitle">فستان روبي المخملي الفاخر بياقة دانتيل وأزرار ذهبية</h1>
-
-        <div class="product-detail-meta">
-          <div class="product-rating">
-            <span id="detailStars">★★★★★</span>
-            <span class="reviews-count" id="detailReviews">(42 تقييم عملاء موثق)</span>
-          </div>
-          <div style="color: #10b981; font-weight: 700; font-size: 0.88rem;">
-            ✓ متوفر في المخزون وجاهز للشحن الفوري
-          </div>
-        </div>
-
-        <div class="product-detail-price">
-          <span class="current" id="detailPriceCurrent">295 ر.س</span>
-          <span class="old" id="detailPriceOld">380 ر.س</span>
-          <span class="discount-badge" id="detailDiscountBadge">خصم 22%</span>
-        </div>
-
-        <div class="product-detail-desc" id="detailDesc">
-          قطعة فاخرة مصنوعة بعناية فائقة من أجود أنواع القطن العضوي 100% المريح والآمن على بشرة طفلك الحساسة. تصميم أنيق وعصري يجمع بين راحة الارتداء وفخامة الإطلالة لجميع المناسبات.
-        </div>
-
-        <!-- Size Selection -->
-        <div class="size-select-group">
-          <label>اختاري المقاس المناسب:</label>
-          <div class="size-options" id="detailSizeOptions">
-            <!-- Rendered sizes -->
-          </div>
-        </div>
-
-        <!-- Quantity and Buttons -->
-        <div class="qty-action-row">
-          <div class="qty-stepper">
-            <button onclick="changeDetailQty(-1)">-</button>
-            <input type="text" id="detailQtyInput" value="1" readonly>
-            <button onclick="changeDetailQty(1)">+</button>
-          </div>
-
-          <button class="btn-large-cart" onclick="addCurrentProductToCart()">
-            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
-            <span>أضف إلى السلة</span>
-          </button>
-        </div>
-
-        <!-- Direct WhatsApp Button -->
-        <button class="btn-large-whatsapp" onclick="buyCurrentProductWhatsApp()">
-          <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.668-.699c.97.53 1.77.818 2.792.818 3.182 0 5.768-2.587 5.768-5.768 0-3.181-2.586-5.764-5.768-5.764zm3.393 8.163c-.144.405-.837.774-1.17.824-.312.045-.634.07-1.782-.407-1.468-.609-2.42-2.094-2.493-2.193-.073-.098-.598-.795-.598-1.517 0-.721.378-1.077.513-1.223.135-.145.295-.181.393-.181.098 0 .197.001.283.006.09.005.21.034.322.302.118.283.407.994.442 1.066.035.073.059.158.012.253-.047.095-.071.154-.141.236-.07.082-.148.184-.211.247-.07.07-.143.146-.062.285.082.139.362.598.777.968.533.475.982.622 1.121.692.139.07.221.059.303-.035.082-.095.35-407.443-.547.093-.14.186-.116.312-.07.127.047.808.381.947.451.139.07.232.105.267.163.035.058.035.342-.109.747z"></path></svg>
-          <span>اشتري الآن مباشرة عبر واتساب</span>
-        </button>
-
-        <!-- Perks List -->
-        <div class="product-perks-box">
-          <div class="perk-item">
-            <span class="perk-icon">🚚</span>
-            <span>توصيل سريع لباب منزلك خلال 2-4 أيام عمل في جميع مدن المملكة</span>
-          </div>
-          <div class="perk-item">
-            <span class="perk-icon">🔄</span>
-            <span>إمكانية الاستبدال والاسترجاع السهل خلال 7 أيام من الاستلام</span>
-          </div>
-          <div class="perk-item">
-            <span class="perk-icon">💳</span>
-            <span>دفع آمن عند الاستلام أو تحويل بنكي سريع</span>
-          </div>
-          <div class="perk-item">
-            <span class="perk-icon">🌿</span>
-            <span>أقمشة قطنية نقية 100% معتمدة لا تسبب أي تحسس لبشرة الأطفال</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- RELATED PRODUCTS -->
-    <section class="section-padding" style="border-top: 1px solid var(--border-light);">
-      <div class="section-header">
-        <span class="section-tag">تشكيلات مقترحة</span>
-        <h2 class="section-title">قطع مشابهة قد تعجبك</h2>
-      </div>
-      <div class="products-grid" id="relatedProductsGrid">
-        <!-- Rendered dynamically -->
-      </div>
-    </section>
-  </div>
-
-__FOOTER__
-
-  <script src="js/store.js"></script>
-  <script>
-    let currentProduct = null;
-    let selectedSize = '';
-    let currentQty = 1;
-
-    function initProductPage() {
-      const params = new URLSearchParams(window.location.search);
-      const id = params.get('id') || 1;
-      const product = BambinoStore.getProductById(id);
-
-      if (!product) {
-        window.location.href = 'shop.html';
-        return;
-      }
-
-      currentProduct = product;
-      const settings = BambinoStore.getSettings();
-
-      // Set Title and meta
-      document.title = `${product.name} | بامبينو كيدز`;
-      document.getElementById('productBreadcrumbCat').textContent = product.catName;
-      document.getElementById('productBreadcrumbTitle').textContent = product.name;
-
-      document.getElementById('detailTitle').textContent = product.name;
-      document.getElementById('detailCatBadge').textContent = product.catName;
-      document.getElementById('detailDesc').textContent = product.desc || 'منتج أنيق وفاخر مصمم خصيصاً لأطفالك.';
-      
-      const badgeEl = document.getElementById('detailBadge');
-      if (product.badge) {
-        badgeEl.textContent = product.badge;
-        badgeEl.className = `product-badge ${product.badgeClass || 'badge-featured'}`;
-        badgeEl.style.display = 'inline-block';
-      } else {
-        badgeEl.style.display = 'none';
-      }
-
-      // Prices
-      document.getElementById('detailPriceCurrent').textContent = `${product.price} ${settings.currency}`;
-      if (product.oldPrice) {
-        document.getElementById('detailPriceOld').textContent = `${product.oldPrice} ${settings.currency}`;
-        const discount = Math.round(((product.oldPrice - product.price) / product.oldPrice) * 100);
-        document.getElementById('detailDiscountBadge').textContent = `خصم ${discount}%`;
-      } else {
-        document.getElementById('detailPriceOld').style.display = 'none';
-        document.getElementById('detailDiscountBadge').style.display = 'none';
-      }
-
-      // Ratings
-      const stars = '★'.repeat(Math.floor(product.rating || 5)) + ((product.rating || 5) % 1 !== 0 ? '½' : '');
-      document.getElementById('detailStars').textContent = stars;
-      document.getElementById('detailReviews').textContent = `(${product.reviews || 25} تقييم عملاء موثق)`;
-
-      // Image & Gallery Thumbs
-      const mainImg = document.getElementById('detailMainImg');
-      mainImg.src = product.img;
-      mainImg.alt = product.name;
-
-      const thumbsContainer = document.getElementById('detailThumbs');
-      // Create thumbs (primary + duplicate/variations for rich gallery experience)
-      const imagesList = [product.img, product.img];
-      thumbsContainer.innerHTML = imagesList.map((imgSrc, idx) => `
-        <img src="${imgSrc}" class="gallery-thumb ${idx === 0 ? 'active' : ''}" onclick="selectThumb(this, '${imgSrc}')" alt="صورة مصغرة">
-      `).join('');
-
-      // Sizes
-      const sizesContainer = document.getElementById('detailSizeOptions');
-      const sizes = product.sizes && product.sizes.length ? product.sizes : ['1-2y', '3-5y', '6-8y'];
-      selectedSize = sizes[0];
-
-      sizesContainer.innerHTML = sizes.map((sz, idx) => `
-        <button class="size-btn ${idx === 0 ? 'active' : ''}" onclick="selectSize(this, '${sz}')">${sz}</button>
-      `).join('');
-
-      // Related Products
-      const related = BambinoStore.getProducts().filter(p => p.cat === product.cat && p.id !== product.id).slice(0, 3);
-      const relatedContainer = document.getElementById('relatedProductsGrid');
-      if (relatedContainer) {
-        relatedContainer.innerHTML = (related.length ? related : BambinoStore.getProducts().slice(0, 3))
-          .map(p => BambinoStore.renderProductCardHTML(p)).join('');
-      }
-    }
-
-    function selectThumb(thumbEl, src) {
-      document.querySelectorAll('.gallery-thumb').forEach(t => t.classList.remove('active'));
-      thumbEl.classList.add('active');
-      document.getElementById('detailMainImg').src = src;
-    }
-
-    function selectSize(btn, sz) {
-      document.querySelectorAll('.size-btn').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      selectedSize = sz;
-    }
-
-    function changeDetailQty(delta) {
-      currentQty = Math.max(1, currentQty + delta);
-      document.getElementById('detailQtyInput').value = currentQty;
-    }
-
-    function addCurrentProductToCart() {
-      if (!currentProduct) return;
-      BambinoStore.addToCart(currentProduct.id, selectedSize, currentQty);
-    }
-
-    function buyCurrentProductWhatsApp() {
-      if (!currentProduct) return;
-      BambinoStore.directWhatsAppProduct(currentProduct.id, selectedSize, currentQty);
-    }
-
-    document.addEventListener('DOMContentLoaded', () => {
-      initProductPage();
-    });
-  </script>
-</body>
-</html>
-"""
-    with open(os.path.join(BASE_DIR, 'product.html'), 'w', encoding='utf-8') as f:
-        f.write(html.replace('__HEADER__', header).replace('__FOOTER__', footer))
-    print("product.html written successfully!")
-
-
-# ==========================================
-# 4. ABOUT.HTML (About Us)
+# 2. ABOUT.HTML (With CMS Bindings)
 # ==========================================
 def build_about():
     header = get_header(active_nav='about')
@@ -787,7 +267,7 @@ __HEADER__
 
   <div class="page-hero">
     <div class="container">
-      <h1 class="page-hero-title">من نحن - قصة بامبينو كيدز</h1>
+      <h1 class="page-hero-title" data-cms="about.heroTitle">من نحن - قصة بامبينو كيدز</h1>
       <div class="breadcrumb">
         <a href="index.html">الرئيسية</a>
         <span>/</span>
@@ -800,12 +280,12 @@ __HEADER__
     <div class="static-page-content">
       <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; margin-bottom: 40px;">
         <div>
-          <span class="section-tag">شغف بالأناقة والراحة</span>
-          <h2>أزياء راقية تُصنع بحب لأجمل لحظات الطفولة</h2>
-          <p>
-            تأسست علامة <strong>بامبينو كيدز (BAMBINO KIDS)</strong> انطلاقاً من إيماننا العميق بأن أطفالنا يستحقون الأفضل دائماً. نحن ندرك أن ملابس الأطفال ليست مجرد مظهر أنيق، بل هي راحة يومية وحرية حركة وأمان تام على بشرتهم الغضة.
+          <span class="section-tag" data-cms="about.storyTag">شغف بالأناقة والراحة</span>
+          <h2 data-cms="about.storyTitle">أزياء راقية تُصنع بحب لأجمل لحظات الطفولة</h2>
+          <p data-cms="about.storyP1">
+            تأسست علامة بامبينو كيدز (BAMBINO KIDS) انطلاقاً من إيماننا العميق بأن أطفالنا يستحقون الأفضل دائماً. نحن ندرك أن ملابس الأطفال ليست مجرد مظهر أنيق، بل هي راحة يومية وحرية حركة وأمان تام على بشرتهم الغضة.
           </p>
-          <p>
+          <p data-cms="about.storyP2">
             منذ اليوم الأول، وضعنا معايير صارمة في انتقاء خامات القطن العضوي النقي 100% والتصاميم الراقية المستوحاة من أحدث صيحات الموضة الأوروبية والعالمية، لنقدم للأمهات تشكيلات تلبي طموحاتهن في إطلالات استثنائية لأطفالهن في جميع المناسبات.
           </p>
         </div>
@@ -817,25 +297,25 @@ __HEADER__
       <div class="features-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin: 40px 0;">
         <div style="background: var(--bg-soft); padding: 26px; border-radius: var(--radius-md); border-right: 4px solid var(--primary);">
           <div style="font-size: 2.2rem; margin-bottom: 10px;">🌟</div>
-          <h3 style="font-size: 1.2rem; font-weight: 800; color: var(--dark); margin-bottom: 8px;">جودة لا تقبل المساومة</h3>
-          <p style="font-size: 0.95rem; color: var(--text-light);">نختار بعناية فائقة أنعم أنواع الخيوط القطنية وأدق تفاصيل الحياكة لضمان متانة القطعة بعد كل غسيل.</p>
+          <h3 style="font-size: 1.2rem; font-weight: 800; color: var(--dark); margin-bottom: 8px;" data-cms="about.card1Title">جودة لا تقبل المساومة</h3>
+          <p style="font-size: 0.95rem; color: var(--text-light);" data-cms="about.card1Desc">نختار بعناية فائقة أنعم أنواع الخيوط القطنية وأدق تفاصيل الحياكة لضمان متانة القطعة بعد كل غسيل.</p>
         </div>
 
         <div style="background: var(--bg-soft); padding: 26px; border-radius: var(--radius-md); border-right: 4px solid var(--primary);">
           <div style="font-size: 2.2rem; margin-bottom: 10px;">👶</div>
-          <h3 style="font-size: 1.2rem; font-weight: 800; color: var(--dark); margin-bottom: 8px;">أمان وراحة تامة</h3>
-          <p style="font-size: 0.95rem; color: var(--text-light);">جميع أصباغنا وأزرارنا وإكسسواراتنا معتمدة وخالية من المواد الكيميائية الضارة لسلامة طفلك التامة.</p>
+          <h3 style="font-size: 1.2rem; font-weight: 800; color: var(--dark); margin-bottom: 8px;" data-cms="about.card2Title">أمان وراحة تامة</h3>
+          <p style="font-size: 0.95rem; color: var(--text-light);" data-cms="about.card2Desc">جميع أصباغنا وأزرارنا وإكسسواراتنا معتمدة وخالية من المواد الكيميائية الضارة لسلامة طفلك التامة.</p>
         </div>
 
         <div style="background: var(--bg-soft); padding: 26px; border-radius: var(--radius-md); border-right: 4px solid var(--primary);">
           <div style="font-size: 2.2rem; margin-bottom: 10px;">❤️</div>
-          <h3 style="font-size: 1.2rem; font-weight: 800; color: var(--dark); margin-bottom: 8px;">خدمة أمهات استثنائية</h3>
-          <p style="font-size: 0.95rem; color: var(--text-light);">فريقنا يتفهم متطلبات المقاسات ويسعد دائماً بتقديم المشورة وتيسير الشحن والاستبدال بكل رحابة صدر.</p>
+          <h3 style="font-size: 1.2rem; font-weight: 800; color: var(--dark); margin-bottom: 8px;" data-cms="about.card3Title">خدمة أمهات استثنائية</h3>
+          <p style="font-size: 0.95rem; color: var(--text-light);" data-cms="about.card3Desc">فريقنا يتفهم متطلبات المقاسات ويسعد دائماً بتقديم المشورة وتيسير الشحن والاستبدال بكل رحابة صدر.</p>
         </div>
       </div>
 
-      <h2>رسالتنا</h2>
-      <p>
+      <h2 data-cms="about.missionTitle">رسالتنا</h2>
+      <p data-cms="about.missionText">
         أن نكون الوجهة الأولى والمفضلة لكل أسرة تبحث عن الفخامة والعملية في ملابس الأطفال في المملكة والخليج، مقدمين تجربة تسوق راقية تبدأ من سهولة الطلب وتتوج بابتسامة طفلك عند ارتداء قطعته المفضلة.
       </p>
     </div>
@@ -853,7 +333,7 @@ __FOOTER__
 
 
 # ==========================================
-# 5. CONTACT.HTML (Contact Us)
+# 3. CONTACT.HTML (With CMS Bindings)
 # ==========================================
 def build_contact():
     header = get_header(active_nav='contact')
@@ -874,7 +354,7 @@ __HEADER__
 
   <div class="page-hero">
     <div class="container">
-      <h1 class="page-hero-title">يسعدنا تواصلكم دائماً</h1>
+      <h1 class="page-hero-title" data-cms="contact.heroTitle">يسعدنا تواصلكم دائماً</h1>
       <div class="breadcrumb">
         <a href="index.html">الرئيسية</a>
         <span>/</span>
@@ -888,16 +368,16 @@ __HEADER__
       <!-- Info Cards -->
       <div class="contact-info-card">
         <div>
-          <span class="section-tag">نحن هنا للمساعدة</span>
-          <h2 style="font-size: 1.6rem; font-weight: 900; color: var(--dark); margin-bottom: 8px;">قنوات التواصل المباشر</h2>
-          <p style="color: var(--text-light); font-size: 0.95rem;">فريق خدمة العملاء جاهز للإجابة عن أسئلتكم ومساعدتكم في اختيار المقاسات أو متابعة الشحنات.</p>
+          <span class="section-tag" data-cms="contact.secTag">نحن هنا للمساعدة</span>
+          <h2 style="font-size: 1.6rem; font-weight: 900; color: var(--dark); margin-bottom: 8px;" data-cms="contact.secTitle">قنوات التواصل المباشر</h2>
+          <p style="color: var(--text-light); font-size: 0.95rem;" data-cms="contact.secDesc">فريق خدمة العملاء جاهز للإجابة عن أسئلتكم ومساعدتكم في اختيار المقاسات أو متابعة الشحنات.</p>
         </div>
 
         <div class="contact-card-item">
           <div class="contact-card-icon">💬</div>
           <div>
-            <h4 style="font-weight: 800; color: var(--dark); margin-bottom: 2px;">محادثة واتساب الفورية</h4>
-            <p style="font-size: 0.88rem; color: var(--text-light); margin-bottom: 4px;">الرد السريع خلال دقائق</p>
+            <h4 style="font-weight: 800; color: var(--dark); margin-bottom: 2px;" data-cms="contact.waTitle">محادثة واتساب الفورية</h4>
+            <p style="font-size: 0.88rem; color: var(--text-light); margin-bottom: 4px;" data-cms="contact.waDesc">الرد السريع خلال دقائق</p>
             <a href="https://wa.me/966500000000" target="_blank" class="store-whatsapp-link" style="color: #25d366; font-weight: 800;">بدء المحادثة الآن ←</a>
           </div>
         </div>
@@ -905,8 +385,8 @@ __HEADER__
         <div class="contact-card-item">
           <div class="contact-card-icon">📞</div>
           <div>
-            <h4 style="font-weight: 800; color: var(--dark); margin-bottom: 2px;">الهاتف المباشر</h4>
-            <p style="font-size: 0.88rem; color: var(--text-light); margin-bottom: 4px;">يومياً من 9:00 ص إلى 11:00 م</p>
+            <h4 style="font-weight: 800; color: var(--dark); margin-bottom: 2px;" data-cms="contact.phoneTitle">الهاتف المباشر</h4>
+            <p style="font-size: 0.88rem; color: var(--text-light); margin-bottom: 4px;" data-cms="contact.phoneDesc">يومياً من 9:00 ص إلى 11:00 م</p>
             <span class="store-phone-text" style="color: var(--primary); font-weight: 800;">+966 50 000 0000</span>
           </div>
         </div>
@@ -914,8 +394,8 @@ __HEADER__
         <div class="contact-card-item">
           <div class="contact-card-icon">✉️</div>
           <div>
-            <h4 style="font-weight: 800; color: var(--dark); margin-bottom: 2px;">البريد الإلكتروني</h4>
-            <p style="font-size: 0.88rem; color: var(--text-light); margin-bottom: 4px;">للاستفسارات والشكاوى الرسمية</p>
+            <h4 style="font-weight: 800; color: var(--dark); margin-bottom: 2px;" data-cms="contact.emailTitle">البريد الإلكتروني</h4>
+            <p style="font-size: 0.88rem; color: var(--text-light); margin-bottom: 4px;" data-cms="contact.emailDesc">للاستفسارات والشكاوى الرسمية</p>
             <span class="store-email-text" style="color: var(--primary); font-weight: 800;">care@bambinokids.com</span>
           </div>
         </div>
@@ -923,15 +403,15 @@ __HEADER__
         <div class="contact-card-item">
           <div class="contact-card-icon">📍</div>
           <div>
-            <h4 style="font-weight: 800; color: var(--dark); margin-bottom: 2px;">موقع المتجر والمقر</h4>
-            <p class="store-address-text" style="font-size: 0.9rem; color: var(--text);">المملكة العربية السعودية - الرياض - طريق الملك فهد</p>
+            <h4 style="font-weight: 800; color: var(--dark); margin-bottom: 2px;" data-cms="contact.addressTitle">موقع المتجر والمقر</h4>
+            <p class="store-address-text" data-cms="contact.addressDesc" style="font-size: 0.9rem; color: var(--text);">المملكة العربية السعودية - الرياض - طريق الملك فهد</p>
           </div>
         </div>
       </div>
 
       <!-- Form Card -->
       <div class="contact-form-card">
-        <h3 style="font-size: 1.4rem; font-weight: 900; color: var(--dark); margin-bottom: 16px;">أرسل لنا رسالة سريعة</h3>
+        <h3 style="font-size: 1.4rem; font-weight: 900; color: var(--dark); margin-bottom: 16px;" data-cms="contact.formTitle">أرسل لنا رسالة سريعة</h3>
         <form onsubmit="handleContactSubmit(event)">
           <div class="form-group">
             <label>الاسم الكامل *</label>
@@ -996,7 +476,7 @@ __FOOTER__
 
 
 # ==========================================
-# 6. PRIVACY.HTML (Privacy Policy)
+# 4. PRIVACY.HTML (With CMS Bindings)
 # ==========================================
 def build_privacy():
     header = get_header(active_nav='')
@@ -1016,7 +496,7 @@ __HEADER__
 
   <div class="page-hero">
     <div class="container">
-      <h1 class="page-hero-title">سياسة الخصوصية وسرية المعلومات</h1>
+      <h1 class="page-hero-title" data-cms="privacy.heroTitle">سياسة الخصوصية وسرية المعلومات</h1>
       <div class="breadcrumb">
         <a href="index.html">الرئيسية</a>
         <span>/</span>
@@ -1027,36 +507,28 @@ __HEADER__
 
   <div class="container">
     <div class="static-page-content">
-      <p>
-        نقدر مخاوفكم واهتمامكم بشأن خصوصية بياناتكم على شبكة الإنترنت. تم إعداد هذه السياسة لمساعدتكم في فهم طبيعة البيانات التي نقوم بجمعها منكم عند زيارتكم لمتجر <strong>بامبينو كيدز (BAMBINO KIDS)</strong> وكيفية تعاملنا مع هذه البيانات الشخصية.
+      <p data-cms="privacy.intro">
+        نقدر مخاوفكم واهتمامكم بشأن خصوصية بياناتكم على شبكة الإنترنت. تم إعداد هذه السياسة لمساعدتكم في فهم طبيعة البيانات التي نقوم بجمعها منكم عند زيارتكم لمتجر بامبينو كيدز (BAMBINO KIDS) وكيفية تعاملنا مع هذه البيانات الشخصية.
       </p>
 
-      <h2>1. البيانات التي نقوم بجمعها</h2>
-      <p>
+      <h2 data-cms="privacy.sec1Title">1. البيانات التي نقوم بجمعها</h2>
+      <p data-cms="privacy.sec1Desc">
         عند تقديمكم لطلب شراء أو التواصل معنا عبر واتساب أو نموذج الاتصال، قد نطلب منكم تزويدنا ببيانات تشمل: الاسم الكامل، رقم الجوال، عنوان التوصيل داخل المملكة العربية السعودية، والملاحظات المتعلقة بالطلب.
       </p>
 
-      <h2>2. الغرض من جمع البيانات</h2>
-      <ul>
-        <li>تجهيز وشحن وتوصيل طلباتكم إلى العنوان المحدد بكل دقة وسرعة.</li>
-        <li>التواصل معكم عبر واتساب أو الرسائل النصية لتأكيد الطلب وتزويدكم برقم التتبع.</li>
-        <li>الرد على استفساراتكم واقتراحاتكم وتقديم الدعم الفني اللازم.</li>
-        <li>إشعاركم بالعروض الحصرية والتخفيضات الموسمية (في حال رغبتكم في ذلك).</li>
-      </ul>
-
-      <h2>3. سرية وأمان المعلومات</h2>
-      <p>
-        نلتزم التزاماً تاماً بعدم بيع، تأجير، أو مشاركة أي من بياناتكم الشخصية مع أي طرف ثالث لأغراض تسويقية أو تجارية. تُستخدم بياناتكم حصرياً لإتمام طلباتكم وتقديم أرقى مستوى من الخدمة من خلال فريقنا المعتمد وشركات الشحن الشريكة.
+      <h2 data-cms="privacy.sec2Title">2. الغرض من جمع البيانات</h2>
+      <p data-cms="privacy.sec2Desc">
+        تجهيز وشحن وتوصيل طلباتكم، التواصل معكم لتأكيد الطلب وتزويدكم برقم التتبع، والرد على استفساراتكم واقتراحاتكم وتقديم الدعم الفني اللازم.
       </p>
 
-      <h2>4. التعديلات على سياسة الخصوصية</h2>
-      <p>
-        نحتفظ بالحق في تعديل بنود وشروط سياسة الخصوصية عند الضرورة وبما يتوافق مع الأنظمة المعمول بها في المملكة العربية السعودية. سيتم نشر أي تحديث على هذه الصفحة مع إشعار عملائنا الكرام.
+      <h2 data-cms="privacy.sec3Title">3. سرية وأمان المعلومات</h2>
+      <p data-cms="privacy.sec3Desc">
+        نلتزم التزاماً تاماً بعدم بيع، تأجير، أو مشاركة أي من بياناتكم الشخصية مع أي طرف ثالث لأغراض تسويقية أو تجارية. تُستخدم بياناتكم حصرياً لإتمام طلباتكم وتقديم أرقى مستوى من الخدمة.
       </p>
 
-      <h2>5. الاتصال بنا</h2>
-      <p>
-        إذا كانت لديكم أي استفسارات أو ملاحظات بشأن سياسة الخصوصية، يرجى التواصل معنا عبر البريد الإلكتروني <span class="store-email-text" style="font-weight: 700; color: var(--primary);">care@bambinokids.com</span> أو عبر واتساب خدمة العملاء.
+      <h2 data-cms="privacy.sec4Title">4. التعديلات على سياسة الخصوصية</h2>
+      <p data-cms="privacy.sec4Desc">
+        نحتفظ بالحق في تعديل بنود وشروط سياسة الخصوصية عند الضرورة وبما يتوافق مع الأنظمة المعمول بها في المملكة العربية السعودية.
       </p>
     </div>
   </div>
@@ -1073,7 +545,7 @@ __FOOTER__
 
 
 # ==========================================
-# 7. TERMS.HTML (Terms of Service)
+# 5. TERMS.HTML (With CMS Bindings)
 # ==========================================
 def build_terms():
     header = get_header(active_nav='')
@@ -1093,7 +565,7 @@ __HEADER__
 
   <div class="page-hero">
     <div class="container">
-      <h1 class="page-hero-title">شروط وأحكام الاستخدام والطلب</h1>
+      <h1 class="page-hero-title" data-cms="terms.heroTitle">شروط وأحكام الاستخدام والطلب</h1>
       <div class="breadcrumb">
         <a href="index.html">الرئيسية</a>
         <span>/</span>
@@ -1104,34 +576,28 @@ __HEADER__
 
   <div class="container">
     <div class="static-page-content">
-      <p>
-        أهلاً بكم في متجر <strong>بامبينو كيدز (BAMBINO KIDS)</strong>. يرجى قراءة هذه الشروط والأحكام بعناية قبل استخدام الموقع أو تقديم أي طلب شراء. يُعد استخدامكم للمتجر أو إتمام الطلب موافقة صريحة على الالتزام بكافة الشروط الموضحة أدناه.
+      <p data-cms="terms.intro">
+        أهلاً بكم في متجر بامبينو كيدز (BAMBINO KIDS). يرجى قراءة هذه الشروط والأحكام بعناية قبل استخدام الموقع أو تقديم أي طلب شراء. يُعد استخدامكم للمتجر أو إتمام الطلب موافقة صريحة على الالتزام بكافة الشروط الموضحة أدناه.
       </p>
 
-      <h2>1. الطلب وتأكيد المشتريات</h2>
-      <ul>
-        <li>يتم استقبال وتأكيد الطلبات عبر النظام الإلكتروني للمتجر أو مباشرة عبر تطبيق واتساب المعتمد.</li>
-        <li>يتحمل العميل مسؤولية التأكد من صحة بيانات التواصل والعنوان التفصيلي والمقاسات المطلوبة.</li>
-        <li>جميع الأسعار المعروضة في المتجر تشمل ضريبة القيمة المضافة ومسعرة بالريال السعودي (ر.س).</li>
-      </ul>
+      <h2 data-cms="terms.sec1Title">1. الطلب وتأكيد المشتريات</h2>
+      <p data-cms="terms.sec1Desc">
+        يتم استقبال وتأكيد الطلبات عبر النظام الإلكتروني للمتجر أو مباشرة عبر تطبيق واتساب المعتمد. يتحمل العميل مسؤولية التأكد من صحة بيانات التواصل والعنوان التفصيلي والمقاسات المطلوبة. جميع الأسعار تشمل ضريبة القيمة المضافة ومسعرة بالريال السعودي.
+      </p>
 
-      <h2>2. الشحن والتوصيل</h2>
-      <ul>
-        <li>نقوم بالشحن إلى جميع مدن ومناطق المملكة العربية السعودية عبر أسرع شركات الشحن المعتمدة.</li>
-        <li>مدة التوصيل المعتادة تتراوح بين 2 إلى 4 أيام عمل من تاريخ تأكيد الطلب.</li>
-        <li>الشحن مجاني لجميع الطلبات التي تتجاوز قيمتها 250 ريال سعودي.</li>
-      </ul>
+      <h2 data-cms="terms.sec2Title">2. الشحن والتوصيل</h2>
+      <p data-cms="terms.sec2Desc">
+        نقوم بالشحن إلى جميع مدن ومناطق المملكة العربية السعودية عبر أسرع شركات الشحن المعتمدة. مدة التوصيل المعتادة تتراوح بين 2 إلى 4 أيام عمل. الشحن مجاني للطلبات فوق 250 ريال سعودي.
+      </p>
 
-      <h2>3. سياسة الاستبدال والاسترجاع</h2>
-      <ul>
-        <li>حرصاً على سلامتكم ورضاكم، يحق للعميل طلب استبدال المقاس أو استرجاع المنتج خلال 7 أيام من تاريخ الاستلام.</li>
-        <li>يشترط أن تكون القطعة في حالتها الأصلية غير ملبوسة، مع بطاقات السعر والتغليف الأصلي.</li>
-        <li>في حال وجود أي عيب مصنعي في المنتج، يتحمل المتجر كافة تكاليف الشحن والاستبدال بالكامل دون أي رسوم على العميل.</li>
-      </ul>
+      <h2 data-cms="terms.sec3Title">3. سياسة الاستبدال والاسترجاع</h2>
+      <p data-cms="terms.sec3Desc">
+        حرصاً على سلامتكم ورضاكم، يحق للعميل طلب استبدال المقاس أو استرجاع المنتج خلال 7 أيام من تاريخ الاستلام بشرط أن تكون القطعة في حالتها الأصلية غير ملبوسة، مع بطاقات السعر والتغليف الأصلي.
+      </p>
 
-      <h2>4. المقاسات والألوان</h2>
-      <p>
-        نبذل قصارى جهدنا لعرض ألوان وتفاصيل المنتجات بأعلى دقة ممكنة، إلا أنه قد يطرأ اختلاف طفيف جداً في درجات الألوان نتيجة لاختلاف إعدادات شاشات العرض وإضاءة التصوير. فريقنا متاح دائماً عبر واتساب لإرسال صور وفيديوهات حية للقطعة قبل شحنها.
+      <h2 data-cms="terms.sec4Title">4. المقاسات والألوان</h2>
+      <p data-cms="terms.sec4Desc">
+        نبذل قصارى جهدنا لعرض ألوان وتفاصيل المنتجات بأعلى دقة ممكنة، وفريقنا متاح دائماً عبر واتساب لإرسال صور وفيديوهات حية للقطعة قبل شحنها.
       </p>
     </div>
   </div>
@@ -1148,7 +614,7 @@ __FOOTER__
 
 
 # ==========================================
-# 8. ADMIN/INDEX.HTML (Admin Dashboard)
+# 6. ADMIN/INDEX.HTML (With Full Pages CMS)
 # ==========================================
 def build_admin():
     html = """<!DOCTYPE html>
@@ -1167,7 +633,7 @@ def build_admin():
     <div style="background: #fff; padding: 40px; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); max-width: 420px; width: 100%; text-align: center; border: 1px solid var(--border-light);">
       <div style="font-size: 3rem; margin-bottom: 10px;">🔐</div>
       <h2 style="font-size: 1.6rem; font-weight: 900; color: var(--dark); margin-bottom: 6px;">لوحة تحكم بامبينو كيدز</h2>
-      <p style="color: var(--text-light); font-size: 0.9rem; margin-bottom: 24px;">يرجى إدخال رمز الأمان (PIN) لتعديل المتجر وإدارة المنتجات</p>
+      <p style="color: var(--text-light); font-size: 0.9rem; margin-bottom: 24px;">يرجى إدخال رمز الأمان (PIN) لتعديل المتجر وإدارة المنتجات والصفحات</p>
 
       <form id="adminLoginForm">
         <div class="form-group">
@@ -1215,13 +681,17 @@ def build_admin():
           <span>🛍️</span>
           <span>إدارة المنتجات</span>
         </div>
+        <div class="admin-nav-item" data-tab="pages">
+          <span>📄</span>
+          <span>محتوى وتعديل الصفحات</span>
+        </div>
         <div class="admin-nav-item" data-tab="settings">
           <span>⚙️</span>
           <span>إعدادات المتجر</span>
         </div>
         <div class="admin-nav-item" data-tab="backup">
           <span>💾</span>
-          <span>النسخ الاحتياطي</span>
+          <span>النسخ الاحتياطي الشامل</span>
         </div>
       </aside>
 
@@ -1283,7 +753,379 @@ def build_admin():
           </div>
         </div>
 
-        <!-- TAB 2: STORE SETTINGS -->
+        <!-- TAB 2: PAGES CONTENT CMS (Visual Editor for all pages) -->
+        <div class="admin-tab-content" id="tab-pages">
+          <div class="admin-card">
+            <div class="admin-card-header">
+              <div>
+                <h3>محرر محتوى صفحات المتجر (Visual Page CMS)</h3>
+                <p style="color: var(--text-light); font-size: 0.88rem; margin-top: 4px;">
+                  اختر أي صفحة لتعديل نصوصها وأقسامها بحرية تامة دون الحاجة للمساس بالأكواد البرمجية.
+                </p>
+              </div>
+            </div>
+
+            <!-- Page Switcher Cards -->
+            <div class="cms-pages-grid">
+              <div class="cms-page-card active" data-page="home" onclick="AdminApp.selectPage('home')">
+                <div class="cms-page-card-icon">🏠</div>
+                <div>
+                  <div class="cms-page-card-title">الصفحة الرئيسية</div>
+                  <div class="cms-page-card-sub">السلايدر، العروض، الميزات</div>
+                </div>
+              </div>
+
+              <div class="cms-page-card" data-page="about" onclick="AdminApp.selectPage('about')">
+                <div class="cms-page-card-icon">✨</div>
+                <div>
+                  <div class="cms-page-card-title">صفحة من نحن</div>
+                  <div class="cms-page-card-sub">القصة، الرسالة، الجودة</div>
+                </div>
+              </div>
+
+              <div class="cms-page-card" data-page="contact" onclick="AdminApp.selectPage('contact')">
+                <div class="cms-page-card-icon">📞</div>
+                <div>
+                  <div class="cms-page-card-title">صفحة اتصل بنا</div>
+                  <div class="cms-page-card-sub">عناوين ونصوص التواصل</div>
+                </div>
+              </div>
+
+              <div class="cms-page-card" data-page="terms" onclick="AdminApp.selectPage('terms')">
+                <div class="cms-page-card-icon">📋</div>
+                <div>
+                  <div class="cms-page-card-title">الشروط والأحكام</div>
+                  <div class="cms-page-card-sub">شروط الطلب وسياسة الاسترجاع</div>
+                </div>
+              </div>
+
+              <div class="cms-page-card" data-page="privacy" onclick="AdminApp.selectPage('privacy')">
+                <div class="cms-page-card-icon">🔒</div>
+                <div>
+                  <div class="cms-page-card-title">سياسة الخصوصية</div>
+                  <div class="cms-page-card-sub">بنود حماية بيانات العملاء</div>
+                </div>
+              </div>
+
+              <div class="cms-page-card" data-page="footer" onclick="AdminApp.selectPage('footer')">
+                <div class="cms-page-card-icon">🔻</div>
+                <div>
+                  <div class="cms-page-card-title">الفوتر العام</div>
+                  <div class="cms-page-card-sub">نبذة الفوتر وحقوق النشر</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- EDIT FORMS FOR EACH PAGE -->
+            <div id="cmsFormsContainer">
+
+              <!-- HOME PAGE FORM -->
+              <div class="cms-page-form-wrapper" id="cmsForm-home">
+                <div class="cms-section-group">
+                  <h4>🎨 قسم البانر الرئيسي (Hero Section)</h4>
+                  <div class="form-group">
+                    <label>الشارة العلوية للبانر</label>
+                    <input type="text" id="cms_home_heroBadge" data-cms-field="heroBadge">
+                  </div>
+                  <div class="form-group">
+                    <label>العنوان الرئيسي الكبير</label>
+                    <input type="text" id="cms_home_heroTitle" data-cms-field="heroTitle">
+                  </div>
+                  <div class="form-group">
+                    <label>النص الوصفي للبانر</label>
+                    <textarea id="cms_home_heroDesc" data-cms-field="heroDesc" rows="2"></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label>نص زر التسوق الرئيسي</label>
+                    <input type="text" id="cms_home_heroBtnText" data-cms-field="heroBtnText">
+                  </div>
+                </div>
+
+                <div class="cms-section-group">
+                  <h4>🚚 ميزات المتجر الأربعة (Features Bar)</h4>
+                  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
+                    <div class="form-group">
+                      <label>عنوان الميزة 1</label>
+                      <input type="text" id="cms_home_feat1Title" data-cms-field="feat1Title">
+                      <label style="font-size:0.8rem; color:#64748b; margin-top:4px;">وصف الميزة 1</label>
+                      <input type="text" id="cms_home_feat1Desc" data-cms-field="feat1Desc">
+                    </div>
+                    <div class="form-group">
+                      <label>عنوان الميزة 2</label>
+                      <input type="text" id="cms_home_feat2Title" data-cms-field="feat2Title">
+                      <label style="font-size:0.8rem; color:#64748b; margin-top:4px;">وصف الميزة 2</label>
+                      <input type="text" id="cms_home_feat2Desc" data-cms-field="feat2Desc">
+                    </div>
+                    <div class="form-group">
+                      <label>عنوان الميزة 3</label>
+                      <input type="text" id="cms_home_feat3Title" data-cms-field="feat3Title">
+                      <label style="font-size:0.8rem; color:#64748b; margin-top:4px;">وصف الميزة 3</label>
+                      <input type="text" id="cms_home_feat3Desc" data-cms-field="feat3Desc">
+                    </div>
+                    <div class="form-group">
+                      <label>عنوان الميزة 4</label>
+                      <input type="text" id="cms_home_feat4Title" data-cms-field="feat4Title">
+                      <label style="font-size:0.8rem; color:#64748b; margin-top:4px;">وصف الميزة 4</label>
+                      <input type="text" id="cms_home_feat4Desc" data-cms-field="feat4Desc">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="cms-section-group">
+                  <h4>⚡ بانر الخصومات الخاطفة (Flash Deals)</h4>
+                  <div class="form-group">
+                    <label>شارة العرض</label>
+                    <input type="text" id="cms_home_flashTag" data-cms-field="flashTag">
+                  </div>
+                  <div class="form-group">
+                    <label>عنوان العرض الكبير</label>
+                    <input type="text" id="cms_home_flashTitle" data-cms-field="flashTitle">
+                  </div>
+                  <div class="form-group">
+                    <label>وصف العرض</label>
+                    <textarea id="cms_home_flashDesc" data-cms-field="flashDesc" rows="2"></textarea>
+                  </div>
+                </div>
+
+                <div class="cms-section-group">
+                  <h4>👑 قسم نادي أمهات بامبينو (VIP Club)</h4>
+                  <div class="form-group">
+                    <label>شارة نادي الأمهات</label>
+                    <input type="text" id="cms_home_vipTag" data-cms-field="vipTag">
+                  </div>
+                  <div class="form-group">
+                    <label>عنوان النادي</label>
+                    <input type="text" id="cms_home_vipTitle" data-cms-field="vipTitle">
+                  </div>
+                  <div class="form-group">
+                    <label>النص التشجيعي للاشتراك</label>
+                    <textarea id="cms_home_vipDesc" data-cms-field="vipDesc" rows="2"></textarea>
+                  </div>
+                </div>
+
+                <div style="display: flex; gap: 12px; margin-top: 20px;">
+                  <button type="button" class="btn-checkout" style="width: auto; padding: 12px 28px;" onclick="AdminApp.saveCurrentPage('home')">حفظ تعديلات الصفحة الرئيسية ✅</button>
+                  <button type="button" class="btn-admin-pill btn-admin-outline" onclick="AdminApp.previewPage('home')">معاينة مباشرة للصفحة 👁️</button>
+                  <button type="button" class="btn-admin-pill btn-admin-danger" onclick="AdminApp.resetCurrentPage('home')">استعادة النصوص الأصلية 🔄</button>
+                </div>
+              </div>
+
+              <!-- ABOUT PAGE FORM -->
+              <div class="cms-page-form-wrapper" id="cmsForm-about" style="display: none;">
+                <div class="cms-section-group">
+                  <h4>📖 قصة العلامة التجارية (Brand Story)</h4>
+                  <div class="form-group">
+                    <label>عنوان هيدر الصفحة</label>
+                    <input type="text" id="cms_about_heroTitle" data-cms-field="heroTitle">
+                  </div>
+                  <div class="form-group">
+                    <label>شارة القصة</label>
+                    <input type="text" id="cms_about_storyTag" data-cms-field="storyTag">
+                  </div>
+                  <div class="form-group">
+                    <label>عنوان القصة الرئيسي</label>
+                    <input type="text" id="cms_about_storyTitle" data-cms-field="storyTitle">
+                  </div>
+                  <div class="form-group">
+                    <label>الفقرة الأولى من القصة</label>
+                    <textarea id="cms_about_storyP1" data-cms-field="storyP1" rows="3"></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label>الفقرة الثانية من القصة</label>
+                    <textarea id="cms_about_storyP2" data-cms-field="storyP2" rows="3"></textarea>
+                  </div>
+                </div>
+
+                <div class="cms-section-group">
+                  <h4>🌟 بطاقات مميزات الجودة الثلاثة</h4>
+                  <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px;">
+                    <div class="form-group">
+                      <label>عنوان البطاقة 1</label>
+                      <input type="text" id="cms_about_card1Title" data-cms-field="card1Title">
+                      <label style="font-size:0.8rem; color:#64748b; margin-top:4px;">وصف البطاقة 1</label>
+                      <textarea id="cms_about_card1Desc" data-cms-field="card1Desc" rows="2"></textarea>
+                    </div>
+                    <div class="form-group">
+                      <label>عنوان البطاقة 2</label>
+                      <input type="text" id="cms_about_card2Title" data-cms-field="card2Title">
+                      <label style="font-size:0.8rem; color:#64748b; margin-top:4px;">وصف البطاقة 2</label>
+                      <textarea id="cms_about_card2Desc" data-cms-field="card2Desc" rows="2"></textarea>
+                    </div>
+                    <div class="form-group">
+                      <label>عنوان البطاقة 3</label>
+                      <input type="text" id="cms_about_card3Title" data-cms-field="card3Title">
+                      <label style="font-size:0.8rem; color:#64748b; margin-top:4px;">وصف البطاقة 3</label>
+                      <textarea id="cms_about_card3Desc" data-cms-field="card3Desc" rows="2"></textarea>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="cms-section-group">
+                  <h4>🎯 رسالة المتجر</h4>
+                  <div class="form-group">
+                    <label>عنوان الرسالة</label>
+                    <input type="text" id="cms_about_missionTitle" data-cms-field="missionTitle">
+                  </div>
+                  <div class="form-group">
+                    <label>نص الرسالة</label>
+                    <textarea id="cms_about_missionText" data-cms-field="missionText" rows="3"></textarea>
+                  </div>
+                </div>
+
+                <div style="display: flex; gap: 12px; margin-top: 20px;">
+                  <button type="button" class="btn-checkout" style="width: auto; padding: 12px 28px;" onclick="AdminApp.saveCurrentPage('about')">حفظ تعديلات صفحة من نحن ✅</button>
+                  <button type="button" class="btn-admin-pill btn-admin-outline" onclick="AdminApp.previewPage('about')">معاينة صفحة من نحن 👁️</button>
+                  <button type="button" class="btn-admin-pill btn-admin-danger" onclick="AdminApp.resetCurrentPage('about')">استعادة النصوص الأصلية 🔄</button>
+                </div>
+              </div>
+
+              <!-- CONTACT PAGE FORM -->
+              <div class="cms-page-form-wrapper" id="cmsForm-contact" style="display: none;">
+                <div class="cms-section-group">
+                  <h4>📞 نصوص ومعلومات التواصل</h4>
+                  <div class="form-group">
+                    <label>عنوان هيدر الصفحة</label>
+                    <input type="text" id="cms_contact_heroTitle" data-cms-field="heroTitle">
+                  </div>
+                  <div class="form-group">
+                    <label>شارة قسم التواصل</label>
+                    <input type="text" id="cms_contact_secTag" data-cms-field="secTag">
+                  </div>
+                  <div class="form-group">
+                    <label>عنوان قنوات التواصل</label>
+                    <input type="text" id="cms_contact_secTitle" data-cms-field="secTitle">
+                  </div>
+                  <div class="form-group">
+                    <label>الوصف التمهيدي لخدمة العملاء</label>
+                    <textarea id="cms_contact_secDesc" data-cms-field="secDesc" rows="2"></textarea>
+                  </div>
+                  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
+                    <div class="form-group">
+                      <label>عنوان واتساب</label>
+                      <input type="text" id="cms_contact_waTitle" data-cms-field="waTitle">
+                      <label style="font-size:0.8rem; color:#64748b; margin-top:4px;">وصف رد واتساب</label>
+                      <input type="text" id="cms_contact_waDesc" data-cms-field="waDesc">
+                    </div>
+                    <div class="form-group">
+                      <label>عنوان الهاتف</label>
+                      <input type="text" id="cms_contact_phoneTitle" data-cms-field="phoneTitle">
+                      <label style="font-size:0.8rem; color:#64748b; margin-top:4px;">أوقات عمل الهاتف</label>
+                      <input type="text" id="cms_contact_phoneDesc" data-cms-field="phoneDesc">
+                    </div>
+                  </div>
+                </div>
+
+                <div style="display: flex; gap: 12px; margin-top: 20px;">
+                  <button type="button" class="btn-checkout" style="width: auto; padding: 12px 28px;" onclick="AdminApp.saveCurrentPage('contact')">حفظ تعديلات صفحة اتصل بنا ✅</button>
+                  <button type="button" class="btn-admin-pill btn-admin-outline" onclick="AdminApp.previewPage('contact')">معاينة صفحة اتصل بنا 👁️</button>
+                  <button type="button" class="btn-admin-pill btn-admin-danger" onclick="AdminApp.resetCurrentPage('contact')">استعادة النصوص الأصلية 🔄</button>
+                </div>
+              </div>
+
+              <!-- TERMS PAGE FORM -->
+              <div class="cms-page-form-wrapper" id="cmsForm-terms" style="display: none;">
+                <div class="cms-section-group">
+                  <h4>📋 بنود الشروط والأحكام</h4>
+                  <div class="form-group">
+                    <label>عنوان الصفحة الرئيسي</label>
+                    <input type="text" id="cms_terms_heroTitle" data-cms-field="heroTitle">
+                  </div>
+                  <div class="form-group">
+                    <label>المقدمة التمهيدية</label>
+                    <textarea id="cms_terms_intro" data-cms-field="intro" rows="2"></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label>عنوان البند 1 (الطلب والأسعار)</label>
+                    <input type="text" id="cms_terms_sec1Title" data-cms-field="sec1Title">
+                    <label style="font-size:0.8rem; color:#64748b; margin-top:4px;">تفاصيل البند 1</label>
+                    <textarea id="cms_terms_sec1Desc" data-cms-field="sec1Desc" rows="2"></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label>عنوان البند 2 (الشحن والتوصيل)</label>
+                    <input type="text" id="cms_terms_sec2Title" data-cms-field="sec2Title">
+                    <label style="font-size:0.8rem; color:#64748b; margin-top:4px;">تفاصيل البند 2</label>
+                    <textarea id="cms_terms_sec2Desc" data-cms-field="sec2Desc" rows="2"></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label>عنوان البند 3 (الاستبدال والاسترجاع)</label>
+                    <input type="text" id="cms_terms_sec3Title" data-cms-field="sec3Title">
+                    <label style="font-size:0.8rem; color:#64748b; margin-top:4px;">تفاصيل البند 3</label>
+                    <textarea id="cms_terms_sec3Desc" data-cms-field="sec3Desc" rows="2"></textarea>
+                  </div>
+                </div>
+
+                <div style="display: flex; gap: 12px; margin-top: 20px;">
+                  <button type="button" class="btn-checkout" style="width: auto; padding: 12px 28px;" onclick="AdminApp.saveCurrentPage('terms')">حفظ تعديلات الشروط والأحكام ✅</button>
+                  <button type="button" class="btn-admin-pill btn-admin-outline" onclick="AdminApp.previewPage('terms')">معاينة صفحة الشروط 👁️</button>
+                  <button type="button" class="btn-admin-pill btn-admin-danger" onclick="AdminApp.resetCurrentPage('terms')">استعادة النصوص الأصلية 🔄</button>
+                </div>
+              </div>
+
+              <!-- PRIVACY PAGE FORM -->
+              <div class="cms-page-form-wrapper" id="cmsForm-privacy" style="display: none;">
+                <div class="cms-section-group">
+                  <h4>🔒 بنود سياسة الخصوصية</h4>
+                  <div class="form-group">
+                    <label>عنوان الصفحة الرئيسي</label>
+                    <input type="text" id="cms_privacy_heroTitle" data-cms-field="heroTitle">
+                  </div>
+                  <div class="form-group">
+                    <label>المقدمة التمهيدية</label>
+                    <textarea id="cms_privacy_intro" data-cms-field="intro" rows="2"></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label>عنوان البند 1</label>
+                    <input type="text" id="cms_privacy_sec1Title" data-cms-field="sec1Title">
+                    <label style="font-size:0.8rem; color:#64748b; margin-top:4px;">تفاصيل البند 1</label>
+                    <textarea id="cms_privacy_sec1Desc" data-cms-field="sec1Desc" rows="2"></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label>عنوان البند 2</label>
+                    <input type="text" id="cms_privacy_sec2Title" data-cms-field="sec2Title">
+                    <label style="font-size:0.8rem; color:#64748b; margin-top:4px;">تفاصيل البند 2</label>
+                    <textarea id="cms_privacy_sec2Desc" data-cms-field="sec2Desc" rows="2"></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label>عنوان البند 3</label>
+                    <input type="text" id="cms_privacy_sec3Title" data-cms-field="sec3Title">
+                    <label style="font-size:0.8rem; color:#64748b; margin-top:4px;">تفاصيل البند 3</label>
+                    <textarea id="cms_privacy_sec3Desc" data-cms-field="sec3Desc" rows="2"></textarea>
+                  </div>
+                </div>
+
+                <div style="display: flex; gap: 12px; margin-top: 20px;">
+                  <button type="button" class="btn-checkout" style="width: auto; padding: 12px 28px;" onclick="AdminApp.saveCurrentPage('privacy')">حفظ تعديلات سياسة الخصوصية ✅</button>
+                  <button type="button" class="btn-admin-pill btn-admin-outline" onclick="AdminApp.previewPage('privacy')">معاينة صفحة الخصوصية 👁️</button>
+                  <button type="button" class="btn-admin-pill btn-admin-danger" onclick="AdminApp.resetCurrentPage('privacy')">استعادة النصوص الأصلية 🔄</button>
+                </div>
+              </div>
+
+              <!-- FOOTER FORM -->
+              <div class="cms-page-form-wrapper" id="cmsForm-footer" style="display: none;">
+                <div class="cms-section-group">
+                  <h4>🔻 نبذة الفوتر وحقوق النشر</h4>
+                  <div class="form-group">
+                    <label>النبذة التعريفية في الفوتر</label>
+                    <textarea id="cms_footer_aboutText" data-cms-field="aboutText" rows="3"></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label>نص حقوق النشر والملكية (Copyright)</label>
+                    <input type="text" id="cms_footer_copyright" data-cms-field="copyright">
+                  </div>
+                </div>
+
+                <div style="display: flex; gap: 12px; margin-top: 20px;">
+                  <button type="button" class="btn-checkout" style="width: auto; padding: 12px 28px;" onclick="AdminApp.saveCurrentPage('footer')">حفظ تعديلات الفوتر ✅</button>
+                  <button type="button" class="btn-admin-pill btn-admin-outline" onclick="AdminApp.previewPage('footer')">معاينة الفوتر في الرئيسية 👁️</button>
+                  <button type="button" class="btn-admin-pill btn-admin-danger" onclick="AdminApp.resetCurrentPage('footer')">استعادة النصوص الأصلية 🔄</button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB 3: STORE SETTINGS -->
         <div class="admin-tab-content" id="tab-settings">
           <div class="admin-card" style="max-width: 750px;">
             <div class="admin-card-header">
@@ -1335,36 +1177,36 @@ def build_admin():
           </div>
         </div>
 
-        <!-- TAB 3: BACKUP & DATA -->
+        <!-- TAB 4: BACKUP & DATA (FULL BACKUP: Products + Settings + Pages) -->
         <div class="admin-tab-content" id="tab-backup">
           <div class="admin-card" style="max-width: 750px;">
             <div class="admin-card-header">
-              <h3>النسخ الاحتياطي وإدارة البيانات</h3>
+              <h3>النسخ الاحتياطي الشامل وإدارة البيانات</h3>
             </div>
 
             <div style="display: flex; flex-direction: column; gap: 20px;">
               <div style="background: var(--bg-soft); padding: 20px; border-radius: var(--radius-sm); border: 1px solid var(--border-light);">
-                <h4 style="font-size: 1.05rem; font-weight: 800; color: var(--dark); margin-bottom: 6px;">📥 تصدير نسخة احتياطية من جميع المنتجات</h4>
-                <p style="font-size: 0.9rem; color: var(--text-light); margin-bottom: 14px;">يمكنك تحميل ملف JSON يحتوي على كامل منتجات المتجر وأسعارها وتفاصيلها لحفظها على جهازك.</p>
-                <button class="btn-admin-pill btn-admin-primary" onclick="AdminApp.exportProductsJSON()">
-                  <span>تحميل ملف المنتجات (JSON) 📥</span>
+                <h4 style="font-size: 1.05rem; font-weight: 800; color: var(--dark); margin-bottom: 6px;">📥 تصدير نسخة احتياطية شاملة (المنتجات + محتوى الصفحات + الإعدادات)</h4>
+                <p style="font-size: 0.9rem; color: var(--text-light); margin-bottom: 14px;">يمكنك تحميل ملف JSON متكامل يحتوي على كامل منتجات المتجر، نصوص كل الصفحات، والإعدادات لحفظها كأمان على جهازك.</p>
+                <button class="btn-admin-pill btn-admin-primary" onclick="AdminApp.exportFullBackupJSON()">
+                  <span>تحميل ملف النسخة الاحتياطية الشاملة (JSON) 📥</span>
                 </button>
               </div>
 
               <div style="background: var(--bg-soft); padding: 20px; border-radius: var(--radius-sm); border: 1px solid var(--border-light);">
-                <h4 style="font-size: 1.05rem; font-weight: 800; color: var(--dark); margin-bottom: 6px;">📤 استيراد وتحديث المنتجات من ملف</h4>
-                <p style="font-size: 0.9rem; color: var(--text-light); margin-bottom: 14px;">ارفع ملف JSON الذي قمت بتصديره سابقاً لاستعادة المنتجات في ثوانٍ معدودة.</p>
-                <input type="file" id="importProductsInput" accept=".json" onchange="AdminApp.importProductsJSON(event)" style="display: none;">
+                <h4 style="font-size: 1.05rem; font-weight: 800; color: var(--dark); margin-bottom: 6px;">📤 استيراد واستعادة المتجر من ملف نسخ احتياطي</h4>
+                <p style="font-size: 0.9rem; color: var(--text-light); margin-bottom: 14px;">ارفع ملف JSON الذي قمت بتصديره سابقاً لاستعادة جميع المنتجات والصفحات في لحظات معدودة.</p>
+                <input type="file" id="importProductsInput" accept=".json" onchange="AdminApp.importFullBackupJSON(event)" style="display: none;">
                 <button class="btn-admin-pill btn-admin-outline" onclick="document.getElementById('importProductsInput').click()">
                   <span>اختيار ملف JSON ورفعه 📤</span>
                 </button>
               </div>
 
               <div style="background: #fff1f2; padding: 20px; border-radius: var(--radius-sm); border: 1px solid #fecdd3;">
-                <h4 style="font-size: 1.05rem; font-weight: 800; color: #dc2626; margin-bottom: 6px;">⚠️ استعادة المنتجات الافتراضية (إعادة ضبط المصنع)</h4>
-                <p style="font-size: 0.9rem; color: #b91c1c; margin-bottom: 14px;">سيؤدي هذا إلى إعادة المتجر إلى المنتجات الأصلية وحذف أي منتجات تجريبية تمت إضافتها.</p>
+                <h4 style="font-size: 1.05rem; font-weight: 800; color: #dc2626; margin-bottom: 6px;">⚠️ استعادة ضبط المصنع لجميع محتويات المتجر</h4>
+                <p style="font-size: 0.9rem; color: #b91c1c; margin-bottom: 14px;">سيؤدي هذا إلى إعادة المتجر ونصوص الصفحات والمنتجات إلى الحالة الأصلية الافتراضية.</p>
                 <button class="btn-admin-pill btn-admin-danger" onclick="AdminApp.resetDefaultProducts()">
-                  <span>استرجاع المنتجات الاصلية للمتجر 🔄</span>
+                  <span>استرجاع الإعدادات والمنتجات الأصلية 🔄</span>
                 </button>
               </div>
             </div>
@@ -1451,13 +1293,12 @@ def build_admin():
         f.write(html)
     print("admin/index.html written successfully!")
 
+
 if __name__ == '__main__':
     build_index()
-    build_shop()
-    build_product()
     build_about()
     build_contact()
     build_privacy()
     build_terms()
     build_admin()
-    print("ALL 8 HTML PAGES GENERATED SUCCESSFULLY!")
+    print("ALL PAGES AND ADMIN CMS UPDATED 100% SUCCESSFULLY!")

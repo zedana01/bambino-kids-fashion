@@ -1997,3 +1997,62 @@ button, input, select, textarea {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+\n
+/* ===================================================
+   CMS PAGES EDITOR STYLES
+=================================================== */
+.cms-pages-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+}
+.cms-page-card {
+  background: var(--white);
+  border: 2px solid #e2e8f0;
+  border-radius: var(--radius-md);
+  padding: 16px;
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.cms-page-card:hover, .cms-page-card.active {
+  border-color: var(--primary);
+  background: var(--primary-light);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+.cms-page-card-icon {
+  font-size: 1.8rem;
+}
+.cms-page-card-title {
+  font-weight: 800;
+  color: var(--dark);
+  font-size: 0.95rem;
+}
+.cms-page-card-sub {
+  font-size: 0.78rem;
+  color: var(--text-light);
+}
+.cms-section-group {
+  background: #f8fafc;
+  border-radius: var(--radius-sm);
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #e2e8f0;
+}
+.cms-section-group h4 {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--dark);
+  margin-bottom: 14px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--border-light);
+}
+@media (max-width: 768px) {
+  .cms-pages-grid {
+    grid-template-columns: 1fr;
+  }
+}

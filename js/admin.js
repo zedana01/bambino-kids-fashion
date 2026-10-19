@@ -1,10 +1,11 @@
 /**
  * BAMBINO KIDS FASHION - Admin Dashboard Controller
- * Client-friendly, intuitive management for products, settings, and orders
+ * Client-friendly, intuitive management for products, pages content, and settings
  */
 
 const AdminApp = {
   activeTab: 'products',
+  activePageKey: 'home',
   editingProductId: null,
 
   init() {
@@ -13,6 +14,7 @@ const AdminApp = {
     this.loadStats();
     this.renderProductsTable();
     this.loadSettingsForm();
+    this.loadPagesEditor();
   },
 
   checkAuth() {
@@ -30,7 +32,6 @@ const AdminApp = {
   },
 
   login(pin) {
-    // Default PIN: 1234 or custom set
     const savedPin = localStorage.getItem('bambino_admin_pin') || '1234';
     if (pin === savedPin) {
       sessionStorage.setItem('bambino_admin_auth', 'true');
@@ -38,6 +39,7 @@ const AdminApp = {
       this.loadStats();
       this.renderProductsTable();
       this.loadSettingsForm();
+      this.loadPagesEditor();
     } else {
       alert('رمز الدخول غير صحيح! الرمز الافتراضي هو 1234');
     }
@@ -94,6 +96,9 @@ const AdminApp = {
     document.querySelectorAll('.admin-tab-content').forEach(el => {
       el.classList.toggle('active', el.id === `tab-${tabId}`);
     });
+    if (tabId === 'pages') {
+      this.loadPagesEditor();
+    }
   },
 
   loadStats() {
@@ -311,18 +316,104 @@ const AdminApp = {
     alert('✅ تم حفظ جميع إعدادات المتجر وتطبيقها بنجاح!');
   },
 
-  exportProductsJSON() {
-    const products = BambinoStore.getProducts();
-    const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(products, null, 2));
+  // ==========================================
+  // PAGES CONTENT CMS EDITOR
+  // ==========================================
+  loadPagesEditor() {
+    this.selectPage(this.activePageKey || 'home');
+  },
+
+  selectPage(pageKey) {
+    this.activePageKey = pageKey;
+    document.querySelectorAll('.cms-page-card').forEach(card => {
+      card.classList.toggle('active', card.getAttribute('data-page') === pageKey);
+    });
+
+    document.querySelectorAll('.cms-page-form-wrapper').forEach(form => {
+      form.style.display = form.id === `cmsForm-${pageKey}` ? 'block' : 'none';
+    });
+
+    // Populate current values
+    const data = BambinoStore.getPagesContent();
+    if (!data || !data[pageKey]) return;
+
+    const pageData = data[pageKey];
+    for (const [key, val] of Object.entries(pageData)) {
+      const input = document.getElementById(`cms_${pageKey}_${key}`);
+      if (input) {
+        input.value = val;
+      }
+    }
+  },
+
+  saveCurrentPage(pageKey) {
+    let content = BambinoStore.getPagesContent();
+    if (!content[pageKey]) content[pageKey] = {};
+
+    const form = document.getElementById(`cmsForm-${pageKey}`);
+    if (!form) return;
+
+    form.querySelectorAll('[data-cms-field]').forEach(input => {
+      const field = input.getAttribute('data-cms-field');
+      content[pageKey][field] = input.value.trim();
+    });
+
+    BambinoStore.savePagesContent(content);
+    alert(`✅ تم حفظ محتوى صفحة (${this.getPageNameAr(pageKey)}) وتحديثها بنجاح في المتجر!`);
+  },
+
+  resetCurrentPage(pageKey) {
+    if (!confirm(`هل أنت متأكد من استعادة النصوص الافتراضية الأصلية لصفحة (${this.getPageNameAr(pageKey)})؟`)) return;
+    BambinoStore.resetPageContent(pageKey);
+    this.selectPage(pageKey);
+    alert(`🔄 تم استرجاع النصوص الأصلية لصفحة (${this.getPageNameAr(pageKey)}) بنجاح!`);
+  },
+
+  getPageNameAr(key) {
+    const map = {
+      home: 'الصفحة الرئيسية',
+      about: 'من نحن',
+      contact: 'اتصل بنا',
+      privacy: 'سياسة الخصوصية',
+      terms: 'الشروط والأحكام',
+      footer: 'الفوتر العام'
+    };
+    return map[key] || key;
+  },
+
+  previewPage(key) {
+    const map = {
+      home: '../index.html',
+      about: '../about.html',
+      contact: '../contact.html',
+      privacy: '../privacy.html',
+      terms: '../terms.html',
+      footer: '../index.html'
+    };
+    window.open(map[key] || '../index.html', '_blank');
+  },
+
+  // ==========================================
+  // BACKUP & RESTORE (PRODUCTS + PAGES + SETTINGS)
+  // ==========================================
+  exportFullBackupJSON() {
+    const fullBackup = {
+      products: BambinoStore.getProducts(),
+      settings: BambinoStore.getSettings(),
+      pagesContent: BambinoStore.getPagesContent(),
+      exportDate: new Date().toISOString()
+    };
+
+    const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(fullBackup, null, 2));
     const downloadAnchor = document.createElement('a');
     downloadAnchor.setAttribute("href", dataStr);
-    downloadAnchor.setAttribute("download", `bambino_products_${new Date().toISOString().slice(0,10)}.json`);
+    downloadAnchor.setAttribute("download", `bambino_full_backup_${new Date().toISOString().slice(0,10)}.json`);
     document.body.appendChild(downloadAnchor);
     downloadAnchor.click();
     downloadAnchor.remove();
   },
 
-  importProductsJSON(event) {
+  importFullBackupJSON(event) {
     const file = event.target.files[0];
     if (!file) return;
 
@@ -330,13 +421,22 @@ const AdminApp = {
     reader.onload = (e) => {
       try {
         const imported = JSON.parse(e.target.result);
-        if (Array.isArray(imported)) {
+        if (imported.products && Array.isArray(imported.products)) {
+          BambinoStore.saveProducts(imported.products);
+          if (imported.settings) BambinoStore.saveSettings(imported.settings);
+          if (imported.pagesContent) BambinoStore.savePagesContent(imported.pagesContent);
+          this.loadStats();
+          this.renderProductsTable();
+          this.loadSettingsForm();
+          this.loadPagesEditor();
+          alert(`✅ تم استيراد النسخة الاحتياطية بنجاح! (المنتجات: ${imported.products.length} منتج، إعدادات المتجر ومحتوى الصفحات)`);
+        } else if (Array.isArray(imported)) {
           BambinoStore.saveProducts(imported);
           this.loadStats();
           this.renderProductsTable();
           alert(`✅ تم استيراد ${imported.length} منتج بنجاح!`);
         } else {
-          alert('الملف المرفوع لا يحتوي على قائمة منتجات صالحة');
+          alert('الملف المرفوع لا يحتوي على صيغة نسخ احتياطي صالحة');
         }
       } catch (err) {
         alert('حدث خطأ أثناء قراءة ملف JSON');
@@ -346,12 +446,16 @@ const AdminApp = {
   },
 
   resetDefaultProducts() {
-    if (!confirm('تحذير: سيتم حذف جميع التعديلات والمنتجات المضافة واسترجاع المنتجات الأصلية، هل توافق؟')) return;
+    if (!confirm('تحذير: سيتم حذف جميع التعديلات والمنتجات المضافة واسترجاع المنتجات الاصلية، هل توافق؟')) return;
     localStorage.removeItem('bambino_products');
+    localStorage.removeItem('bambino_pages_content');
+    localStorage.removeItem('bambino_settings');
     BambinoStore.initStorage();
     this.loadStats();
     this.renderProductsTable();
-    alert('🔄 تم استرجاع المنتجات الافتراضية بنجاح!');
+    this.loadSettingsForm();
+    this.loadPagesEditor();
+    alert('🔄 تم استرجاع كافة الإعدادات والمنتجات الأصلية للمتجر بنجاح!');
   }
 };
 
