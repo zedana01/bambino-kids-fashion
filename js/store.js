@@ -227,20 +227,30 @@ const DEFAULT_PAGES_CONTENT = {
     "heroTitle": "أناقة استثنائية تليق بابتسامة طفلك",
     "heroDesc": "اكتشفي تشكيلة الأزياء الفاخرة المصنوعة من القطن العضوي 100% بنعومة فائقة تناسب بشرة أطفالك الرقيقة، من عمر الولادة وحتى 14 سنة.",
     "heroBtnText": "تسوقي التشكيلة الآن ✨",
+    "heroImg": "images/kids_hero_banner.jpg",
+    "feat1Icon": "🚚",
     "feat1Title": "شحن سريع ومجاني",
     "feat1Desc": "لكافة مدن المملكة للطلبات فوق 250 ر.س",
+    "feat2Icon": "🌱",
     "feat2Title": "قطن طبيعي 100%",
     "feat2Desc": "أقمشة ناعمة وآمنة لبشرة طفلك الحساسة",
+    "feat3Icon": "💬",
     "feat3Title": "طلب سهل عبر واتساب",
     "feat3Desc": "إتمام فوري للطلب مع خدمة عملاء متفانية",
+    "feat4Icon": "🔄",
     "feat4Title": "استبدال ميسر وسريع",
     "feat4Desc": "سياسة مرنة للاستبدال واسترجاع المقاسات",
     "catSecTag": "أقسام المتجر",
     "catSecTitle": "تسوق حسب الفئة",
     "catSecDesc": "اختاري ما يناسب طفلك من أرقى التشكيلات المصممة خصيصاً لأناقة يومية ومناسبات مميزة",
+    "catGirlsImg": "images/kids_cat_girls.jpg",
+    "catBoysImg": "images/kids_cat_boys.jpg",
+    "catBabyImg": "images/kids_cat_baby.jpg",
+    "catShoesImg": "images/kids_cat_shoes.jpg",
     "flashTag": "⚡ عروض حصرية لفترة محدودة",
     "flashTitle": "خصومات حتى 40% على تشكيلة الصيف",
     "flashDesc": "اغتنمي الفرصة ووفري الكثير على أجمل الفساتين والأطقم الفاخرة لأطفالك. ينتهي العرض قريباً!",
+    "flashImg": "images/flash_deal_kids_banner.jpg",
     "prodSecTag": "أحدث القطع",
     "prodSecTitle": "المختارات الأكثر طلباً",
     "prodSecDesc": "قطع مختارة بعناية تجمع بين الأناقة الراقية والراحة الفائقة لطفلك",
@@ -254,10 +264,14 @@ const DEFAULT_PAGES_CONTENT = {
     "storyTitle": "أزياء راقية تُصنع بحب لأجمل لحظات الطفولة",
     "storyP1": "تأسست علامة بامبينو كيدز (BAMBINO KIDS) انطلاقاً من إيماننا العميق بأن أطفالنا يستحقون الأفضل دائماً. نحن ندرك أن ملابس الأطفال ليست مجرد مظهر أنيق، بل هي راحة يومية وحرية حركة وأمان تام على بشرتهم الغضة.",
     "storyP2": "منذ اليوم الأول، وضعنا معايير صارمة في انتقاء خامات القطن العضوي النقي 100% والتصاميم الراقية المستوحاة من أحدث صيحات الموضة الأوروبية والعالمية، لنقدم للأمهات تشكيلات تلبي طموحاتهن في إطلالات استثنائية لأطفالهن في جميع المناسبات.",
+    "storyImg": "images/hero_kids_slide_2.jpg",
+    "card1Icon": "🌟",
     "card1Title": "جودة لا تقبل المساومة",
     "card1Desc": "نختار بعناية فائقة أنعم أنواع الخيوط القطنية وأدق تفاصيل الحياكة لضمان متانة القطعة بعد كل غسيل.",
+    "card2Icon": "👶",
     "card2Title": "أمان وراحة تامة",
     "card2Desc": "جميع أصباغنا وأزرارنا وإكسسواراتنا معتمدة وخالية من المواد الكيميائية الضارة لسلامة طفلك التامة.",
+    "card3Icon": "❤️",
     "card3Title": "خدمة أمهات استثنائية",
     "card3Desc": "فريقنا يتفهم متطلبات المقاسات ويسعد دائماً بتقديم المشورة وتيسير الشحن والاستبدال بكل رحابة صدر.",
     "missionTitle": "رسالتنا",
@@ -377,7 +391,7 @@ const BambinoStore = {
     });
   },
 
-  // Pages Content Management
+  // Pages Content & Media Management
   getPagesContent() {
     try {
       const data = localStorage.getItem('bambino_pages_content');
@@ -404,6 +418,7 @@ const BambinoStore = {
     const data = this.getPagesContent();
     if (!data) return;
 
+    // 1. Text & HTML elements
     document.querySelectorAll('[data-cms]').forEach(el => {
       const path = el.getAttribute('data-cms').split('.');
       if (path.length === 2 && data[path[0]] && data[path[0]][path[1]] !== undefined) {
@@ -413,6 +428,22 @@ const BambinoStore = {
         } else {
           el.textContent = val;
         }
+      }
+    });
+
+    // 2. Image sources (data-cms-src)
+    document.querySelectorAll('[data-cms-src]').forEach(img => {
+      const path = img.getAttribute('data-cms-src').split('.');
+      if (path.length === 2 && data[path[0]] && data[path[0]][path[1]]) {
+        img.src = data[path[0]][path[1]];
+      }
+    });
+
+    // 3. Icons / Emojis (data-cms-icon)
+    document.querySelectorAll('[data-cms-icon]').forEach(el => {
+      const path = el.getAttribute('data-cms-icon').split('.');
+      if (path.length === 2 && data[path[0]] && data[path[0]][path[1]]) {
+        el.textContent = data[path[0]][path[1]];
       }
     });
   },

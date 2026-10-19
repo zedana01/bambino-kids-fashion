@@ -31,7 +31,7 @@ __HEADER__
       <div class="hero-slider-wrap">
         <!-- Slide 1 -->
         <div class="hero-slide active" style="background: linear-gradient(90deg, rgba(255,241,242,0.95) 0%, rgba(255,255,255,0.7) 100%);">
-          <img src="images/kids_hero_banner.jpg" alt="تشكيلة بامبينو كيدز الحصرية" style="position: absolute; left: 0; top: 0; width: 55%; height: 100%; object-fit: cover; z-index: 1;">
+          <img src="images/kids_hero_banner.jpg" data-cms-src="home.heroImg" alt="تشكيلة بامبينو كيدز الحصرية" style="position: absolute; left: 0; top: 0; width: 55%; height: 100%; object-fit: cover; z-index: 1;">
           <div class="hero-content" style="position: relative; z-index: 2; max-width: 540px; padding: 40px;">
             <span class="hero-tag" data-cms="home.heroBadge" style="background: var(--primary); color: #fff; padding: 5px 14px; border-radius: var(--radius-full); font-size: 0.85rem; font-weight: 800; display: inline-block; margin-bottom: 12px;">🌟 تشكيلة الموسم الجديد 2026</span>
             <h1 class="hero-title" data-cms="home.heroTitle" style="font-size: 2.7rem; font-weight: 900; line-height: 1.25; color: var(--dark); margin-bottom: 16px;">
@@ -55,28 +55,28 @@ __HEADER__
     <div class="container">
       <div class="features-grid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;">
         <div class="feature-item">
-          <div class="feature-icon">🚚</div>
+          <div class="feature-icon" data-cms-icon="home.feat1Icon">🚚</div>
           <div class="feature-text">
             <h4 data-cms="home.feat1Title">شحن سريع ومجاني</h4>
             <p data-cms="home.feat1Desc">لكافة مدن المملكة للطلبات فوق 250 ر.س</p>
           </div>
         </div>
         <div class="feature-item">
-          <div class="feature-icon">🌱</div>
+          <div class="feature-icon" data-cms-icon="home.feat2Icon">🌱</div>
           <div class="feature-text">
             <h4 data-cms="home.feat2Title">قطن طبيعي 100%</h4>
             <p data-cms="home.feat2Desc">أقمشة ناعمة وآمنة لبشرة طفلك الحساسة</p>
           </div>
         </div>
         <div class="feature-item">
-          <div class="feature-icon">💬</div>
+          <div class="feature-icon" data-cms-icon="home.feat3Icon">💬</div>
           <div class="feature-text">
             <h4 data-cms="home.feat3Title">طلب سهل عبر واتساب</h4>
             <p data-cms="home.feat3Desc">إتمام فوري للطلب مع خدمة عملاء متفانية</p>
           </div>
         </div>
         <div class="feature-item">
-          <div class="feature-icon">🔄</div>
+          <div class="feature-icon" data-cms-icon="home.feat4Icon">🔄</div>
           <div class="feature-text">
             <h4 data-cms="home.feat4Title">استبدال ميسر وسريع</h4>
             <p data-cms="home.feat4Desc">سياسة مرنة للاستبدال واسترجاع المقاسات</p>
@@ -98,7 +98,7 @@ __HEADER__
       <div class="categories-grid">
         <!-- Girls -->
         <a href="shop.html?cat=girls" class="category-card">
-          <img src="images/kids_cat_girls.jpg" alt="ملابس بناتي">
+          <img src="images/kids_cat_girls.jpg" data-cms-src="home.catGirlsImg" alt="ملابس بناتي">
           <div class="category-card-overlay">
             <h3 class="category-card-title">ملابس بناتي</h3>
             <span class="category-card-link">استكشف التشكيلة ←</span>
@@ -107,7 +107,7 @@ __HEADER__
 
         <!-- Boys -->
         <a href="shop.html?cat=boys" class="category-card">
-          <img src="images/kids_cat_boys.jpg" alt="ملابس أولادي">
+          <img src="images/kids_cat_boys.jpg" data-cms-src="home.catBoysImg" alt="ملابس أولادي">
           <div class="category-card-overlay">
             <h3 class="category-card-title">ملابس أولادي</h3>
             <span class="category-card-link">استكشف التشكيلة ←</span>
@@ -116,7 +116,7 @@ __HEADER__
 
         <!-- Baby -->
         <a href="shop.html?cat=baby" class="category-card">
-          <img src="images/kids_cat_baby.jpg" alt="بيبي ومواليد">
+          <img src="images/kids_cat_baby.jpg" data-cms-src="home.catBabyImg" alt="بيبي ومواليد">
           <div class="category-card-overlay">
             <h3 class="category-card-title">بيبي ومواليد</h3>
             <span class="category-card-link">استكشف التشكيلة ←</span>
@@ -125,7 +125,7 @@ __HEADER__
 
         <!-- Shoes & Accessories -->
         <a href="shop.html?cat=shoes" class="category-card">
-          <img src="images/kids_cat_shoes.jpg" alt="أحذية وإكسسوارات">
+          <img src="images/kids_cat_shoes.jpg" data-cms-src="home.catShoesImg" alt="أحذية وإكسسوارات">
           <div class="category-card-overlay">
             <h3 class="category-card-title">أحذية وإكسسوارات</h3>
             <span class="category-card-link">استكشف التشكيلة ←</span>
@@ -161,7 +161,7 @@ __HEADER__
         <a href="shop.html" class="btn-checkout" style="width: fit-content; background: #fff; color: var(--primary);">تسوق العروض الحصرية الآن 🛍️</a>
       </div>
       <div style="z-index: 2; max-width: 380px;" class="hide-mobile">
-        <img src="images/flash_deal_kids_banner.jpg" alt="عروض بامبينو كيدز" style="border-radius: var(--radius-md); box-shadow: var(--shadow-md);">
+        <img src="images/flash_deal_kids_banner.jpg" data-cms-src="home.flashImg" alt="عروض بامبينو كيدز" style="border-radius: var(--radius-md); box-shadow: var(--shadow-md);">
       </div>
     </div>
   </section>
@@ -246,7 +246,7 @@ __FOOTER__
 
 
 # ==========================================
-# 2. ABOUT.HTML (With CMS Bindings)
+# 2. ABOUT.HTML
 # ==========================================
 def build_about():
     header = get_header(active_nav='about')
@@ -290,25 +290,25 @@ __HEADER__
           </p>
         </div>
         <div>
-          <img src="images/hero_kids_slide_2.jpg" alt="أطفال بامبينو كيدز" style="border-radius: var(--radius-lg); box-shadow: var(--shadow-md);">
+          <img src="images/hero_kids_slide_2.jpg" data-cms-src="about.storyImg" alt="أطفال بامبينو كيدز" style="border-radius: var(--radius-lg); box-shadow: var(--shadow-md);">
         </div>
       </div>
 
       <div class="features-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin: 40px 0;">
         <div style="background: var(--bg-soft); padding: 26px; border-radius: var(--radius-md); border-right: 4px solid var(--primary);">
-          <div style="font-size: 2.2rem; margin-bottom: 10px;">🌟</div>
+          <div style="font-size: 2.2rem; margin-bottom: 10px;" data-cms-icon="about.card1Icon">🌟</div>
           <h3 style="font-size: 1.2rem; font-weight: 800; color: var(--dark); margin-bottom: 8px;" data-cms="about.card1Title">جودة لا تقبل المساومة</h3>
           <p style="font-size: 0.95rem; color: var(--text-light);" data-cms="about.card1Desc">نختار بعناية فائقة أنعم أنواع الخيوط القطنية وأدق تفاصيل الحياكة لضمان متانة القطعة بعد كل غسيل.</p>
         </div>
 
         <div style="background: var(--bg-soft); padding: 26px; border-radius: var(--radius-md); border-right: 4px solid var(--primary);">
-          <div style="font-size: 2.2rem; margin-bottom: 10px;">👶</div>
+          <div style="font-size: 2.2rem; margin-bottom: 10px;" data-cms-icon="about.card2Icon">👶</div>
           <h3 style="font-size: 1.2rem; font-weight: 800; color: var(--dark); margin-bottom: 8px;" data-cms="about.card2Title">أمان وراحة تامة</h3>
           <p style="font-size: 0.95rem; color: var(--text-light);" data-cms="about.card2Desc">جميع أصباغنا وأزرارنا وإكسسواراتنا معتمدة وخالية من المواد الكيميائية الضارة لسلامة طفلك التامة.</p>
         </div>
 
         <div style="background: var(--bg-soft); padding: 26px; border-radius: var(--radius-md); border-right: 4px solid var(--primary);">
-          <div style="font-size: 2.2rem; margin-bottom: 10px;">❤️</div>
+          <div style="font-size: 2.2rem; margin-bottom: 10px;" data-cms-icon="about.card3Icon">❤️</div>
           <h3 style="font-size: 1.2rem; font-weight: 800; color: var(--dark); margin-bottom: 8px;" data-cms="about.card3Title">خدمة أمهات استثنائية</h3>
           <p style="font-size: 0.95rem; color: var(--text-light);" data-cms="about.card3Desc">فريقنا يتفهم متطلبات المقاسات ويسعد دائماً بتقديم المشورة وتيسير الشحن والاستبدال بكل رحابة صدر.</p>
         </div>
@@ -333,288 +333,7 @@ __FOOTER__
 
 
 # ==========================================
-# 3. CONTACT.HTML (With CMS Bindings)
-# ==========================================
-def build_contact():
-    header = get_header(active_nav='contact')
-    footer = get_footer()
-
-    html = """<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>اتصل بنا | خدمة عملاء بامبينو كيدز</title>
-  <meta name="description" content="تواصل مع فريق خدمة عملاء بامبينو كيدز عبر واتساب، الهاتف أو البريد الإلكتروني. يسعدنا الرد على استفساراتكم ومساعدتكم على مدار الساعة.">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="icon" href="images/kids_cat_girls.jpg">
-</head>
-<body>
-__HEADER__
-
-  <div class="page-hero">
-    <div class="container">
-      <h1 class="page-hero-title" data-cms="contact.heroTitle">يسعدنا تواصلكم دائماً</h1>
-      <div class="breadcrumb">
-        <a href="index.html">الرئيسية</a>
-        <span>/</span>
-        <span style="color: var(--primary); font-weight: 700;">اتصل بنا</span>
-      </div>
-    </div>
-  </div>
-
-  <div class="container">
-    <div class="contact-grid">
-      <!-- Info Cards -->
-      <div class="contact-info-card">
-        <div>
-          <span class="section-tag" data-cms="contact.secTag">نحن هنا للمساعدة</span>
-          <h2 style="font-size: 1.6rem; font-weight: 900; color: var(--dark); margin-bottom: 8px;" data-cms="contact.secTitle">قنوات التواصل المباشر</h2>
-          <p style="color: var(--text-light); font-size: 0.95rem;" data-cms="contact.secDesc">فريق خدمة العملاء جاهز للإجابة عن أسئلتكم ومساعدتكم في اختيار المقاسات أو متابعة الشحنات.</p>
-        </div>
-
-        <div class="contact-card-item">
-          <div class="contact-card-icon">💬</div>
-          <div>
-            <h4 style="font-weight: 800; color: var(--dark); margin-bottom: 2px;" data-cms="contact.waTitle">محادثة واتساب الفورية</h4>
-            <p style="font-size: 0.88rem; color: var(--text-light); margin-bottom: 4px;" data-cms="contact.waDesc">الرد السريع خلال دقائق</p>
-            <a href="https://wa.me/966500000000" target="_blank" class="store-whatsapp-link" style="color: #25d366; font-weight: 800;">بدء المحادثة الآن ←</a>
-          </div>
-        </div>
-
-        <div class="contact-card-item">
-          <div class="contact-card-icon">📞</div>
-          <div>
-            <h4 style="font-weight: 800; color: var(--dark); margin-bottom: 2px;" data-cms="contact.phoneTitle">الهاتف المباشر</h4>
-            <p style="font-size: 0.88rem; color: var(--text-light); margin-bottom: 4px;" data-cms="contact.phoneDesc">يومياً من 9:00 ص إلى 11:00 م</p>
-            <span class="store-phone-text" style="color: var(--primary); font-weight: 800;">+966 50 000 0000</span>
-          </div>
-        </div>
-
-        <div class="contact-card-item">
-          <div class="contact-card-icon">✉️</div>
-          <div>
-            <h4 style="font-weight: 800; color: var(--dark); margin-bottom: 2px;" data-cms="contact.emailTitle">البريد الإلكتروني</h4>
-            <p style="font-size: 0.88rem; color: var(--text-light); margin-bottom: 4px;" data-cms="contact.emailDesc">للاستفسارات والشكاوى الرسمية</p>
-            <span class="store-email-text" style="color: var(--primary); font-weight: 800;">care@bambinokids.com</span>
-          </div>
-        </div>
-
-        <div class="contact-card-item">
-          <div class="contact-card-icon">📍</div>
-          <div>
-            <h4 style="font-weight: 800; color: var(--dark); margin-bottom: 2px;" data-cms="contact.addressTitle">موقع المتجر والمقر</h4>
-            <p class="store-address-text" data-cms="contact.addressDesc" style="font-size: 0.9rem; color: var(--text);">المملكة العربية السعودية - الرياض - طريق الملك فهد</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Form Card -->
-      <div class="contact-form-card">
-        <h3 style="font-size: 1.4rem; font-weight: 900; color: var(--dark); margin-bottom: 16px;" data-cms="contact.formTitle">أرسل لنا رسالة سريعة</h3>
-        <form onsubmit="handleContactSubmit(event)">
-          <div class="form-group">
-            <label>الاسم الكامل *</label>
-            <input type="text" id="contactName" placeholder="اكتب اسمك الكريم" required>
-          </div>
-          <div class="form-group">
-            <label>رقم الجوال أو واتساب *</label>
-            <input type="tel" id="contactPhone" placeholder="05xxxxxxxx" required>
-          </div>
-          <div class="form-group">
-            <label>موضوع الاستفسار *</label>
-            <select id="contactSubject">
-              <option value="استفسار عن مقاسات">استفسار عن مقاسات ومنتجات</option>
-              <option value="متابعة حالة طلب">متابعة حالة شحنة أو طلب</option>
-              <option value="طلب استبدال واسترجاع">طلب استبدال واسترجاع</option>
-              <option value="اقتراح أو ملاحظة">اقتراح أو ملاحظة عامة</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label>تفاصيل الرسالة *</label>
-            <textarea id="contactMessage" rows="4" placeholder="كيف يمكننا مساعدتك اليوم؟" required></textarea>
-          </div>
-          <button type="submit" class="btn-checkout" style="width: 100%; margin-top: 10px;">
-            <span>إرسال الرسالة عبر واتساب 💬</span>
-          </button>
-        </form>
-      </div>
-    </div>
-  </div>
-
-__FOOTER__
-
-  <script src="js/store.js"></script>
-  <script>
-    function handleContactSubmit(e) {
-      e.preventDefault();
-      const name = document.getElementById('contactName').value.trim();
-      const phone = document.getElementById('contactPhone').value.trim();
-      const subject = document.getElementById('contactSubject').value;
-      const message = document.getElementById('contactMessage').value.trim();
-      const settings = BambinoStore.getSettings();
-
-      const text = `*📩 رسالة جديدة من صفحة اتصل بنا - بامبينو كيدز*\\n` +
-        `--------------------------------\\n` +
-        `👤 *الاسم:* ${name}\\n` +
-        `📱 *الجوال:* ${phone}\\n` +
-        `📋 *الموضوع:* ${subject}\\n` +
-        `📝 *الرسالة:* ${message}\\n` +
-        `--------------------------------`;
-
-      const waUrl = `https://wa.me/${settings.whatsapp}?text=${encodeURIComponent(text)}`;
-      window.open(waUrl, '_blank');
-      BambinoStore.showToast('✅ تم فتح محادثة واتساب لإرسال رسالتك مباشرة!');
-    }
-  </script>
-</body>
-</html>
-"""
-    with open(os.path.join(BASE_DIR, 'contact.html'), 'w', encoding='utf-8') as f:
-        f.write(html.replace('__HEADER__', header).replace('__FOOTER__', footer))
-    print("contact.html written successfully!")
-
-
-# ==========================================
-# 4. PRIVACY.HTML (With CMS Bindings)
-# ==========================================
-def build_privacy():
-    header = get_header(active_nav='')
-    footer = get_footer()
-
-    html = """<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>سياسة الخصوصية | بامبينو كيدز</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="icon" href="images/kids_cat_girls.jpg">
-</head>
-<body>
-__HEADER__
-
-  <div class="page-hero">
-    <div class="container">
-      <h1 class="page-hero-title" data-cms="privacy.heroTitle">سياسة الخصوصية وسرية المعلومات</h1>
-      <div class="breadcrumb">
-        <a href="index.html">الرئيسية</a>
-        <span>/</span>
-        <span style="color: var(--primary); font-weight: 700;">سياسة الخصوصية</span>
-      </div>
-    </div>
-  </div>
-
-  <div class="container">
-    <div class="static-page-content">
-      <p data-cms="privacy.intro">
-        نقدر مخاوفكم واهتمامكم بشأن خصوصية بياناتكم على شبكة الإنترنت. تم إعداد هذه السياسة لمساعدتكم في فهم طبيعة البيانات التي نقوم بجمعها منكم عند زيارتكم لمتجر بامبينو كيدز (BAMBINO KIDS) وكيفية تعاملنا مع هذه البيانات الشخصية.
-      </p>
-
-      <h2 data-cms="privacy.sec1Title">1. البيانات التي نقوم بجمعها</h2>
-      <p data-cms="privacy.sec1Desc">
-        عند تقديمكم لطلب شراء أو التواصل معنا عبر واتساب أو نموذج الاتصال، قد نطلب منكم تزويدنا ببيانات تشمل: الاسم الكامل، رقم الجوال، عنوان التوصيل داخل المملكة العربية السعودية، والملاحظات المتعلقة بالطلب.
-      </p>
-
-      <h2 data-cms="privacy.sec2Title">2. الغرض من جمع البيانات</h2>
-      <p data-cms="privacy.sec2Desc">
-        تجهيز وشحن وتوصيل طلباتكم، التواصل معكم لتأكيد الطلب وتزويدكم برقم التتبع، والرد على استفساراتكم واقتراحاتكم وتقديم الدعم الفني اللازم.
-      </p>
-
-      <h2 data-cms="privacy.sec3Title">3. سرية وأمان المعلومات</h2>
-      <p data-cms="privacy.sec3Desc">
-        نلتزم التزاماً تاماً بعدم بيع، تأجير، أو مشاركة أي من بياناتكم الشخصية مع أي طرف ثالث لأغراض تسويقية أو تجارية. تُستخدم بياناتكم حصرياً لإتمام طلباتكم وتقديم أرقى مستوى من الخدمة.
-      </p>
-
-      <h2 data-cms="privacy.sec4Title">4. التعديلات على سياسة الخصوصية</h2>
-      <p data-cms="privacy.sec4Desc">
-        نحتفظ بالحق في تعديل بنود وشروط سياسة الخصوصية عند الضرورة وبما يتوافق مع الأنظمة المعمول بها في المملكة العربية السعودية.
-      </p>
-    </div>
-  </div>
-
-__FOOTER__
-
-  <script src="js/store.js"></script>
-</body>
-</html>
-"""
-    with open(os.path.join(BASE_DIR, 'privacy.html'), 'w', encoding='utf-8') as f:
-        f.write(html.replace('__HEADER__', header).replace('__FOOTER__', footer))
-    print("privacy.html written successfully!")
-
-
-# ==========================================
-# 5. TERMS.HTML (With CMS Bindings)
-# ==========================================
-def build_terms():
-    header = get_header(active_nav='')
-    footer = get_footer()
-
-    html = """<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>الشروط والأحكام | بامبينو كيدز</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="icon" href="images/kids_cat_girls.jpg">
-</head>
-<body>
-__HEADER__
-
-  <div class="page-hero">
-    <div class="container">
-      <h1 class="page-hero-title" data-cms="terms.heroTitle">شروط وأحكام الاستخدام والطلب</h1>
-      <div class="breadcrumb">
-        <a href="index.html">الرئيسية</a>
-        <span>/</span>
-        <span style="color: var(--primary); font-weight: 700;">الشروط والأحكام</span>
-      </div>
-    </div>
-  </div>
-
-  <div class="container">
-    <div class="static-page-content">
-      <p data-cms="terms.intro">
-        أهلاً بكم في متجر بامبينو كيدز (BAMBINO KIDS). يرجى قراءة هذه الشروط والأحكام بعناية قبل استخدام الموقع أو تقديم أي طلب شراء. يُعد استخدامكم للمتجر أو إتمام الطلب موافقة صريحة على الالتزام بكافة الشروط الموضحة أدناه.
-      </p>
-
-      <h2 data-cms="terms.sec1Title">1. الطلب وتأكيد المشتريات</h2>
-      <p data-cms="terms.sec1Desc">
-        يتم استقبال وتأكيد الطلبات عبر النظام الإلكتروني للمتجر أو مباشرة عبر تطبيق واتساب المعتمد. يتحمل العميل مسؤولية التأكد من صحة بيانات التواصل والعنوان التفصيلي والمقاسات المطلوبة. جميع الأسعار تشمل ضريبة القيمة المضافة ومسعرة بالريال السعودي.
-      </p>
-
-      <h2 data-cms="terms.sec2Title">2. الشحن والتوصيل</h2>
-      <p data-cms="terms.sec2Desc">
-        نقوم بالشحن إلى جميع مدن ومناطق المملكة العربية السعودية عبر أسرع شركات الشحن المعتمدة. مدة التوصيل المعتادة تتراوح بين 2 إلى 4 أيام عمل. الشحن مجاني للطلبات فوق 250 ريال سعودي.
-      </p>
-
-      <h2 data-cms="terms.sec3Title">3. سياسة الاستبدال والاسترجاع</h2>
-      <p data-cms="terms.sec3Desc">
-        حرصاً على سلامتكم ورضاكم، يحق للعميل طلب استبدال المقاس أو استرجاع المنتج خلال 7 أيام من تاريخ الاستلام بشرط أن تكون القطعة في حالتها الأصلية غير ملبوسة، مع بطاقات السعر والتغليف الأصلي.
-      </p>
-
-      <h2 data-cms="terms.sec4Title">4. المقاسات والألوان</h2>
-      <p data-cms="terms.sec4Desc">
-        نبذل قصارى جهدنا لعرض ألوان وتفاصيل المنتجات بأعلى دقة ممكنة، وفريقنا متاح دائماً عبر واتساب لإرسال صور وفيديوهات حية للقطعة قبل شحنها.
-      </p>
-    </div>
-  </div>
-
-__FOOTER__
-
-  <script src="js/store.js"></script>
-</body>
-</html>
-"""
-    with open(os.path.join(BASE_DIR, 'terms.html'), 'w', encoding='utf-8') as f:
-        f.write(html.replace('__HEADER__', header).replace('__FOOTER__', footer))
-    print("terms.html written successfully!")
-
-
-# ==========================================
-# 6. ADMIN/INDEX.HTML (With Full Pages CMS)
+# 3. ADMIN/INDEX.HTML (WITH COMPLETE MEDIA & IMAGES CMS)
 # ==========================================
 def build_admin():
     html = """<!DOCTYPE html>
@@ -633,7 +352,7 @@ def build_admin():
     <div style="background: #fff; padding: 40px; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); max-width: 420px; width: 100%; text-align: center; border: 1px solid var(--border-light);">
       <div style="font-size: 3rem; margin-bottom: 10px;">🔐</div>
       <h2 style="font-size: 1.6rem; font-weight: 900; color: var(--dark); margin-bottom: 6px;">لوحة تحكم بامبينو كيدز</h2>
-      <p style="color: var(--text-light); font-size: 0.9rem; margin-bottom: 24px;">يرجى إدخال رمز الأمان (PIN) لتعديل المتجر وإدارة المنتجات والصفحات</p>
+      <p style="color: var(--text-light); font-size: 0.9rem; margin-bottom: 24px;">يرجى إدخال رمز الأمان (PIN) لتعديل المتجر وإدارة المنتجات والصفحات والصور</p>
 
       <form id="adminLoginForm">
         <div class="form-group">
@@ -753,14 +472,14 @@ def build_admin():
           </div>
         </div>
 
-        <!-- TAB 2: PAGES CONTENT CMS (Visual Editor for all pages) -->
+        <!-- TAB 2: PAGES & MEDIA CMS -->
         <div class="admin-tab-content" id="tab-pages">
           <div class="admin-card">
             <div class="admin-card-header">
               <div>
-                <h3>محرر محتوى صفحات المتجر (Visual Page CMS)</h3>
+                <h3>محرر محتوى وصور صفحات المتجر (Visual Page CMS)</h3>
                 <p style="color: var(--text-light); font-size: 0.88rem; margin-top: 4px;">
-                  اختر أي صفحة لتعديل نصوصها وأقسامها بحرية تامة دون الحاجة للمساس بالأكواد البرمجية.
+                  يمكنك تعديل أي نص، تبديل أي بانر أو صورة، وتغيير الأيقونات في أي صفحة مع إمكانية رفع الصور مباشرة من جهازك!
                 </p>
               </div>
             </div>
@@ -771,7 +490,7 @@ def build_admin():
                 <div class="cms-page-card-icon">🏠</div>
                 <div>
                   <div class="cms-page-card-title">الصفحة الرئيسية</div>
-                  <div class="cms-page-card-sub">السلايدر، العروض، الميزات</div>
+                  <div class="cms-page-card-sub">السلايدر، البانرات، الصور، الميزات</div>
                 </div>
               </div>
 
@@ -779,7 +498,7 @@ def build_admin():
                 <div class="cms-page-card-icon">✨</div>
                 <div>
                   <div class="cms-page-card-title">صفحة من نحن</div>
-                  <div class="cms-page-card-sub">القصة، الرسالة، الجودة</div>
+                  <div class="cms-page-card-sub">القصة، صورة البراند، الجودة</div>
                 </div>
               </div>
 
@@ -821,8 +540,99 @@ def build_admin():
 
               <!-- HOME PAGE FORM -->
               <div class="cms-page-form-wrapper" id="cmsForm-home">
+                
+                <!-- 1. BANNERS & IMAGES FOR HOMEPAGE -->
+                <div class="cms-section-group" style="border: 2px solid #fecdd3; background: #fffdfd;">
+                  <h4 style="color: var(--primary);">🖼️ بانرات وصور الصفحة الرئيسية (Banners & Media)</h4>
+                  
+                  <!-- Hero Banner Image -->
+                  <div class="form-group" style="background: #fff; padding: 14px; border-radius: var(--radius-sm); border: 1px solid var(--border-light); margin-bottom: 16px;">
+                    <label style="font-weight: 800; color: var(--dark);">صورة البانر الرئيسي الكبير (Hero Slider Banner)</label>
+                    <div style="display: flex; gap: 14px; align-items: center; margin-top: 8px;">
+                      <img id="prev_home_heroImg" src="../images/kids_hero_banner.jpg" style="width: 100px; height: 70px; object-fit: cover; border-radius: 8px; border: 1px solid #cbd5e1;">
+                      <div style="flex: 1;">
+                        <input type="text" id="cms_home_heroImg" data-cms-field="heroImg" placeholder="images/kids_hero_banner.jpg أو رابط مباشر" oninput="AdminApp.updateImagePreview(this.value, 'prev_home_heroImg')" style="width: 100%; margin-bottom: 6px;">
+                        <input type="file" accept="image/*" onchange="AdminApp.handleImageUpload(event, 'cms_home_heroImg', 'prev_home_heroImg')" style="display: none;" id="upload_home_heroImg">
+                        <button type="button" class="btn-admin-pill btn-admin-outline" onclick="document.getElementById('upload_home_heroImg').click()">📁 رفع صورة من جهازك</button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Flash Deal Banner Image -->
+                  <div class="form-group" style="background: #fff; padding: 14px; border-radius: var(--radius-sm); border: 1px solid var(--border-light); margin-bottom: 16px;">
+                    <label style="font-weight: 800; color: var(--dark);">صورة بانر العروض الخاطفة (Flash Deals Banner)</label>
+                    <div style="display: flex; gap: 14px; align-items: center; margin-top: 8px;">
+                      <img id="prev_home_flashImg" src="../images/flash_deal_kids_banner.jpg" style="width: 100px; height: 70px; object-fit: cover; border-radius: 8px; border: 1px solid #cbd5e1;">
+                      <div style="flex: 1;">
+                        <input type="text" id="cms_home_flashImg" data-cms-field="flashImg" placeholder="images/flash_deal_kids_banner.jpg أو رابط مباشر" oninput="AdminApp.updateImagePreview(this.value, 'prev_home_flashImg')" style="width: 100%; margin-bottom: 6px;">
+                        <input type="file" accept="image/*" onchange="AdminApp.handleImageUpload(event, 'cms_home_flashImg', 'prev_home_flashImg')" style="display: none;" id="upload_home_flashImg">
+                        <button type="button" class="btn-admin-pill btn-admin-outline" onclick="document.getElementById('upload_home_flashImg').click()">📁 رفع صورة من جهازك</button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- 4 Category Cards Images -->
+                  <label style="font-weight: 800; display: block; margin-bottom: 10px; color: var(--dark);">صور بطاقات أقسام المتجر (Categories Cards):</label>
+                  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
+                    
+                    <!-- Cat Girls -->
+                    <div style="background: #fff; padding: 12px; border-radius: var(--radius-sm); border: 1px solid var(--border-light);">
+                      <label style="font-size: 0.85rem; font-weight: 700;">صورة قسم (ملابس بناتي)</label>
+                      <div style="display: flex; gap: 10px; align-items: center; margin-top: 6px;">
+                        <img id="prev_home_catGirlsImg" src="../images/kids_cat_girls.jpg" style="width: 55px; height: 55px; object-fit: cover; border-radius: 6px; border: 1px solid #cbd5e1;">
+                        <div style="flex: 1;">
+                          <input type="text" id="cms_home_catGirlsImg" data-cms-field="catGirlsImg" oninput="AdminApp.updateImagePreview(this.value, 'prev_home_catGirlsImg')" style="width: 100%; font-size: 0.8rem; margin-bottom: 4px;">
+                          <input type="file" accept="image/*" onchange="AdminApp.handleImageUpload(event, 'cms_home_catGirlsImg', 'prev_home_catGirlsImg')" style="display: none;" id="upload_home_catGirlsImg">
+                          <button type="button" class="btn-admin-pill btn-admin-outline" style="padding: 4px 10px; font-size: 0.75rem;" onclick="document.getElementById('upload_home_catGirlsImg').click()">📁 رفع صورة</button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Cat Boys -->
+                    <div style="background: #fff; padding: 12px; border-radius: var(--radius-sm); border: 1px solid var(--border-light);">
+                      <label style="font-size: 0.85rem; font-weight: 700;">صورة قسم (ملابس أولادي)</label>
+                      <div style="display: flex; gap: 10px; align-items: center; margin-top: 6px;">
+                        <img id="prev_home_catBoysImg" src="../images/kids_cat_boys.jpg" style="width: 55px; height: 55px; object-fit: cover; border-radius: 6px; border: 1px solid #cbd5e1;">
+                        <div style="flex: 1;">
+                          <input type="text" id="cms_home_catBoysImg" data-cms-field="catBoysImg" oninput="AdminApp.updateImagePreview(this.value, 'prev_home_catBoysImg')" style="width: 100%; font-size: 0.8rem; margin-bottom: 4px;">
+                          <input type="file" accept="image/*" onchange="AdminApp.handleImageUpload(event, 'cms_home_catBoysImg', 'prev_home_catBoysImg')" style="display: none;" id="upload_home_catBoysImg">
+                          <button type="button" class="btn-admin-pill btn-admin-outline" style="padding: 4px 10px; font-size: 0.75rem;" onclick="document.getElementById('upload_home_catBoysImg').click()">📁 رفع صورة</button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Cat Baby -->
+                    <div style="background: #fff; padding: 12px; border-radius: var(--radius-sm); border: 1px solid var(--border-light);">
+                      <label style="font-size: 0.85rem; font-weight: 700;">صورة قسم (بيبي ومواليد)</label>
+                      <div style="display: flex; gap: 10px; align-items: center; margin-top: 6px;">
+                        <img id="prev_home_catBabyImg" src="../images/kids_cat_baby.jpg" style="width: 55px; height: 55px; object-fit: cover; border-radius: 6px; border: 1px solid #cbd5e1;">
+                        <div style="flex: 1;">
+                          <input type="text" id="cms_home_catBabyImg" data-cms-field="catBabyImg" oninput="AdminApp.updateImagePreview(this.value, 'prev_home_catBabyImg')" style="width: 100%; font-size: 0.8rem; margin-bottom: 4px;">
+                          <input type="file" accept="image/*" onchange="AdminApp.handleImageUpload(event, 'cms_home_catBabyImg', 'prev_home_catBabyImg')" style="display: none;" id="upload_home_catBabyImg">
+                          <button type="button" class="btn-admin-pill btn-admin-outline" style="padding: 4px 10px; font-size: 0.75rem;" onclick="document.getElementById('upload_home_catBabyImg').click()">📁 رفع صورة</button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Cat Shoes -->
+                    <div style="background: #fff; padding: 12px; border-radius: var(--radius-sm); border: 1px solid var(--border-light);">
+                      <label style="font-size: 0.85rem; font-weight: 700;">صورة قسم (أحذية وإكسسوارات)</label>
+                      <div style="display: flex; gap: 10px; align-items: center; margin-top: 6px;">
+                        <img id="prev_home_catShoesImg" src="../images/kids_cat_shoes.jpg" style="width: 55px; height: 55px; object-fit: cover; border-radius: 6px; border: 1px solid #cbd5e1;">
+                        <div style="flex: 1;">
+                          <input type="text" id="cms_home_catShoesImg" data-cms-field="catShoesImg" oninput="AdminApp.updateImagePreview(this.value, 'prev_home_catShoesImg')" style="width: 100%; font-size: 0.8rem; margin-bottom: 4px;">
+                          <input type="file" accept="image/*" onchange="AdminApp.handleImageUpload(event, 'cms_home_catShoesImg', 'prev_home_catShoesImg')" style="display: none;" id="upload_home_catShoesImg">
+                          <button type="button" class="btn-admin-pill btn-admin-outline" style="padding: 4px 10px; font-size: 0.75rem;" onclick="document.getElementById('upload_home_catShoesImg').click()">📁 رفع صورة</button>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+
+                <!-- 2. TEXTS & SECTIONS FOR HOMEPAGE -->
                 <div class="cms-section-group">
-                  <h4>🎨 قسم البانر الرئيسي (Hero Section)</h4>
+                  <h4>🎨 نصوص البانر الرئيسي (Hero Texts)</h4>
                   <div class="form-group">
                     <label>الشارة العلوية للبانر</label>
                     <input type="text" id="cms_home_heroBadge" data-cms-field="heroBadge">
@@ -841,38 +651,75 @@ def build_admin():
                   </div>
                 </div>
 
+                <!-- 3. FEATURES BAR -->
                 <div class="cms-section-group">
-                  <h4>🚚 ميزات المتجر الأربعة (Features Bar)</h4>
+                  <h4>🚚 ميزات وأيقونات المتجر الأربعة (Features & Icons)</h4>
                   <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
                     <div class="form-group">
-                      <label>عنوان الميزة 1</label>
-                      <input type="text" id="cms_home_feat1Title" data-cms-field="feat1Title">
+                      <div style="display: flex; gap: 8px;">
+                        <div style="width: 60px;">
+                          <label>أيقونة 1</label>
+                          <input type="text" id="cms_home_feat1Icon" data-cms-field="feat1Icon" style="text-align: center; font-size: 1.2rem;">
+                        </div>
+                        <div style="flex: 1;">
+                          <label>عنوان الميزة 1</label>
+                          <input type="text" id="cms_home_feat1Title" data-cms-field="feat1Title">
+                        </div>
+                      </div>
                       <label style="font-size:0.8rem; color:#64748b; margin-top:4px;">وصف الميزة 1</label>
                       <input type="text" id="cms_home_feat1Desc" data-cms-field="feat1Desc">
                     </div>
+
                     <div class="form-group">
-                      <label>عنوان الميزة 2</label>
-                      <input type="text" id="cms_home_feat2Title" data-cms-field="feat2Title">
+                      <div style="display: flex; gap: 8px;">
+                        <div style="width: 60px;">
+                          <label>أيقونة 2</label>
+                          <input type="text" id="cms_home_feat2Icon" data-cms-field="feat2Icon" style="text-align: center; font-size: 1.2rem;">
+                        </div>
+                        <div style="flex: 1;">
+                          <label>عنوان الميزة 2</label>
+                          <input type="text" id="cms_home_feat2Title" data-cms-field="feat2Title">
+                        </div>
+                      </div>
                       <label style="font-size:0.8rem; color:#64748b; margin-top:4px;">وصف الميزة 2</label>
                       <input type="text" id="cms_home_feat2Desc" data-cms-field="feat2Desc">
                     </div>
+
                     <div class="form-group">
-                      <label>عنوان الميزة 3</label>
-                      <input type="text" id="cms_home_feat3Title" data-cms-field="feat3Title">
+                      <div style="display: flex; gap: 8px;">
+                        <div style="width: 60px;">
+                          <label>أيقونة 3</label>
+                          <input type="text" id="cms_home_feat3Icon" data-cms-field="feat3Icon" style="text-align: center; font-size: 1.2rem;">
+                        </div>
+                        <div style="flex: 1;">
+                          <label>عنوان الميزة 3</label>
+                          <input type="text" id="cms_home_feat3Title" data-cms-field="feat3Title">
+                        </div>
+                      </div>
                       <label style="font-size:0.8rem; color:#64748b; margin-top:4px;">وصف الميزة 3</label>
                       <input type="text" id="cms_home_feat3Desc" data-cms-field="feat3Desc">
                     </div>
+
                     <div class="form-group">
-                      <label>عنوان الميزة 4</label>
-                      <input type="text" id="cms_home_feat4Title" data-cms-field="feat4Title">
+                      <div style="display: flex; gap: 8px;">
+                        <div style="width: 60px;">
+                          <label>أيقونة 4</label>
+                          <input type="text" id="cms_home_feat4Icon" data-cms-field="feat4Icon" style="text-align: center; font-size: 1.2rem;">
+                        </div>
+                        <div style="flex: 1;">
+                          <label>عنوان الميزة 4</label>
+                          <input type="text" id="cms_home_feat4Title" data-cms-field="feat4Title">
+                        </div>
+                      </div>
                       <label style="font-size:0.8rem; color:#64748b; margin-top:4px;">وصف الميزة 4</label>
                       <input type="text" id="cms_home_feat4Desc" data-cms-field="feat4Desc">
                     </div>
                   </div>
                 </div>
 
+                <!-- 4. FLASH DEALS TEXTS -->
                 <div class="cms-section-group">
-                  <h4>⚡ بانر الخصومات الخاطفة (Flash Deals)</h4>
+                  <h4>⚡ نصوص الخصومات الخاطفة (Flash Deals)</h4>
                   <div class="form-group">
                     <label>شارة العرض</label>
                     <input type="text" id="cms_home_flashTag" data-cms-field="flashTag">
@@ -887,6 +734,7 @@ def build_admin():
                   </div>
                 </div>
 
+                <!-- 5. VIP CLUB -->
                 <div class="cms-section-group">
                   <h4>👑 قسم نادي أمهات بامبينو (VIP Club)</h4>
                   <div class="form-group">
@@ -904,14 +752,30 @@ def build_admin():
                 </div>
 
                 <div style="display: flex; gap: 12px; margin-top: 20px;">
-                  <button type="button" class="btn-checkout" style="width: auto; padding: 12px 28px;" onclick="AdminApp.saveCurrentPage('home')">حفظ تعديلات الصفحة الرئيسية ✅</button>
+                  <button type="button" class="btn-checkout" style="width: auto; padding: 12px 28px;" onclick="AdminApp.saveCurrentPage('home')">حفظ تعديلات وصور الصفحة الرئيسية ✅</button>
                   <button type="button" class="btn-admin-pill btn-admin-outline" onclick="AdminApp.previewPage('home')">معاينة مباشرة للصفحة 👁️</button>
-                  <button type="button" class="btn-admin-pill btn-admin-danger" onclick="AdminApp.resetCurrentPage('home')">استعادة النصوص الأصلية 🔄</button>
+                  <button type="button" class="btn-admin-pill btn-admin-danger" onclick="AdminApp.resetCurrentPage('home')">استعادة النصوص والصور الأصلية 🔄</button>
                 </div>
               </div>
 
               <!-- ABOUT PAGE FORM -->
               <div class="cms-page-form-wrapper" id="cmsForm-about" style="display: none;">
+                
+                <!-- About Story Image -->
+                <div class="cms-section-group" style="border: 2px solid #fecdd3; background: #fffdfd;">
+                  <h4 style="color: var(--primary);">🖼️ صورة قصة المتجر (About Brand Image)</h4>
+                  <div class="form-group" style="background: #fff; padding: 14px; border-radius: var(--radius-sm); border: 1px solid var(--border-light);">
+                    <div style="display: flex; gap: 14px; align-items: center;">
+                      <img id="prev_about_storyImg" src="../images/hero_kids_slide_2.jpg" style="width: 100px; height: 70px; object-fit: cover; border-radius: 8px; border: 1px solid #cbd5e1;">
+                      <div style="flex: 1;">
+                        <input type="text" id="cms_about_storyImg" data-cms-field="storyImg" placeholder="images/hero_kids_slide_2.jpg أو رابط مباشر" oninput="AdminApp.updateImagePreview(this.value, 'prev_about_storyImg')" style="width: 100%; margin-bottom: 6px;">
+                        <input type="file" accept="image/*" onchange="AdminApp.handleImageUpload(event, 'cms_about_storyImg', 'prev_about_storyImg')" style="display: none;" id="upload_about_storyImg">
+                        <button type="button" class="btn-admin-pill btn-admin-outline" onclick="document.getElementById('upload_about_storyImg').click()">📁 رفع صورة من جهازك</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
                 <div class="cms-section-group">
                   <h4>📖 قصة العلامة التجارية (Brand Story)</h4>
                   <div class="form-group">
@@ -937,21 +801,27 @@ def build_admin():
                 </div>
 
                 <div class="cms-section-group">
-                  <h4>🌟 بطاقات مميزات الجودة الثلاثة</h4>
+                  <h4>🌟 بطاقات وأيقونات مميزات الجودة الثلاثة</h4>
                   <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px;">
                     <div class="form-group">
+                      <label>أيقونة 1</label>
+                      <input type="text" id="cms_about_card1Icon" data-cms-field="card1Icon" style="text-align: center; font-size: 1.2rem; width: 60px; margin-bottom: 6px;">
                       <label>عنوان البطاقة 1</label>
                       <input type="text" id="cms_about_card1Title" data-cms-field="card1Title">
                       <label style="font-size:0.8rem; color:#64748b; margin-top:4px;">وصف البطاقة 1</label>
                       <textarea id="cms_about_card1Desc" data-cms-field="card1Desc" rows="2"></textarea>
                     </div>
                     <div class="form-group">
+                      <label>أيقونة 2</label>
+                      <input type="text" id="cms_about_card2Icon" data-cms-field="card2Icon" style="text-align: center; font-size: 1.2rem; width: 60px; margin-bottom: 6px;">
                       <label>عنوان البطاقة 2</label>
                       <input type="text" id="cms_about_card2Title" data-cms-field="card2Title">
                       <label style="font-size:0.8rem; color:#64748b; margin-top:4px;">وصف البطاقة 2</label>
                       <textarea id="cms_about_card2Desc" data-cms-field="card2Desc" rows="2"></textarea>
                     </div>
                     <div class="form-group">
+                      <label>أيقونة 3</label>
+                      <input type="text" id="cms_about_card3Icon" data-cms-field="card3Icon" style="text-align: center; font-size: 1.2rem; width: 60px; margin-bottom: 6px;">
                       <label>عنوان البطاقة 3</label>
                       <input type="text" id="cms_about_card3Title" data-cms-field="card3Title">
                       <label style="font-size:0.8rem; color:#64748b; margin-top:4px;">وصف البطاقة 3</label>
@@ -975,7 +845,7 @@ def build_admin():
                 <div style="display: flex; gap: 12px; margin-top: 20px;">
                   <button type="button" class="btn-checkout" style="width: auto; padding: 12px 28px;" onclick="AdminApp.saveCurrentPage('about')">حفظ تعديلات صفحة من نحن ✅</button>
                   <button type="button" class="btn-admin-pill btn-admin-outline" onclick="AdminApp.previewPage('about')">معاينة صفحة من نحن 👁️</button>
-                  <button type="button" class="btn-admin-pill btn-admin-danger" onclick="AdminApp.resetCurrentPage('about')">استعادة النصوص الأصلية 🔄</button>
+                  <button type="button" class="btn-admin-pill btn-admin-danger" onclick="AdminApp.resetCurrentPage('about')">استعادة النصوص والصور الأصلية 🔄</button>
                 </div>
               </div>
 
@@ -1177,7 +1047,7 @@ def build_admin():
           </div>
         </div>
 
-        <!-- TAB 4: BACKUP & DATA (FULL BACKUP: Products + Settings + Pages) -->
+        <!-- TAB 4: BACKUP & DATA (FULL BACKUP: Products + Settings + Pages + Images) -->
         <div class="admin-tab-content" id="tab-backup">
           <div class="admin-card" style="max-width: 750px;">
             <div class="admin-card-header">
@@ -1186,8 +1056,8 @@ def build_admin():
 
             <div style="display: flex; flex-direction: column; gap: 20px;">
               <div style="background: var(--bg-soft); padding: 20px; border-radius: var(--radius-sm); border: 1px solid var(--border-light);">
-                <h4 style="font-size: 1.05rem; font-weight: 800; color: var(--dark); margin-bottom: 6px;">📥 تصدير نسخة احتياطية شاملة (المنتجات + محتوى الصفحات + الإعدادات)</h4>
-                <p style="font-size: 0.9rem; color: var(--text-light); margin-bottom: 14px;">يمكنك تحميل ملف JSON متكامل يحتوي على كامل منتجات المتجر، نصوص كل الصفحات، والإعدادات لحفظها كأمان على جهازك.</p>
+                <h4 style="font-size: 1.05rem; font-weight: 800; color: var(--dark); margin-bottom: 6px;">📥 تصدير نسخة احتياطية شاملة (المنتجات + الصور والبانرات + محتوى الصفحات + الإعدادات)</h4>
+                <p style="font-size: 0.9rem; color: var(--text-light); margin-bottom: 14px;">يمكنك تحميل ملف JSON متكامل يحتوي على كامل منتجات المتجر، نصوص كل الصفحات، الصور والبانرات المرفوعة، والإعدادات لحفظها كأمان على جهازك.</p>
                 <button class="btn-admin-pill btn-admin-primary" onclick="AdminApp.exportFullBackupJSON()">
                   <span>تحميل ملف النسخة الاحتياطية الشاملة (JSON) 📥</span>
                 </button>
@@ -1195,7 +1065,7 @@ def build_admin():
 
               <div style="background: var(--bg-soft); padding: 20px; border-radius: var(--radius-sm); border: 1px solid var(--border-light);">
                 <h4 style="font-size: 1.05rem; font-weight: 800; color: var(--dark); margin-bottom: 6px;">📤 استيراد واستعادة المتجر من ملف نسخ احتياطي</h4>
-                <p style="font-size: 0.9rem; color: var(--text-light); margin-bottom: 14px;">ارفع ملف JSON الذي قمت بتصديره سابقاً لاستعادة جميع المنتجات والصفحات في لحظات معدودة.</p>
+                <p style="font-size: 0.9rem; color: var(--text-light); margin-bottom: 14px;">ارفع ملف JSON الذي قمت بتصديره سابقاً لاستعادة جميع المنتجات والصفحات والصور في لحظات معدودة.</p>
                 <input type="file" id="importProductsInput" accept=".json" onchange="AdminApp.importFullBackupJSON(event)" style="display: none;">
                 <button class="btn-admin-pill btn-admin-outline" onclick="document.getElementById('importProductsInput').click()">
                   <span>اختيار ملف JSON ورفعه 📤</span>
@@ -1204,7 +1074,7 @@ def build_admin():
 
               <div style="background: #fff1f2; padding: 20px; border-radius: var(--radius-sm); border: 1px solid #fecdd3;">
                 <h4 style="font-size: 1.05rem; font-weight: 800; color: #dc2626; margin-bottom: 6px;">⚠️ استعادة ضبط المصنع لجميع محتويات المتجر</h4>
-                <p style="font-size: 0.9rem; color: #b91c1c; margin-bottom: 14px;">سيؤدي هذا إلى إعادة المتجر ونصوص الصفحات والمنتجات إلى الحالة الأصلية الافتراضية.</p>
+                <p style="font-size: 0.9rem; color: #b91c1c; margin-bottom: 14px;">سيؤدي هذا إلى إعادة المتجر ونصوص الصفحات والصور والمنتجات إلى الحالة الأصلية الافتراضية.</p>
                 <button class="btn-admin-pill btn-admin-danger" onclick="AdminApp.resetDefaultProducts()">
                   <span>استرجاع الإعدادات والمنتجات الأصلية 🔄</span>
                 </button>
@@ -1216,7 +1086,7 @@ def build_admin():
     </div>
   </div>
 
-  <!-- ADD / EDIT PRODUCT MODAL -->
+  <!-- ADD / EDIT PRODUCT MODAL (WITH FILE UPLOAD BUTTON) -->
   <div class="admin-modal-overlay" id="adminProductModalOverlay">
     <div class="admin-modal">
       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; border-bottom: 1px solid var(--border-light); padding-bottom: 14px;">
@@ -1258,10 +1128,14 @@ def build_admin():
         </div>
 
         <div class="form-group">
-          <label>مسار الصورة أو رابط الصورة (URL) *</label>
+          <label>صورة المنتج (مسار أو رابط، أو رفع صورة من جهازك) *</label>
           <div style="display: flex; gap: 10px; align-items: center;">
-            <input type="text" id="prodImgInput" placeholder="images/prod_girls_party.jpg أو رابط مباشر" oninput="document.getElementById('productImagePreview').src = this.value.startsWith('http') ? this.value : '../' + this.value" required style="flex: 1;">
-            <img id="productImagePreview" src="../images/prod_girls_party.jpg" style="width: 50px; height: 50px; border-radius: 6px; object-fit: cover; border: 1px solid #cbd5e1;">
+            <img id="productImagePreview" src="../images/prod_girls_party.jpg" style="width: 55px; height: 55px; border-radius: 6px; object-fit: cover; border: 1px solid #cbd5e1;">
+            <div style="flex: 1;">
+              <input type="text" id="prodImgInput" placeholder="images/prod_girls_party.jpg أو رابط مباشر" oninput="AdminApp.updateImagePreview(this.value, 'productImagePreview')" required style="width: 100%; margin-bottom: 6px;">
+              <input type="file" accept="image/*" onchange="AdminApp.handleImageUpload(event, 'prodImgInput', 'productImagePreview')" style="display: none;" id="upload_prod_img">
+              <button type="button" class="btn-admin-pill btn-admin-outline" onclick="document.getElementById('upload_prod_img').click()">📁 رفع صورة من جهازك</button>
+            </div>
           </div>
         </div>
 
@@ -1297,8 +1171,5 @@ def build_admin():
 if __name__ == '__main__':
     build_index()
     build_about()
-    build_contact()
-    build_privacy()
-    build_terms()
     build_admin()
-    print("ALL PAGES AND ADMIN CMS UPDATED 100% SUCCESSFULLY!")
+    print("ALL PAGES AND ADMIN MEDIA CMS UPDATED 100% SUCCESSFULLY!")

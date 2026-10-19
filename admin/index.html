@@ -14,7 +14,7 @@
     <div style="background: #fff; padding: 40px; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); max-width: 420px; width: 100%; text-align: center; border: 1px solid var(--border-light);">
       <div style="font-size: 3rem; margin-bottom: 10px;">🔐</div>
       <h2 style="font-size: 1.6rem; font-weight: 900; color: var(--dark); margin-bottom: 6px;">لوحة تحكم بامبينو كيدز</h2>
-      <p style="color: var(--text-light); font-size: 0.9rem; margin-bottom: 24px;">يرجى إدخال رمز الأمان (PIN) لتعديل المتجر وإدارة المنتجات والصفحات</p>
+      <p style="color: var(--text-light); font-size: 0.9rem; margin-bottom: 24px;">يرجى إدخال رمز الأمان (PIN) لتعديل المتجر وإدارة المنتجات والصفحات والصور</p>
 
       <form id="adminLoginForm">
         <div class="form-group">
@@ -134,14 +134,14 @@
           </div>
         </div>
 
-        <!-- TAB 2: PAGES CONTENT CMS (Visual Editor for all pages) -->
+        <!-- TAB 2: PAGES & MEDIA CMS -->
         <div class="admin-tab-content" id="tab-pages">
           <div class="admin-card">
             <div class="admin-card-header">
               <div>
-                <h3>محرر محتوى صفحات المتجر (Visual Page CMS)</h3>
+                <h3>محرر محتوى وصور صفحات المتجر (Visual Page CMS)</h3>
                 <p style="color: var(--text-light); font-size: 0.88rem; margin-top: 4px;">
-                  اختر أي صفحة لتعديل نصوصها وأقسامها بحرية تامة دون الحاجة للمساس بالأكواد البرمجية.
+                  يمكنك تعديل أي نص، تبديل أي بانر أو صورة، وتغيير الأيقونات في أي صفحة مع إمكانية رفع الصور مباشرة من جهازك!
                 </p>
               </div>
             </div>
@@ -152,7 +152,7 @@
                 <div class="cms-page-card-icon">🏠</div>
                 <div>
                   <div class="cms-page-card-title">الصفحة الرئيسية</div>
-                  <div class="cms-page-card-sub">السلايدر، العروض، الميزات</div>
+                  <div class="cms-page-card-sub">السلايدر، البانرات، الصور، الميزات</div>
                 </div>
               </div>
 
@@ -160,7 +160,7 @@
                 <div class="cms-page-card-icon">✨</div>
                 <div>
                   <div class="cms-page-card-title">صفحة من نحن</div>
-                  <div class="cms-page-card-sub">القصة، الرسالة، الجودة</div>
+                  <div class="cms-page-card-sub">القصة، صورة البراند، الجودة</div>
                 </div>
               </div>
 
@@ -202,8 +202,99 @@
 
               <!-- HOME PAGE FORM -->
               <div class="cms-page-form-wrapper" id="cmsForm-home">
+                
+                <!-- 1. BANNERS & IMAGES FOR HOMEPAGE -->
+                <div class="cms-section-group" style="border: 2px solid #fecdd3; background: #fffdfd;">
+                  <h4 style="color: var(--primary);">🖼️ بانرات وصور الصفحة الرئيسية (Banners & Media)</h4>
+                  
+                  <!-- Hero Banner Image -->
+                  <div class="form-group" style="background: #fff; padding: 14px; border-radius: var(--radius-sm); border: 1px solid var(--border-light); margin-bottom: 16px;">
+                    <label style="font-weight: 800; color: var(--dark);">صورة البانر الرئيسي الكبير (Hero Slider Banner)</label>
+                    <div style="display: flex; gap: 14px; align-items: center; margin-top: 8px;">
+                      <img id="prev_home_heroImg" src="../images/kids_hero_banner.jpg" style="width: 100px; height: 70px; object-fit: cover; border-radius: 8px; border: 1px solid #cbd5e1;">
+                      <div style="flex: 1;">
+                        <input type="text" id="cms_home_heroImg" data-cms-field="heroImg" placeholder="images/kids_hero_banner.jpg أو رابط مباشر" oninput="AdminApp.updateImagePreview(this.value, 'prev_home_heroImg')" style="width: 100%; margin-bottom: 6px;">
+                        <input type="file" accept="image/*" onchange="AdminApp.handleImageUpload(event, 'cms_home_heroImg', 'prev_home_heroImg')" style="display: none;" id="upload_home_heroImg">
+                        <button type="button" class="btn-admin-pill btn-admin-outline" onclick="document.getElementById('upload_home_heroImg').click()">📁 رفع صورة من جهازك</button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Flash Deal Banner Image -->
+                  <div class="form-group" style="background: #fff; padding: 14px; border-radius: var(--radius-sm); border: 1px solid var(--border-light); margin-bottom: 16px;">
+                    <label style="font-weight: 800; color: var(--dark);">صورة بانر العروض الخاطفة (Flash Deals Banner)</label>
+                    <div style="display: flex; gap: 14px; align-items: center; margin-top: 8px;">
+                      <img id="prev_home_flashImg" src="../images/flash_deal_kids_banner.jpg" style="width: 100px; height: 70px; object-fit: cover; border-radius: 8px; border: 1px solid #cbd5e1;">
+                      <div style="flex: 1;">
+                        <input type="text" id="cms_home_flashImg" data-cms-field="flashImg" placeholder="images/flash_deal_kids_banner.jpg أو رابط مباشر" oninput="AdminApp.updateImagePreview(this.value, 'prev_home_flashImg')" style="width: 100%; margin-bottom: 6px;">
+                        <input type="file" accept="image/*" onchange="AdminApp.handleImageUpload(event, 'cms_home_flashImg', 'prev_home_flashImg')" style="display: none;" id="upload_home_flashImg">
+                        <button type="button" class="btn-admin-pill btn-admin-outline" onclick="document.getElementById('upload_home_flashImg').click()">📁 رفع صورة من جهازك</button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- 4 Category Cards Images -->
+                  <label style="font-weight: 800; display: block; margin-bottom: 10px; color: var(--dark);">صور بطاقات أقسام المتجر (Categories Cards):</label>
+                  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
+                    
+                    <!-- Cat Girls -->
+                    <div style="background: #fff; padding: 12px; border-radius: var(--radius-sm); border: 1px solid var(--border-light);">
+                      <label style="font-size: 0.85rem; font-weight: 700;">صورة قسم (ملابس بناتي)</label>
+                      <div style="display: flex; gap: 10px; align-items: center; margin-top: 6px;">
+                        <img id="prev_home_catGirlsImg" src="../images/kids_cat_girls.jpg" style="width: 55px; height: 55px; object-fit: cover; border-radius: 6px; border: 1px solid #cbd5e1;">
+                        <div style="flex: 1;">
+                          <input type="text" id="cms_home_catGirlsImg" data-cms-field="catGirlsImg" oninput="AdminApp.updateImagePreview(this.value, 'prev_home_catGirlsImg')" style="width: 100%; font-size: 0.8rem; margin-bottom: 4px;">
+                          <input type="file" accept="image/*" onchange="AdminApp.handleImageUpload(event, 'cms_home_catGirlsImg', 'prev_home_catGirlsImg')" style="display: none;" id="upload_home_catGirlsImg">
+                          <button type="button" class="btn-admin-pill btn-admin-outline" style="padding: 4px 10px; font-size: 0.75rem;" onclick="document.getElementById('upload_home_catGirlsImg').click()">📁 رفع صورة</button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Cat Boys -->
+                    <div style="background: #fff; padding: 12px; border-radius: var(--radius-sm); border: 1px solid var(--border-light);">
+                      <label style="font-size: 0.85rem; font-weight: 700;">صورة قسم (ملابس أولادي)</label>
+                      <div style="display: flex; gap: 10px; align-items: center; margin-top: 6px;">
+                        <img id="prev_home_catBoysImg" src="../images/kids_cat_boys.jpg" style="width: 55px; height: 55px; object-fit: cover; border-radius: 6px; border: 1px solid #cbd5e1;">
+                        <div style="flex: 1;">
+                          <input type="text" id="cms_home_catBoysImg" data-cms-field="catBoysImg" oninput="AdminApp.updateImagePreview(this.value, 'prev_home_catBoysImg')" style="width: 100%; font-size: 0.8rem; margin-bottom: 4px;">
+                          <input type="file" accept="image/*" onchange="AdminApp.handleImageUpload(event, 'cms_home_catBoysImg', 'prev_home_catBoysImg')" style="display: none;" id="upload_home_catBoysImg">
+                          <button type="button" class="btn-admin-pill btn-admin-outline" style="padding: 4px 10px; font-size: 0.75rem;" onclick="document.getElementById('upload_home_catBoysImg').click()">📁 رفع صورة</button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Cat Baby -->
+                    <div style="background: #fff; padding: 12px; border-radius: var(--radius-sm); border: 1px solid var(--border-light);">
+                      <label style="font-size: 0.85rem; font-weight: 700;">صورة قسم (بيبي ومواليد)</label>
+                      <div style="display: flex; gap: 10px; align-items: center; margin-top: 6px;">
+                        <img id="prev_home_catBabyImg" src="../images/kids_cat_baby.jpg" style="width: 55px; height: 55px; object-fit: cover; border-radius: 6px; border: 1px solid #cbd5e1;">
+                        <div style="flex: 1;">
+                          <input type="text" id="cms_home_catBabyImg" data-cms-field="catBabyImg" oninput="AdminApp.updateImagePreview(this.value, 'prev_home_catBabyImg')" style="width: 100%; font-size: 0.8rem; margin-bottom: 4px;">
+                          <input type="file" accept="image/*" onchange="AdminApp.handleImageUpload(event, 'cms_home_catBabyImg', 'prev_home_catBabyImg')" style="display: none;" id="upload_home_catBabyImg">
+                          <button type="button" class="btn-admin-pill btn-admin-outline" style="padding: 4px 10px; font-size: 0.75rem;" onclick="document.getElementById('upload_home_catBabyImg').click()">📁 رفع صورة</button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Cat Shoes -->
+                    <div style="background: #fff; padding: 12px; border-radius: var(--radius-sm); border: 1px solid var(--border-light);">
+                      <label style="font-size: 0.85rem; font-weight: 700;">صورة قسم (أحذية وإكسسوارات)</label>
+                      <div style="display: flex; gap: 10px; align-items: center; margin-top: 6px;">
+                        <img id="prev_home_catShoesImg" src="../images/kids_cat_shoes.jpg" style="width: 55px; height: 55px; object-fit: cover; border-radius: 6px; border: 1px solid #cbd5e1;">
+                        <div style="flex: 1;">
+                          <input type="text" id="cms_home_catShoesImg" data-cms-field="catShoesImg" oninput="AdminApp.updateImagePreview(this.value, 'prev_home_catShoesImg')" style="width: 100%; font-size: 0.8rem; margin-bottom: 4px;">
+                          <input type="file" accept="image/*" onchange="AdminApp.handleImageUpload(event, 'cms_home_catShoesImg', 'prev_home_catShoesImg')" style="display: none;" id="upload_home_catShoesImg">
+                          <button type="button" class="btn-admin-pill btn-admin-outline" style="padding: 4px 10px; font-size: 0.75rem;" onclick="document.getElementById('upload_home_catShoesImg').click()">📁 رفع صورة</button>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+
+                <!-- 2. TEXTS & SECTIONS FOR HOMEPAGE -->
                 <div class="cms-section-group">
-                  <h4>🎨 قسم البانر الرئيسي (Hero Section)</h4>
+                  <h4>🎨 نصوص البانر الرئيسي (Hero Texts)</h4>
                   <div class="form-group">
                     <label>الشارة العلوية للبانر</label>
                     <input type="text" id="cms_home_heroBadge" data-cms-field="heroBadge">
@@ -222,38 +313,75 @@
                   </div>
                 </div>
 
+                <!-- 3. FEATURES BAR -->
                 <div class="cms-section-group">
-                  <h4>🚚 ميزات المتجر الأربعة (Features Bar)</h4>
+                  <h4>🚚 ميزات وأيقونات المتجر الأربعة (Features & Icons)</h4>
                   <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
                     <div class="form-group">
-                      <label>عنوان الميزة 1</label>
-                      <input type="text" id="cms_home_feat1Title" data-cms-field="feat1Title">
+                      <div style="display: flex; gap: 8px;">
+                        <div style="width: 60px;">
+                          <label>أيقونة 1</label>
+                          <input type="text" id="cms_home_feat1Icon" data-cms-field="feat1Icon" style="text-align: center; font-size: 1.2rem;">
+                        </div>
+                        <div style="flex: 1;">
+                          <label>عنوان الميزة 1</label>
+                          <input type="text" id="cms_home_feat1Title" data-cms-field="feat1Title">
+                        </div>
+                      </div>
                       <label style="font-size:0.8rem; color:#64748b; margin-top:4px;">وصف الميزة 1</label>
                       <input type="text" id="cms_home_feat1Desc" data-cms-field="feat1Desc">
                     </div>
+
                     <div class="form-group">
-                      <label>عنوان الميزة 2</label>
-                      <input type="text" id="cms_home_feat2Title" data-cms-field="feat2Title">
+                      <div style="display: flex; gap: 8px;">
+                        <div style="width: 60px;">
+                          <label>أيقونة 2</label>
+                          <input type="text" id="cms_home_feat2Icon" data-cms-field="feat2Icon" style="text-align: center; font-size: 1.2rem;">
+                        </div>
+                        <div style="flex: 1;">
+                          <label>عنوان الميزة 2</label>
+                          <input type="text" id="cms_home_feat2Title" data-cms-field="feat2Title">
+                        </div>
+                      </div>
                       <label style="font-size:0.8rem; color:#64748b; margin-top:4px;">وصف الميزة 2</label>
                       <input type="text" id="cms_home_feat2Desc" data-cms-field="feat2Desc">
                     </div>
+
                     <div class="form-group">
-                      <label>عنوان الميزة 3</label>
-                      <input type="text" id="cms_home_feat3Title" data-cms-field="feat3Title">
+                      <div style="display: flex; gap: 8px;">
+                        <div style="width: 60px;">
+                          <label>أيقونة 3</label>
+                          <input type="text" id="cms_home_feat3Icon" data-cms-field="feat3Icon" style="text-align: center; font-size: 1.2rem;">
+                        </div>
+                        <div style="flex: 1;">
+                          <label>عنوان الميزة 3</label>
+                          <input type="text" id="cms_home_feat3Title" data-cms-field="feat3Title">
+                        </div>
+                      </div>
                       <label style="font-size:0.8rem; color:#64748b; margin-top:4px;">وصف الميزة 3</label>
                       <input type="text" id="cms_home_feat3Desc" data-cms-field="feat3Desc">
                     </div>
+
                     <div class="form-group">
-                      <label>عنوان الميزة 4</label>
-                      <input type="text" id="cms_home_feat4Title" data-cms-field="feat4Title">
+                      <div style="display: flex; gap: 8px;">
+                        <div style="width: 60px;">
+                          <label>أيقونة 4</label>
+                          <input type="text" id="cms_home_feat4Icon" data-cms-field="feat4Icon" style="text-align: center; font-size: 1.2rem;">
+                        </div>
+                        <div style="flex: 1;">
+                          <label>عنوان الميزة 4</label>
+                          <input type="text" id="cms_home_feat4Title" data-cms-field="feat4Title">
+                        </div>
+                      </div>
                       <label style="font-size:0.8rem; color:#64748b; margin-top:4px;">وصف الميزة 4</label>
                       <input type="text" id="cms_home_feat4Desc" data-cms-field="feat4Desc">
                     </div>
                   </div>
                 </div>
 
+                <!-- 4. FLASH DEALS TEXTS -->
                 <div class="cms-section-group">
-                  <h4>⚡ بانر الخصومات الخاطفة (Flash Deals)</h4>
+                  <h4>⚡ نصوص الخصومات الخاطفة (Flash Deals)</h4>
                   <div class="form-group">
                     <label>شارة العرض</label>
                     <input type="text" id="cms_home_flashTag" data-cms-field="flashTag">
@@ -268,6 +396,7 @@
                   </div>
                 </div>
 
+                <!-- 5. VIP CLUB -->
                 <div class="cms-section-group">
                   <h4>👑 قسم نادي أمهات بامبينو (VIP Club)</h4>
                   <div class="form-group">
@@ -285,14 +414,30 @@
                 </div>
 
                 <div style="display: flex; gap: 12px; margin-top: 20px;">
-                  <button type="button" class="btn-checkout" style="width: auto; padding: 12px 28px;" onclick="AdminApp.saveCurrentPage('home')">حفظ تعديلات الصفحة الرئيسية ✅</button>
+                  <button type="button" class="btn-checkout" style="width: auto; padding: 12px 28px;" onclick="AdminApp.saveCurrentPage('home')">حفظ تعديلات وصور الصفحة الرئيسية ✅</button>
                   <button type="button" class="btn-admin-pill btn-admin-outline" onclick="AdminApp.previewPage('home')">معاينة مباشرة للصفحة 👁️</button>
-                  <button type="button" class="btn-admin-pill btn-admin-danger" onclick="AdminApp.resetCurrentPage('home')">استعادة النصوص الأصلية 🔄</button>
+                  <button type="button" class="btn-admin-pill btn-admin-danger" onclick="AdminApp.resetCurrentPage('home')">استعادة النصوص والصور الأصلية 🔄</button>
                 </div>
               </div>
 
               <!-- ABOUT PAGE FORM -->
               <div class="cms-page-form-wrapper" id="cmsForm-about" style="display: none;">
+                
+                <!-- About Story Image -->
+                <div class="cms-section-group" style="border: 2px solid #fecdd3; background: #fffdfd;">
+                  <h4 style="color: var(--primary);">🖼️ صورة قصة المتجر (About Brand Image)</h4>
+                  <div class="form-group" style="background: #fff; padding: 14px; border-radius: var(--radius-sm); border: 1px solid var(--border-light);">
+                    <div style="display: flex; gap: 14px; align-items: center;">
+                      <img id="prev_about_storyImg" src="../images/hero_kids_slide_2.jpg" style="width: 100px; height: 70px; object-fit: cover; border-radius: 8px; border: 1px solid #cbd5e1;">
+                      <div style="flex: 1;">
+                        <input type="text" id="cms_about_storyImg" data-cms-field="storyImg" placeholder="images/hero_kids_slide_2.jpg أو رابط مباشر" oninput="AdminApp.updateImagePreview(this.value, 'prev_about_storyImg')" style="width: 100%; margin-bottom: 6px;">
+                        <input type="file" accept="image/*" onchange="AdminApp.handleImageUpload(event, 'cms_about_storyImg', 'prev_about_storyImg')" style="display: none;" id="upload_about_storyImg">
+                        <button type="button" class="btn-admin-pill btn-admin-outline" onclick="document.getElementById('upload_about_storyImg').click()">📁 رفع صورة من جهازك</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
                 <div class="cms-section-group">
                   <h4>📖 قصة العلامة التجارية (Brand Story)</h4>
                   <div class="form-group">
@@ -318,21 +463,27 @@
                 </div>
 
                 <div class="cms-section-group">
-                  <h4>🌟 بطاقات مميزات الجودة الثلاثة</h4>
+                  <h4>🌟 بطاقات وأيقونات مميزات الجودة الثلاثة</h4>
                   <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px;">
                     <div class="form-group">
+                      <label>أيقونة 1</label>
+                      <input type="text" id="cms_about_card1Icon" data-cms-field="card1Icon" style="text-align: center; font-size: 1.2rem; width: 60px; margin-bottom: 6px;">
                       <label>عنوان البطاقة 1</label>
                       <input type="text" id="cms_about_card1Title" data-cms-field="card1Title">
                       <label style="font-size:0.8rem; color:#64748b; margin-top:4px;">وصف البطاقة 1</label>
                       <textarea id="cms_about_card1Desc" data-cms-field="card1Desc" rows="2"></textarea>
                     </div>
                     <div class="form-group">
+                      <label>أيقونة 2</label>
+                      <input type="text" id="cms_about_card2Icon" data-cms-field="card2Icon" style="text-align: center; font-size: 1.2rem; width: 60px; margin-bottom: 6px;">
                       <label>عنوان البطاقة 2</label>
                       <input type="text" id="cms_about_card2Title" data-cms-field="card2Title">
                       <label style="font-size:0.8rem; color:#64748b; margin-top:4px;">وصف البطاقة 2</label>
                       <textarea id="cms_about_card2Desc" data-cms-field="card2Desc" rows="2"></textarea>
                     </div>
                     <div class="form-group">
+                      <label>أيقونة 3</label>
+                      <input type="text" id="cms_about_card3Icon" data-cms-field="card3Icon" style="text-align: center; font-size: 1.2rem; width: 60px; margin-bottom: 6px;">
                       <label>عنوان البطاقة 3</label>
                       <input type="text" id="cms_about_card3Title" data-cms-field="card3Title">
                       <label style="font-size:0.8rem; color:#64748b; margin-top:4px;">وصف البطاقة 3</label>
@@ -356,7 +507,7 @@
                 <div style="display: flex; gap: 12px; margin-top: 20px;">
                   <button type="button" class="btn-checkout" style="width: auto; padding: 12px 28px;" onclick="AdminApp.saveCurrentPage('about')">حفظ تعديلات صفحة من نحن ✅</button>
                   <button type="button" class="btn-admin-pill btn-admin-outline" onclick="AdminApp.previewPage('about')">معاينة صفحة من نحن 👁️</button>
-                  <button type="button" class="btn-admin-pill btn-admin-danger" onclick="AdminApp.resetCurrentPage('about')">استعادة النصوص الأصلية 🔄</button>
+                  <button type="button" class="btn-admin-pill btn-admin-danger" onclick="AdminApp.resetCurrentPage('about')">استعادة النصوص والصور الأصلية 🔄</button>
                 </div>
               </div>
 
@@ -558,7 +709,7 @@
           </div>
         </div>
 
-        <!-- TAB 4: BACKUP & DATA (FULL BACKUP: Products + Settings + Pages) -->
+        <!-- TAB 4: BACKUP & DATA (FULL BACKUP: Products + Settings + Pages + Images) -->
         <div class="admin-tab-content" id="tab-backup">
           <div class="admin-card" style="max-width: 750px;">
             <div class="admin-card-header">
@@ -567,8 +718,8 @@
 
             <div style="display: flex; flex-direction: column; gap: 20px;">
               <div style="background: var(--bg-soft); padding: 20px; border-radius: var(--radius-sm); border: 1px solid var(--border-light);">
-                <h4 style="font-size: 1.05rem; font-weight: 800; color: var(--dark); margin-bottom: 6px;">📥 تصدير نسخة احتياطية شاملة (المنتجات + محتوى الصفحات + الإعدادات)</h4>
-                <p style="font-size: 0.9rem; color: var(--text-light); margin-bottom: 14px;">يمكنك تحميل ملف JSON متكامل يحتوي على كامل منتجات المتجر، نصوص كل الصفحات، والإعدادات لحفظها كأمان على جهازك.</p>
+                <h4 style="font-size: 1.05rem; font-weight: 800; color: var(--dark); margin-bottom: 6px;">📥 تصدير نسخة احتياطية شاملة (المنتجات + الصور والبانرات + محتوى الصفحات + الإعدادات)</h4>
+                <p style="font-size: 0.9rem; color: var(--text-light); margin-bottom: 14px;">يمكنك تحميل ملف JSON متكامل يحتوي على كامل منتجات المتجر، نصوص كل الصفحات، الصور والبانرات المرفوعة، والإعدادات لحفظها كأمان على جهازك.</p>
                 <button class="btn-admin-pill btn-admin-primary" onclick="AdminApp.exportFullBackupJSON()">
                   <span>تحميل ملف النسخة الاحتياطية الشاملة (JSON) 📥</span>
                 </button>
@@ -576,7 +727,7 @@
 
               <div style="background: var(--bg-soft); padding: 20px; border-radius: var(--radius-sm); border: 1px solid var(--border-light);">
                 <h4 style="font-size: 1.05rem; font-weight: 800; color: var(--dark); margin-bottom: 6px;">📤 استيراد واستعادة المتجر من ملف نسخ احتياطي</h4>
-                <p style="font-size: 0.9rem; color: var(--text-light); margin-bottom: 14px;">ارفع ملف JSON الذي قمت بتصديره سابقاً لاستعادة جميع المنتجات والصفحات في لحظات معدودة.</p>
+                <p style="font-size: 0.9rem; color: var(--text-light); margin-bottom: 14px;">ارفع ملف JSON الذي قمت بتصديره سابقاً لاستعادة جميع المنتجات والصفحات والصور في لحظات معدودة.</p>
                 <input type="file" id="importProductsInput" accept=".json" onchange="AdminApp.importFullBackupJSON(event)" style="display: none;">
                 <button class="btn-admin-pill btn-admin-outline" onclick="document.getElementById('importProductsInput').click()">
                   <span>اختيار ملف JSON ورفعه 📤</span>
@@ -585,7 +736,7 @@
 
               <div style="background: #fff1f2; padding: 20px; border-radius: var(--radius-sm); border: 1px solid #fecdd3;">
                 <h4 style="font-size: 1.05rem; font-weight: 800; color: #dc2626; margin-bottom: 6px;">⚠️ استعادة ضبط المصنع لجميع محتويات المتجر</h4>
-                <p style="font-size: 0.9rem; color: #b91c1c; margin-bottom: 14px;">سيؤدي هذا إلى إعادة المتجر ونصوص الصفحات والمنتجات إلى الحالة الأصلية الافتراضية.</p>
+                <p style="font-size: 0.9rem; color: #b91c1c; margin-bottom: 14px;">سيؤدي هذا إلى إعادة المتجر ونصوص الصفحات والصور والمنتجات إلى الحالة الأصلية الافتراضية.</p>
                 <button class="btn-admin-pill btn-admin-danger" onclick="AdminApp.resetDefaultProducts()">
                   <span>استرجاع الإعدادات والمنتجات الأصلية 🔄</span>
                 </button>
@@ -597,7 +748,7 @@
     </div>
   </div>
 
-  <!-- ADD / EDIT PRODUCT MODAL -->
+  <!-- ADD / EDIT PRODUCT MODAL (WITH FILE UPLOAD BUTTON) -->
   <div class="admin-modal-overlay" id="adminProductModalOverlay">
     <div class="admin-modal">
       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; border-bottom: 1px solid var(--border-light); padding-bottom: 14px;">
@@ -639,10 +790,14 @@
         </div>
 
         <div class="form-group">
-          <label>مسار الصورة أو رابط الصورة (URL) *</label>
+          <label>صورة المنتج (مسار أو رابط، أو رفع صورة من جهازك) *</label>
           <div style="display: flex; gap: 10px; align-items: center;">
-            <input type="text" id="prodImgInput" placeholder="images/prod_girls_party.jpg أو رابط مباشر" oninput="document.getElementById('productImagePreview').src = this.value.startsWith('http') ? this.value : '../' + this.value" required style="flex: 1;">
-            <img id="productImagePreview" src="../images/prod_girls_party.jpg" style="width: 50px; height: 50px; border-radius: 6px; object-fit: cover; border: 1px solid #cbd5e1;">
+            <img id="productImagePreview" src="../images/prod_girls_party.jpg" style="width: 55px; height: 55px; border-radius: 6px; object-fit: cover; border: 1px solid #cbd5e1;">
+            <div style="flex: 1;">
+              <input type="text" id="prodImgInput" placeholder="images/prod_girls_party.jpg أو رابط مباشر" oninput="AdminApp.updateImagePreview(this.value, 'productImagePreview')" required style="width: 100%; margin-bottom: 6px;">
+              <input type="file" accept="image/*" onchange="AdminApp.handleImageUpload(event, 'prodImgInput', 'productImagePreview')" style="display: none;" id="upload_prod_img">
+              <button type="button" class="btn-admin-pill btn-admin-outline" onclick="document.getElementById('upload_prod_img').click()">📁 رفع صورة من جهازك</button>
+            </div>
           </div>
         </div>
 

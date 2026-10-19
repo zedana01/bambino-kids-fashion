@@ -1,6 +1,6 @@
 /**
  * BAMBINO KIDS FASHION - Admin Dashboard Controller
- * Client-friendly, intuitive management for products, pages content, and settings
+ * Client-friendly, intuitive management for products, pages content, images, and settings
  */
 
 const AdminApp = {
@@ -135,10 +135,11 @@ const AdminApp = {
 
     let html = '';
     products.forEach(p => {
+      const imgSrc = p.img.startsWith('data:') || p.img.startsWith('http') ? p.img : `../${p.img}`;
       html += `
         <tr>
           <td>
-            <img src="../${p.img}" alt="${p.name}" class="table-img" onerror="this.src='../images/prod_girls_party.jpg'">
+            <img src="${imgSrc}" alt="${p.name}" class="table-img" onerror="this.src='../images/prod_girls_party.jpg'">
           </td>
           <td>
             <strong style="color: var(--dark); font-size: 0.95rem;">${p.name}</strong>
@@ -317,7 +318,7 @@ const AdminApp = {
   },
 
   // ==========================================
-  // PAGES CONTENT CMS EDITOR
+  // PAGES CONTENT & MEDIA CMS EDITOR
   // ==========================================
   loadPagesEditor() {
     this.selectPage(this.activePageKey || 'home');
@@ -343,6 +344,10 @@ const AdminApp = {
       if (input) {
         input.value = val;
       }
+      const preview = document.getElementById(`prev_${pageKey}_${key}`);
+      if (preview && val) {
+        preview.src = val.startsWith('http') || val.startsWith('data:') ? val : `../${val}`;
+      }
     }
   },
 
@@ -359,14 +364,14 @@ const AdminApp = {
     });
 
     BambinoStore.savePagesContent(content);
-    alert(`✅ تم حفظ محتوى صفحة (${this.getPageNameAr(pageKey)}) وتحديثها بنجاح في المتجر!`);
+    alert(`✅ تم حفظ محتوى وصور صفحة (${this.getPageNameAr(pageKey)}) وتحديثها بنجاح في المتجر!`);
   },
 
   resetCurrentPage(pageKey) {
-    if (!confirm(`هل أنت متأكد من استعادة النصوص الافتراضية الأصلية لصفحة (${this.getPageNameAr(pageKey)})؟`)) return;
+    if (!confirm(`هل أنت متأكد من استعادة النصوص والصور الأصلية لصفحة (${this.getPageNameAr(pageKey)})؟`)) return;
     BambinoStore.resetPageContent(pageKey);
     this.selectPage(pageKey);
-    alert(`🔄 تم استرجاع النصوص الأصلية لصفحة (${this.getPageNameAr(pageKey)}) بنجاح!`);
+    alert(`🔄 تم استرجاع النصوص والصور الأصلية لصفحة (${this.getPageNameAr(pageKey)}) بنجاح!`);
   },
 
   getPageNameAr(key) {
@@ -391,6 +396,29 @@ const AdminApp = {
       footer: '../index.html'
     };
     window.open(map[key] || '../index.html', '_blank');
+  },
+
+  // File Upload Helper (converts image file to Base64)
+  handleImageUpload(event, targetInputId, previewId) {
+    const file = event.target.files[0];
+    if (!file) return;
+
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      const base64 = e.target.result;
+      const targetInput = document.getElementById(targetInputId);
+      if (targetInput) targetInput.value = base64;
+
+      const preview = document.getElementById(previewId);
+      if (preview) preview.src = base64;
+    };
+    reader.readAsDataURL(file);
+  },
+
+  updateImagePreview(urlVal, previewId) {
+    const preview = document.getElementById(previewId);
+    if (!preview) return;
+    preview.src = urlVal.startsWith('http') || urlVal.startsWith('data:') ? urlVal : `../${urlVal}`;
   },
 
   // ==========================================

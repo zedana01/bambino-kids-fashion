@@ -17,7 +17,7 @@ for file_rel in all_files:
     # Remove script tags to only test static HTML img/link elements
     html_without_scripts = re.sub(r'<script.*?</script>', '', content, flags=re.DOTALL)
     
-    img_srcs = re.findall(r'<img[^>]+src=["\']([^"\']+)["\']', html_without_scripts)
+    img_srcs = re.findall(r'<img[^>]+?\ssrc=["\']([^"\']+)["\']', html_without_scripts)
     for src in img_srcs:
         if src.startswith('http') or src.startswith('data:'):
             continue
